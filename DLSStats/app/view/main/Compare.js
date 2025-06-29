@@ -23,7 +23,7 @@ Ext.define("DLSStats.view.main.Compare", {
     },
 
     items: [
-        // ID & version
+        // ID & version inputs
         {
             xtype: "container",
             reference: "inputContainer",
@@ -39,12 +39,10 @@ Ext.define("DLSStats.view.main.Compare", {
                 minWidth: 120,
             },
             items: [
-                // ID player 1
                 {
                     itemId: "player1Id",
                     emptyText: "Enter player1's ID",
                 },
-                // Version player 1
                 {
                     xtype: "combo",
                     itemId: "version1",
@@ -57,12 +55,10 @@ Ext.define("DLSStats.view.main.Compare", {
                     flex: 1,
                     minWidth: 120,
                 },
-                // ID player 2
                 {
                     itemId: "player2Id",
                     emptyText: "Enter player2's ID",
                 },
-                // Version player 2
                 {
                     xtype: "combo",
                     itemId: "version2",
@@ -77,7 +73,7 @@ Ext.define("DLSStats.view.main.Compare", {
                 },
             ],
         },
-        // Nút Compare
+        // Button Compare
         {
             xtype: "button",
             text: "Compare",
@@ -89,69 +85,50 @@ Ext.define("DLSStats.view.main.Compare", {
             margin: 10,
             handler: function (btn) {
                 var mainContainer = btn.up("dls-compare");
+                var ctrl = mainContainer.getController();
+
                 var inputContainer = mainContainer.lookupReference("inputContainer");
 
                 var player1Id = inputContainer.down("#player1Id").getValue();
-                var player2Id = inputContainer.down("#player2Id").getValue();
                 var version1 = inputContainer.down("#version1").getValue();
+                var player2Id = inputContainer.down("#player2Id").getValue();
                 var version2 = inputContainer.down("#version2").getValue();
 
-                var url = "https://trungta-hust-dls24.vercel.app/search";
+                // Chuẩn bị criteria cho tìm kiếm
+                var criteria1 = {
+                    id: String(player1Id),
+                    version: String(version1)
+                };
+                var criteria2 = {
+                    id: String(player2Id),
+                    version: String(version2)
+                };
 
-                async function fetchPlayer(id, version) {
-                    var payload = {
-                        criteria: {
-                            id: id,
-                            version: version,
-                        },
-                    };
+                // Tìm trong store local qua hàm dùng chung
+                var player1Results = ctrl.searchPlayersByCriteria(criteria1, null);
+                var player2Results = ctrl.searchPlayersByCriteria(criteria2, null);
 
-                    const response = await fetch(url, {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(payload),
-                    });
+                var player1 = player1Results.length > 0 ? player1Results[0].data : null;
+                var player2 = player2Results.length > 0 ? player2Results[0].data : null;
 
-                    if (!response.ok) {
-                        throw new Error("Network response was not ok");
-                    }
-
-                    const data = await response.json();
-                    return Array.isArray(data) && data.length > 0 ? data[0] : null;
+                if (!player1 || !player2) {
+                    Ext.Msg.alert(
+                        "Not Found",
+                        "One or both player data of corresponding version not found."
+                    );
+                    return;
                 }
 
-                Promise.all([
-                    fetchPlayer(player1Id, version1),
-                    fetchPlayer(player2Id, version2),
-                ])
-                    .then(function (results) {
-                        var player1 = results[0];
-                        var player2 = results[1];
+                var player1DetailsCmp = mainContainer.lookupReference("player1DetailsCmp");
+                var player2DetailsCmp = mainContainer.lookupReference("player2DetailsCmp");
+                player1DetailsCmp.updatePlayer(player1);
+                player2DetailsCmp.updatePlayer(player2);
 
-                        if (!player1 || !player2) {
-                            Ext.Msg.alert(
-                                "Not Found",
-                                "One or both player data of corresponding version not found."
-                            );
-                            return;
-                        }
-
-                        var player1DetailsCmp =
-                            mainContainer.lookupReference("player1DetailsCmp");
-                        var player2DetailsCmp =
-                            mainContainer.lookupReference("player2DetailsCmp");
-                        player1DetailsCmp.updatePlayer(player1);
-                        player2DetailsCmp.updatePlayer(player2);
-                        var radarChartCmp = mainContainer.lookupReference("radarChartCmp");
-                        radarChartCmp.updatePlayers([player1, player2]);
-                    })
-                    .catch(function (error) {
-                        Ext.Msg.alert("Error", "Failed to load player data.");
-                        console.error(error);
-                    });
+                var radarChartCmp = mainContainer.lookupReference("radarChartCmp");
+                radarChartCmp.updatePlayers([player1, player2]);
             },
         },
-        // 2 players's details
+        // 2 players detail panels
         {
             xtype: "container",
             reference: "detailsContainer",
@@ -198,7 +175,7 @@ Ext.define("DLSStats.view.main.Compare", {
                 },
             ],
         },
-        // Container radar chart
+        // Radar chart container
         {
             xtype: "radarchart",
             reference: "radarChartCmp",

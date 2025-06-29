@@ -16,51 +16,88 @@ Ext.define("DLSStats.view.main.PlayerController", {
 
   init: function () {
     var form = this.lookup("searchform");
-    if (form) {
-      form.on("searchrequest", this.onSearch, this);
+    if (form) form.on("searchrequest", this.onSearch, this);
+  },
+
+  searchPlayersByCriteria: function (criteria, nameTerm) {
+    var playerStore = Ext.getStore("playerstore");
+    if (!playerStore) {
+      console.error("Không tìm thấy store playerstore");
+      return [];
     }
+
+    nameTerm = nameTerm ? nameTerm.toLowerCase() : null;
+
+    var filteredRecords = playerStore.queryBy(function (record) {
+      for (var key in criteria) {
+        var value = record.get(key);
+        if (value == null) return false;
+
+        var criteriaValue = criteria[key];
+        if (typeof value === "number") {
+          if (value !== parseInt(criteriaValue)) return false;
+        } else {
+          if (
+            String(value)
+              .toLowerCase()
+              .indexOf(String(criteriaValue).toLowerCase()) === -1
+          )
+            return false;
+        }
+      }
+
+      if (nameTerm) {
+        var fullName = (
+          record.get("fname") + record.get("lname")
+        ).toLowerCase();
+        if (fullName.indexOf(nameTerm) === -1) return false;
+      }
+
+      return true;
+    });
+
+    return filteredRecords.getRange();
   },
 
   onSearch: function (values) {
     var me = this;
+    var playerStore = Ext.getStore("playerstore");
+
+    if (!playerStore) {
+      console.error("Không tìm thấy store playerstore");
+      return;
+    }
+
+    if (!playerStore.isLoaded()) {
+      console.log("Store chưa load, đợi xong rồi mới search...");
+      playerStore.on(
+        "load",
+        function () {
+          me.onSearch(values); // Gọi lại chính nó
+        },
+        { single: true }
+      );
+      return;
+    }
+
+    // Xử lý tiêu chí tìm kiếm
     var criteria = {};
     ["id", "nat", "club", "pos", "foot", "rate", "version"].forEach(function (
       key
     ) {
       if (values[key]) {
-        criteria[key] = values[key].toLowerCase();
+        criteria[key] = String(values[key]).toLowerCase();
       }
     });
 
-    if (!criteria.id) {
-      delete criteria.id;
-    }
+    var nameTerm = values.name ? values.name.toLowerCase() : null;
+    var results = me.searchPlayersByCriteria(criteria, nameTerm);
 
-    console.log("Sending request to API...");
-
-    fetch("https://trungta-hust-dls24.vercel.app/search", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        nameTerm: values.name ? values.name.toLowerCase() : "",
-        criteria: criteria,
-      }),
-    })
-      .then(function (res) {
-        return res.json();
-      })
-      .then(function (data) {
-        me.setCurrentResults(data);
-        me.setCurrentPage(1);
-        me.updatePaging();
-        me.loadPage(1);
-      })
-      .catch(function (err) {
-        Ext.Msg.alert("Error", "Lỗi khi gọi API");
-        console.error(err);
-      });
+    me.setCurrentResults(results);
+    me.setCurrentPage(1);
+    me.updatePaging();
+    me.loadPage(1);
   },
-
   loadPage: function (page) {
     var vm = this.getViewModel();
     var start = (page - 1) * this.getItemsPerPage();
@@ -104,10 +141,7 @@ Ext.define("DLSStats.view.main.PlayerController", {
 
   showPlayerDetails: function (player) {
     var detailPanel = this.lookupReference("playerdetails");
-    if (detailPanel) {
-      detailPanel.updatePlayer(player);
-    } else {
-      console.warn("Không tìm thấy playerdetails");
-    }
+    if (detailPanel) detailPanel.updatePlayer(player);
+    else console.warn("Không tìm thấy playerdetails");
   },
 });

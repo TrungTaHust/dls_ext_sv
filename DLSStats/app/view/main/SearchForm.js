@@ -77,7 +77,7 @@ Ext.define("DLSStats.view.main.SearchForm", {
         //Nationality
         {
           xtype: "combo",
-          name: "nationality",
+          name: "nat",
           emptyText: "Nationality",
           store: { type: "nationsstore" },
           queryMode: "local",
@@ -103,7 +103,7 @@ Ext.define("DLSStats.view.main.SearchForm", {
         //Position
         {
           xtype: "combo",
-          name: "position",
+          name: "pos",
           emptyText: "Position",
           store: [
             "CF",
@@ -137,7 +137,7 @@ Ext.define("DLSStats.view.main.SearchForm", {
         //Rating
         {
           xtype: "textfield",
-          name: "rating",
+          name: "rate",
           emptyText: "Rating",
         },
       ],

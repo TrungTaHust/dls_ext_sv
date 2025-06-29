@@ -4,5 +4,9 @@ Ext.application({
     requires: [
         'DLSStats.*'
     ],
+    
+    stores: [
+        'PlayerStore'
+    ],
     mainView: 'DLSStats.view.main.Main'
 });
