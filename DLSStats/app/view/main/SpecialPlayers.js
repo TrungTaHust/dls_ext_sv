@@ -137,6 +137,9 @@ Ext.define('DLSStats.view.main.SpecialPlayers', {
                                 } else if (pos === 'champion') {
                                     color = 'blue';
                                 }
+                                else if (pos === 'team') {
+                                    color = 'green';
+                                }
                                 meta.style = 'color: ' + color + '; font-weight: bold; text-align: center';
                                 return value ? value.toUpperCase() : '';
                             }
