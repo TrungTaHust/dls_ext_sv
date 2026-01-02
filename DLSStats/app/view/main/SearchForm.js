@@ -63,10 +63,10 @@ Ext.define("DLSStats.view.main.SearchForm", {
           xtype: "combo",
           name: "version",
           emptyText: "Version",
-          store: ["20253", "20252", "20251", "20242", "20241", "20231"],
+          store: ["20261", "20253", "20252", "20251", "20242", "20241", "20231"],
           queryMode: "local",
           editable: false,
-          value: "20253",
+          value: "20261",
         },
         //Name
         {
@@ -77,7 +77,7 @@ Ext.define("DLSStats.view.main.SearchForm", {
         //Nationality
         {
           xtype: "combo",
-          name: "nationality",
+          name: "nat",
           emptyText: "Nationality",
           store: { type: "nationsstore" },
           queryMode: "local",
@@ -103,7 +103,7 @@ Ext.define("DLSStats.view.main.SearchForm", {
         //Position
         {
           xtype: "combo",
-          name: "position",
+          name: "pos",
           emptyText: "Position",
           store: [
             "CF",
@@ -137,7 +137,7 @@ Ext.define("DLSStats.view.main.SearchForm", {
         //Rating
         {
           xtype: "textfield",
-          name: "rating",
+          name: "rate",
           emptyText: "Rating",
         },
       ],

@@ -18,19 +18,18 @@ Ext.define("DLSStats.view.main.PlayerDevelopment", {
     backgroundRepeat: "no-repeat",
   },
 
-requires: [
-  "Ext.chart.CartesianChart",
-  "Ext.chart.axis.Category",
-  "Ext.chart.axis.Numeric",
-  "Ext.chart.series.Line",
-  "Ext.chart.legend.Legend",
-  "Ext.chart.interactions.ItemHighlight",
-  "Ext.data.Store"
-],
-
+  requires: [
+    "Ext.chart.CartesianChart",
+    "Ext.chart.axis.Category",
+    "Ext.chart.axis.Numeric",
+    "Ext.chart.series.Line",
+    "Ext.chart.legend.Legend",
+    "Ext.chart.interactions.ItemHighlight",
+    "Ext.data.Store",
+  ],
 
   controller: {
-    async onLoadPlayerData() {
+    onLoadPlayerData() {
       const view = this.getView();
       const playerIdField = view.lookupReference("playerIdField");
       const playerId = playerIdField.getValue();
@@ -41,65 +40,64 @@ requires: [
         return;
       }
 
-      try {
-        const response = await fetch("https://trungta-hust-dls24.vercel.app/search", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            criteria: {
-              id: playerId,
-            },
-          }),
-        });
-
-        const data = await response.json();
-
-        if (!Array.isArray(data) || data.length === 0) {
-          Ext.Msg.alert("Not found!", "This ID has no data! Please try again!");
-          return;
-        }
-
-        const filteredData = data
-          .filter((item) => item.version && item.rate !== undefined)
-          .map((item) => {
-            return {
-              uid: `${item.id}_${item.version}`,
-              version: String(item.version),
-              rate: item.rate,
-              spe: item.spe,
-              acc: item.acc,
-              sta: item.sta,
-              str: item.str,
-              con: item.con,
-              pas: item.pas,
-              sho: item.sho,
-              tac: item.tac,
-            };
-          })
-          .sort((a, b) => a.version.localeCompare(b.version));
-
-        const newStore = Ext.create("Ext.data.Store", {
-          fields: [
-            "uid",
-            "version",
-            "rate",
-            "spe",
-            "acc",
-            "sta",
-            "str",
-            "con",
-            "pas",
-            "sho",
-            "tac",
-          ],
-          idProperty: "uid",
-          data: filteredData,
-        });
-
-        chart.setStore(newStore);
-      } catch (error) {
-        Ext.Msg.alert("Error", "Server down. Please try again!");
+      // Lấy store playerstore đã load sẵn
+      const playerStore = Ext.getStore("playerstore");
+      if (!playerStore) {
+        Ext.Msg.alert("Error", "Player store not found!");
+        return;
       }
+
+      // Lọc tất cả bản ghi có id = playerId
+      // Lưu ý: id trong dữ liệu là số, nên convert playerId về số nếu cần
+      const filteredData = playerStore
+        .queryBy((record) => {
+          return String(record.get("id")) === String(playerId);
+        })
+        .getRange();
+
+      if (filteredData.length === 0) {
+        Ext.Msg.alert("Not found!", "This ID has no data! Please try again!");
+        return;
+      }
+
+      // Map dữ liệu cho chart
+      const chartData = filteredData
+        .filter((item) => item.get("version") && item.get("rate") !== undefined)
+        .map((item) => ({
+          uid: `${item.get("id")}_${item.get("version")}`,
+          version: String(item.get("version")),
+          rate: item.get("rate"),
+          spe: item.get("spe"),
+          acc: item.get("acc"),
+          sta: item.get("sta"),
+          str: item.get("str"),
+          con: item.get("con"),
+          pas: item.get("pas"),
+          sho: item.get("sho"),
+          tac: item.get("tac"),
+        }))
+        .sort((a, b) => a.version.localeCompare(b.version));
+
+      // Tạo store mới cho chart
+      const newStore = Ext.create("Ext.data.Store", {
+        fields: [
+          "uid",
+          "version",
+          "rate",
+          "spe",
+          "acc",
+          "sta",
+          "str",
+          "con",
+          "pas",
+          "sho",
+          "tac",
+        ],
+        idProperty: "uid",
+        data: chartData,
+      });
+
+      chart.setStore(newStore);
     },
   },
 
