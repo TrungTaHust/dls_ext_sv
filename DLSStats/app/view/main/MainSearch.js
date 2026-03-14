@@ -25,6 +25,7 @@ Ext.define("DLSStats.view.main.MainSearch", {
     data: {
       hasPrev: false,
       hasNext: false,
+      selectedPlayer: null,
     },
     stores: {
       players: {

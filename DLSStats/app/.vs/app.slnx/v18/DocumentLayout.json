@@ -1,0 +1,207 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\PlayerDetails.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\main\\PlayerDetails.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\SearchForm.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\main\\SearchForm.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\MainSearch.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\main\\MainSearch.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\Main.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\main\\Main.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\TopPlayers.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\main\\TopPlayers.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\SpecialPlayers.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\main\\SpecialPlayers.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\Temp.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\main\\Temp.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\PlayerDevelopment.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\main\\PlayerDevelopment.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\PlayerGrid.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\main\\PlayerGrid.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\PlayerController.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\main\\PlayerController.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\Compare.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:view\\main\\Compare.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TopPlayers.js",
+              "DocumentMoniker": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\TopPlayers.js",
+              "RelativeDocumentMoniker": "view\\main\\TopPlayers.js",
+              "ToolTip": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\TopPlayers.js",
+              "RelativeToolTip": "view\\main\\TopPlayers.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-27T16:21:45.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SpecialPlayers.js",
+              "DocumentMoniker": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\SpecialPlayers.js",
+              "RelativeDocumentMoniker": "view\\main\\SpecialPlayers.js",
+              "ToolTip": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\SpecialPlayers.js",
+              "RelativeToolTip": "view\\main\\SpecialPlayers.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-27T16:21:44.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Temp.js",
+              "DocumentMoniker": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\Temp.js",
+              "RelativeDocumentMoniker": "view\\main\\Temp.js",
+              "ToolTip": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\Temp.js",
+              "RelativeToolTip": "view\\main\\Temp.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-27T16:21:42.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SearchForm.js",
+              "DocumentMoniker": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\SearchForm.js",
+              "RelativeDocumentMoniker": "view\\main\\SearchForm.js",
+              "ToolTip": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\SearchForm.js",
+              "RelativeToolTip": "view\\main\\SearchForm.js",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAEAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-27T16:21:31.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlayerDevelopment.js",
+              "DocumentMoniker": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\PlayerDevelopment.js",
+              "RelativeDocumentMoniker": "view\\main\\PlayerDevelopment.js",
+              "ToolTip": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\PlayerDevelopment.js",
+              "RelativeToolTip": "view\\main\\PlayerDevelopment.js",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-27T16:21:22.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PlayerGrid.js",
+              "DocumentMoniker": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\PlayerGrid.js",
+              "RelativeDocumentMoniker": "view\\main\\PlayerGrid.js",
+              "ToolTip": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\PlayerGrid.js",
+              "RelativeToolTip": "view\\main\\PlayerGrid.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-27T16:21:21.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerDetails.js",
+              "DocumentMoniker": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\PlayerDetails.js",
+              "RelativeDocumentMoniker": "view\\main\\PlayerDetails.js",
+              "ToolTip": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\PlayerDetails.js",
+              "RelativeToolTip": "view\\main\\PlayerDetails.js",
+              "ViewState": "AgIAAN0AAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-27T16:21:15.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PlayerController.js",
+              "DocumentMoniker": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\PlayerController.js",
+              "RelativeDocumentMoniker": "view\\main\\PlayerController.js",
+              "ToolTip": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\PlayerController.js",
+              "RelativeToolTip": "view\\main\\PlayerController.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-27T16:21:09.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainSearch.js",
+              "DocumentMoniker": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\MainSearch.js",
+              "RelativeDocumentMoniker": "view\\main\\MainSearch.js",
+              "ToolTip": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\MainSearch.js",
+              "RelativeToolTip": "view\\main\\MainSearch.js",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-27T16:21:01.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Main.js",
+              "DocumentMoniker": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\Main.js",
+              "RelativeDocumentMoniker": "view\\main\\Main.js",
+              "ToolTip": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\Main.js",
+              "RelativeToolTip": "view\\main\\Main.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-27T16:20:42.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Compare.js",
+              "DocumentMoniker": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\Compare.js",
+              "RelativeDocumentMoniker": "view\\main\\Compare.js",
+              "ToolTip": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\Compare.js",
+              "RelativeToolTip": "view\\main\\Compare.js",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-27T16:20:23.715Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
