@@ -17,14 +17,25 @@ Ext.define("DLSStats.view.main.PlayerDetails", {
     {
       xtype: "container",
       reference: "headerContainer",
-      style: {
-        backgroundColor: "#f0f0f0",
-      },
+      style: { backgroundColor: "#f0f0f0" },
+      layout: { type: "hbox", align: "middle" },
       items: [
         {
           xtype: "component",
           reference: "name",
+          flex: 1,
           html: '<h2 style="text-align:center;">No player selected</h2>',
+        },
+        {
+          xtype: "button",
+          iconCls: "x-fa fa-star",
+          tooltip: "Add to Favorites",
+          margin: "0 8 0 0",
+          hidden: true,
+          reference: "favBtn",
+          handler: function (btn) {
+            btn.up("dls-playerdetails").onAddToFavorites();
+          },
         },
       ],
     },
@@ -59,6 +70,7 @@ Ext.define("DLSStats.view.main.PlayerDetails", {
       items: [
         {
           items: [
+            { reference: "type", html: "", hidden: true },
             { reference: "id", html: "ID: " },
             { reference: "prc", html: "Price: " },
             { reference: "nat", html: "Nationality: " },
@@ -155,11 +167,25 @@ Ext.define("DLSStats.view.main.PlayerDetails", {
     },
   ],
 
+  onAddToFavorites: function () {
+    if (!this._currentPlayer) return;
+    var favTab = Ext.ComponentQuery.query("dls-favorites")[0];
+    if (favTab) {
+      favTab.getController().addFavorite(this._currentPlayer);
+    }
+  },
+
   updatePlayer: function (player) {
     if (!player || !player.lname) {
       this.lookupReference("name").setHtml("<h2>No player selected</h2>");
+      var favBtn = this.lookupReference("favBtn");
+      if (favBtn) favBtn.setVisible(false);
       return;
     }
+
+    this._currentPlayer = player;
+    var favBtn = this.lookupReference("favBtn");
+    if (favBtn) favBtn.setVisible(true);
 
     function getStatColor(val) {
       val = parseInt(val, 10);
@@ -209,6 +235,15 @@ Ext.define("DLSStats.view.main.PlayerDetails", {
     );
 
     // Basic Info
+    var typeCmp = this.lookupReference("type");
+    if (typeCmp) {
+      if (player.type) {
+        typeCmp.setHtml("<b>Type: " + player.type + "</b>");
+        typeCmp.setVisible(true);
+      } else {
+        typeCmp.setVisible(false);
+      }
+    }
     set("prc", player.prc, "Price: ");
     set("nat", player.nat, "Nationality: ");
     set("club", player.club, "Club: ");

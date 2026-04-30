@@ -15,17 +15,16 @@ Ext.define("DLSStats.view.main.MainSearch", {
     "DLSStats.view.main.SearchForm",
     "DLSStats.view.main.PlayerGrid",
     "DLSStats.view.main.PlayerDetails",
-    "DLSStats.view.main.PlayerController",
+    "DLSStats.view.main.MainSearchController",
   ],
 
-  controller: "player",
+  controller: "mainsearch",
   referenceHolder: true,
 
   viewModel: {
     data: {
       hasPrev: false,
       hasNext: false,
-      selectedPlayer: null,
     },
     stores: {
       players: {
