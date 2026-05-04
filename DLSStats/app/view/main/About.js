@@ -52,7 +52,12 @@ Ext.define("DLSStats.view.main.About", {
 
                 <div style="text-align:center; color:#555; font-size:13px;">
                     This website is free for everyone to use.<br/>
-                    Any support is warmly appreciated! 🙏
+                    Any support is warmly appreciated! 🙏<br/><br/>
+                    <a href="https://paypal.me/HIEUTA4970" target="_blank"
+                       style="display:inline-block; background:#0070ba; color:#fff; text-decoration:none;
+                              padding:8px 20px; border-radius:6px; font-weight:bold; font-size:13px;">
+                        ☕ Support via PayPal
+                    </a>
                 </div>
             </div>
             `,
