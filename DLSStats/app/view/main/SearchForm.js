@@ -63,16 +63,22 @@ Ext.define("DLSStats.view.main.SearchForm", {
           xtype: "combo",
           name: "version",
           emptyText: "Version",
-          store: ["20261", "20253", "20252", "20251", "20242", "20241", "20231"],
+          store: { type: "versionstore" },
+          displayField: "version",
+          valueField: "version",
           queryMode: "local",
           editable: false,
-          value: "20261",
+          value: "20262",
         },
         //Name
         {
           xtype: "textfield",
           name: "name",
           emptyText: "Name",
+          enableKeyEvents: true,
+          listeners: {
+            keyup: { fn: "onTextFieldChange", buffer: 400 },
+          },
         },
         //Nationality
         {
@@ -86,6 +92,11 @@ Ext.define("DLSStats.view.main.SearchForm", {
           typeAhead: true,
           minChars: 1,
           forceSelection: false,
+          enableKeyEvents: true,
+          listeners: {
+            keyup: { fn: "onTextFieldChange", buffer: 400 },
+            select: "onComboSelect",
+          },
         },
         //Club
         {
@@ -99,6 +110,11 @@ Ext.define("DLSStats.view.main.SearchForm", {
           typeAhead: true,
           minChars: 1,
           forceSelection: false,
+          enableKeyEvents: true,
+          listeners: {
+            keyup: { fn: "onTextFieldChange", buffer: 400 },
+            select: "onComboSelect",
+          },
         },
         //Position
         {

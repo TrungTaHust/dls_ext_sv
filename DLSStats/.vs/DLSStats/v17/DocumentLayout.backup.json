@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\SearchForm.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\view\\main\\SearchForm.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\MainSearch.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\view\\main\\MainSearch.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\Main.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\view\\main\\Main.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SearchForm.js",
+              "DocumentMoniker": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\SearchForm.js",
+              "RelativeDocumentMoniker": "app\\view\\main\\SearchForm.js",
+              "ToolTip": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\SearchForm.js",
+              "RelativeToolTip": "app\\view\\main\\SearchForm.js",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-01T16:45:35.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainSearch.js",
+              "DocumentMoniker": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\MainSearch.js",
+              "RelativeDocumentMoniker": "app\\view\\main\\MainSearch.js",
+              "ToolTip": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\MainSearch.js",
+              "RelativeToolTip": "app\\view\\main\\MainSearch.js",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-01T16:45:21.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Main.js",
+              "DocumentMoniker": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\Main.js",
+              "RelativeDocumentMoniker": "app\\view\\main\\Main.js",
+              "ToolTip": "C:\\Users\\123\\Desktop\\dls_ext_sv\\DLSStats\\app\\view\\main\\Main.js",
+              "RelativeToolTip": "app\\view\\main\\Main.js",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-01T16:45:09.481Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
