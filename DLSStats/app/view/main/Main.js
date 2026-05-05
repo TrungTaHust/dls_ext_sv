@@ -10,6 +10,7 @@ Ext.define("DLSStats.view.main.Main", {
     "DLSStats.view.main.BestXI",
     "DLSStats.view.main.TeamShowcase",
     "DLSStats.view.main.SpecialPlayers",
+    "DLSStats.view.main.Upgrade",
     "DLSStats.view.main.About",
     "DLSStats.view.main.FAQ",
   ],
@@ -47,6 +48,11 @@ Ext.define("DLSStats.view.main.Main", {
           title: "Special Players",
           xtype: "dls-specialplayers",
           reference: "specialplayers",
+        },
+        {
+          title: "Upgrade Sim",
+          xtype: "dls-upgrade",
+          reference: "upgrade",
         },
         {
           title: "FAQ",

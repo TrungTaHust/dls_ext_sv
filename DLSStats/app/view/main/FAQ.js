@@ -172,11 +172,34 @@ Ext.define("DLSStats.view.main.FAQ", {
                 </div>
 
                 <!-- Q11 -->
-                <div>
+                <div style="margin-bottom:18px;">
                     <div style="font-weight:bold; color:#e67e22; margin-bottom:4px;">11. Why can't I find a player?</div>
                     <div style="color:#444;">
                         Make sure you're searching in the correct <b>version</b>. A player may exist in one version but not another.
                         Also check that the <b>ID</b> is correct (max 4 digits). If searching by name, try using just the last name.
+                    </div>
+                </div>
+
+                <!-- Q12 -->
+                <div>
+                    <div style="font-weight:bold; color:#e67e22; margin-bottom:4px;">12. How does Upgrade Sim work?</div>
+                    <div style="color:#444;">
+                        The <b>Upgrade Sim</b> tab lets you simulate upgrading a player's stats before committing in-game.<br/><br/>
+                        <b>Loading a player:</b><br/>
+                        • Click any player in your <b>Favorites</b> list on the left, <b>or</b><br/>
+                        • Enter a player's <b>ID</b> + select a <b>version</b> on the right, then click <b>Load</b>.<br/><br/>
+                        <b>Upgrading stats:</b><br/>
+                        • Use the <b>▲ / ▼</b> arrows next to each stat to increase or decrease it.<br/>
+                        • Stats cannot go below their original value or above <b>100</b>.<br/>
+                        • Each player has a <b>max upgrade budget</b> of 87–92 points (varies by player).<br/>
+                        • Some stats cost more points per level — <b>CON = ×2</b>, <b>STR = ×1.5</b>, others = ×1.<br/><br/>
+                        <b>OVR circle:</b><br/>
+                        • The ring around the OVR number fills clockwise from 12 o'clock as you spend points.<br/>
+                        • When the budget is fully used, the ring completes and OVR shows <b>base + 10</b>.<br/><br/>
+                        Click <b>Reset</b> to restore all stats to their original values.<br/><br/>
+                        <span style="background:#fff3cd;border:1px solid #ffc107;border-radius:4px;padding:3px 8px;font-size:12px;color:#856404;">
+                            ⚠️ This is a <b>simulation only</b>. Actual in-game stats after upgrading may differ by ±1–2 points per attribute.
+                        </span>
                     </div>
                 </div>
 
