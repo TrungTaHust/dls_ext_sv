@@ -42248,18 +42248,18 @@
         "foot": "R",
         "rate": 68,
         "hgt": 175,
-        "spe": 69,
+        "spe": 72,
         "acc": 75,
-        "sta": 65,
+        "sta": 62,
         "str": 53,
         "con": 74,
         "pas": 68,
-        "sho": 60,
-        "tac": 27,
+        "sho": 62,
+        "tac": 28,
         "prc": 590,
         "id": 7555,
         "version": 20262,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Oliver",
@@ -60409,7 +60409,7 @@
         "prc": 455,
         "id": 8757,
         "version": 20262,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Manu",
@@ -66082,7 +66082,7 @@
         "pas": 75,
         "sho": 51,
         "tac": 67,
-        "prc": 380,
+        "prc": 625,
         "id": 5589,
         "version": 20262,
         "status": 1
@@ -78060,7 +78060,7 @@
         "lname": "Bola",
         "nat": "England",
         "club": "Watford",
-        "pos": "Lb",
+        "pos": "LB",
         "foot": "L",
         "rate": 64,
         "hgt": 185,
@@ -80473,7 +80473,7 @@
         "prc": 300,
         "id": 6006,
         "version": 20262,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Kevin",
@@ -118116,5 +118116,27 @@
         "id": 5828,
         "version": 20262,
         "status": 0
+    },
+    {
+        "fname": "Yassin",
+        "lname": "Oukili",
+        "nat": "Morocco",
+        "club": "Unlicensed",
+        "pos": "CM",
+        "foot": "R",
+        "rate": 64,
+        "hgt": 195,
+        "spe": 64,
+        "acc": 68,
+        "sta": 56,
+        "str": 58,
+        "con": 61,
+        "pas": 54,
+        "sho": 59,
+        "tac": 62,
+        "prc": 310,
+        "id": 1000,
+        "version": 20262,
+        "status": 1
     }
 ]
