@@ -1,5 +1,6 @@
 import json
 import copy
+import re
 import tkinter as tk
 from tkinter import ttk, messagebox
 import os
@@ -964,6 +965,672 @@ class PlayerIDTab(ttk.Frame):
     messagebox.showinfo("Saved", "Saved to player_id.json")
 
 
+# ── helpers shared by Import & OCR ───────────────────────────────────────────
+PREVIEW_COLS = ["fname", "lname", "nat", "club", "pos", "foot", "rate", "hgt",
+                "spe", "acc", "sta", "str", "con", "pas", "sho", "tac", "prc",
+                "id", "version", "status"]
+STAT_COLS    = {"rate", "hgt", "spe", "acc", "sta", "str", "con", "pas", "sho", "tac"}
+
+def _validate_row(row):
+  """Return list of error strings, empty = valid."""
+  errs = []
+  for col in STAT_COLS:
+    v = row.get(col)
+    if v == "" or v is None:
+      continue
+    try:
+      if int(v) > 100:
+        errs.append(f"{col} > 100 ({v})")
+    except (ValueError, TypeError):
+      errs.append(f"{col} not int ({v})")
+  if str(row.get("status", "1")) not in ("0", "1"):
+    errs.append(f"status invalid ({row.get('status')})")
+  return errs
+
+def _build_preview_tree(parent, rows):
+  """Build a Treeview showing rows with validation colouring. Returns (frame, tree)."""
+  cols = [c for c in PREVIEW_COLS if c != "prc"] + ["prc", "errors"]
+  frame = ttk.Frame(parent)
+  tree = ttk.Treeview(frame, columns=cols, show="headings", selectmode="extended")
+  for c in cols:
+    w = 90 if c in ("fname", "lname", "nat", "club", "errors") else 55
+    tree.heading(c, text=c)
+    tree.column(c, width=w, minwidth=36, anchor="center")
+  vsb = ttk.Scrollbar(frame, orient="vertical",   command=tree.yview)
+  hsb = ttk.Scrollbar(frame, orient="horizontal", command=tree.xview)
+  tree.configure(yscrollcommand=vsb.set, xscrollcommand=hsb.set)
+  tree.grid(row=0, column=0, sticky="nsew")
+  vsb.grid(row=0, column=1, sticky="ns")
+  hsb.grid(row=1, column=0, sticky="ew")
+  frame.rowconfigure(0, weight=1)
+  frame.columnconfigure(0, weight=1)
+  tree.tag_configure("ok",    background="#e8f5e9")
+  tree.tag_configure("warn",  background="#fff9c4")
+  tree.tag_configure("error", background="#ffebee")
+  _populate_preview_tree(tree, rows)
+  return frame, tree
+
+def _populate_preview_tree(tree, rows):
+  tree.delete(*tree.get_children())
+  cols = [c for c in PREVIEW_COLS if c != "prc"] + ["prc", "errors"]
+  for idx, row in enumerate(rows):
+    errs = _validate_row(row)
+    tag  = "error" if errs else "ok"
+    vals = []
+    for c in cols:
+      if c == "prc":    vals.append(get_price(row))
+      elif c == "errors": vals.append("; ".join(errs) if errs else "")
+      else:          vals.append(row.get(c, ""))
+    tree.insert("", "end", iid=str(idx), values=vals, tags=(tag,))
+
+def _commit_rows(rows, ver_tab, pid_tab):
+  """Add rows to the given VersionTab, auto-assigning id from pid_tab."""
+  added = 0
+  for row in rows:
+    new_row = dict(row)
+    new_row["prc"] = get_price(new_row)
+    new_row["version"] = ver_tab.ver
+    fname = new_row.get("fname", "").strip()
+    lname = new_row.get("lname", "").strip()
+    pid = pid_tab.lookup_id(fname, lname) if pid_tab else None
+    if pid is None and pid_tab:
+      pid = pid_tab.add_player(fname, lname)
+    new_row["id"] = pid or 0
+    ver_tab.data.append(new_row)
+    added += 1
+  if ver_tab._tbl:
+    ver_tab._tbl.refresh()
+  return added
+
+
+# ── ImportTab ─────────────────────────────────────────────────────────────────
+class ImportTab(ttk.Frame):
+  """Browse a JSON file, preview rows, validate, then add to a chosen version."""
+
+  def __init__(self, parent, data_tab, pid_tab):
+    super().__init__(parent)
+    self._data_tab = data_tab
+    self._pid_tab  = pid_tab
+    self._rows     = []
+    self._build()
+
+  def _build(self):
+    # ── top bar ──────────────────────────────────────────────────────────────
+    top = ttk.Frame(self)
+    top.pack(fill="x", padx=6, pady=6)
+
+    ttk.Button(top, text="Browse JSON...", command=self._browse).pack(side="left", padx=4)
+    self._file_lbl = ttk.Label(top, text="No file selected", foreground="#888888")
+    self._file_lbl.pack(side="left", padx=6)
+
+    ttk.Label(top, text="Target version:").pack(side="left", padx=(20, 4))
+    self._ver_var = tk.StringVar()
+    self._ver_cb  = ttk.Combobox(top, textvariable=self._ver_var, width=10, state="readonly")
+    self._ver_cb.pack(side="left")
+    self._refresh_versions()
+
+    ttk.Button(top, text="Add selected",  command=self._add_selected).pack(side="right", padx=4)
+    ttk.Button(top, text="Add all valid", command=self._add_all_valid).pack(side="right", padx=4)
+
+    # ── status ───────────────────────────────────────────────────────────────
+    self._status_lbl = ttk.Label(self, text="")
+    self._status_lbl.pack(fill="x", padx=8)
+
+    # ── preview area ─────────────────────────────────────────────────────────
+    self._preview_frame = ttk.Frame(self)
+    self._preview_frame.pack(fill="both", expand=True, padx=4, pady=4)
+    self._tree = None
+
+  def _refresh_versions(self):
+    vers = [lbl for lbl in self._data_tab._ver_tabs]
+    self._ver_cb["values"] = vers
+    if vers:
+      self._ver_var.set(vers[-1])
+
+  def _browse(self):
+    from tkinter import filedialog
+    path = filedialog.askopenfilename(
+      title="Select JSON file to import",
+      filetypes=[("JSON files", "*.json"), ("All files", "*.*")]
+    )
+    if not path:
+      return
+    try:
+      with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+      if not isinstance(data, list):
+        messagebox.showerror("Invalid", "File must contain a JSON array.")
+        return
+      self._rows = data
+      self._file_lbl.config(text=os.path.basename(path), foreground="#000000")
+      self._refresh_versions()
+      self._show_preview()
+    except Exception as e:
+      messagebox.showerror("Error", str(e))
+
+  def _show_preview(self):
+    for w in self._preview_frame.winfo_children():
+      w.destroy()
+    frame, self._tree = _build_preview_tree(self._preview_frame, self._rows)
+    frame.pack(fill="both", expand=True)
+    ok    = sum(1 for r in self._rows if not _validate_row(r))
+    total = len(self._rows)
+    self._status_lbl.config(
+      text=f"{total} rows loaded  |  {ok} valid  |  {total-ok} with errors  "
+           f"(green=ok, yellow=warn, red=error)  —  Ctrl+click to multi-select"
+    )
+
+  def _selected_rows(self):
+    if not self._tree:
+      return []
+    return [self._rows[int(iid)] for iid in self._tree.selection()]
+
+  def _add_selected(self):
+    rows = self._selected_rows()
+    if not rows:
+      messagebox.showwarning("Nothing selected", "Select rows in the preview table first.")
+      return
+    self._do_add(rows)
+
+  def _add_all_valid(self):
+    rows = [r for r in self._rows if not _validate_row(r)]
+    if not rows:
+      messagebox.showwarning("No valid rows", "No valid rows to add.")
+      return
+    self._do_add(rows)
+
+  def _do_add(self, rows):
+    label = self._ver_var.get()
+    vt = self._data_tab._ver_tabs.get(label)
+    if not vt:
+      messagebox.showerror("No version", "Select a target version first.")
+      return
+    vt.ensure_loaded()
+    n = _commit_rows(rows, vt, self._pid_tab)
+    messagebox.showinfo("Done", f"Added {n} rows to version {label}.")
+
+
+# ── OCR helpers ───────────────────────────────────────────────────────────────
+TESSERACT_CMD = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+SCREENSHOT_MARKET = os.path.join(
+  os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+  "resources", "data", "screenshot", "market"
+)
+
+def _get_tesseract_cmd():
+  """Return tesseract path — hardcoded first, then PATH fallback."""
+  import shutil
+  if os.path.isfile(TESSERACT_CMD):
+    return TESSERACT_CMD
+  found = shutil.which("tesseract")
+  return found or TESSERACT_CMD
+
+def _ocr_available():
+  import shutil
+  if os.path.isfile(TESSERACT_CMD):
+    tess_ok = True
+  else:
+    tess_ok = bool(shutil.which("tesseract"))
+  if not tess_ok:
+    return False
+  try:
+    import pytesseract  # noqa: F401
+    from PIL import Image  # noqa: F401
+    return True
+  except ImportError:
+    return False
+
+def _parse_market_image(img_path):
+  """
+  Parse a DLS market screenshot.
+  Grid: 3x3 cells, each 346x213px.
+  Row 1 may be banners (Top Picks) — skip if so.
+  """
+  import pytesseract
+  from PIL import Image, ImageEnhance, ImageFilter
+  pytesseract.pytesseract.tesseract_cmd = _get_tesseract_cmd()
+
+  COL_STARTS = [60, 406, 752]
+  ROW_STARTS = [170, 373, 576]   # shifted up: row1 -10, row2 -20, row3 -30
+  CELL_W, CELL_H = 346, 213
+
+  SKIP_WORDS = {
+    'SPE','ACC','STA','STR','CON','PAS','SHO','TAC','GKR','GKH',
+    'LEFT','RIGHT','LAST','CHANCE','LIVE','TOP','PICKS','TRANSFERS',
+    'SCOUTS','AGENTS','MANAGE','PLAYERS','LOCKED','CHANCE',
+  }
+
+  def ocr_words(img, x0, y0):
+    cell = img.crop((x0, y0, x0 + CELL_W, y0 + CELL_H))
+    cell = ImageEnhance.Contrast(cell).enhance(2.5)
+    cell = cell.filter(ImageFilter.SHARPEN)
+    data = pytesseract.image_to_data(
+      cell, config='--psm 6', output_type=pytesseract.Output.DICT)
+    words = []
+    for i, t in enumerate(data['text']):
+      t = t.strip()
+      if t and int(data['conf'][i]) > 10:
+        words.append({
+          'text': t,
+          'x': data['left'][i],
+          'y': data['top'][i],
+          'conf': int(data['conf'][i]),
+        })
+    return words
+
+  def clean_num(s):
+    """Extract integer from noisy OCR string like '(62', '67)', '72|'."""
+    m = re.search(r'\d{2,3}', s)
+    return int(m.group()) if m else None
+
+  def is_banner(words):
+    text = ' '.join(w['text'] for w in words).upper()
+    if any(k in text for k in ('TOP PICKS','LIVE TRANSFERS','LOCKED')):
+      return True
+    nums = [clean_num(w['text']) for w in words]
+    stat_nums = [n for n in nums if n and 10 <= n <= 100]
+    return len(stat_nums) < 3
+
+  def parse_cell(words):
+    if not words or is_banner(words):
+      return None
+
+    # Extract all numbers with position
+    num_words = []
+    for w in words:
+      n = clean_num(w['text'])
+      if n is not None:
+        num_words.append({'val': n, 'x': w['x'], 'y': w['y']})
+
+    # Stats: values 10-100, sorted by y then x
+    stat_candidates = [n for n in num_words if 10 <= n['val'] <= 100]
+    stat_candidates.sort(key=lambda n: (n['y'], n['x']))
+    if len(stat_candidates) < 4:   # lowered from 6 — SPE row often hidden by avatar
+      return None
+    vals = [n['val'] for n in stat_candidates[:8]]
+    while len(vals) < 8:
+      vals.append(0)
+    # If only 4 stats found, they are likely CON PAS SHO TAC (bottom row)
+    # SPE ACC STA STR (top row) hidden by player avatar
+    if len(stat_candidates) < 5:
+      spe = acc = sta = str_ = 0
+      con, pas, sho, tac = vals[:4]
+    else:
+      spe, acc, sta, str_, con, pas, sho, tac = vals[:8]
+
+    # Rate: 50-99 in top half of cell
+    rate_cands = [n for n in num_words
+                  if 50 <= n['val'] <= 99 and n['y'] < CELL_H // 2]
+    rate = rate_cands[0]['val'] if rate_cands else 0
+
+    # Height: 150-220
+    hgt = 0
+    for w in words:
+      m = re.search(r'\b(1[5-9]\d|2[0-2]\d)\b', w['text'])
+      if m:
+        hgt = int(m.group(1))
+        break
+
+    # Foot
+    full = ' '.join(w['text'] for w in words)
+    foot = 'L' if re.search(r'\bLeft\b', full, re.IGNORECASE) else 'R'
+
+    # Price: number before @ sign
+    prc = 0
+    for i, w in enumerate(words):
+      combined = w['text']
+      if i + 1 < len(words):
+        combined = w['text'] + words[i+1]['text']
+      m = re.search(r'([\d,]{2,})\s*@', combined)
+      if m:
+        try:
+          prc = int(m.group(1).replace(',', ''))
+          break
+        except ValueError:
+          pass
+
+    # Name: alphabetic words in bottom 40% of cell, not stat labels
+    name_area_y = CELL_H * 0.6
+    name_cands = []
+    for w in words:
+      t = re.sub(r'[^A-Za-z\-\']', '', w['text'])
+      if (len(t) >= 2
+          and t.upper() not in SKIP_WORDS
+          and w['y'] >= name_area_y):
+        name_cands.append({'text': t, 'x': w['x'], 'y': w['y']})
+
+    # Sort by x to get left→right order
+    name_cands.sort(key=lambda w: w['x'])
+    fname, lname = '', ''
+    if len(name_cands) >= 2:
+      fname = name_cands[0]['text']
+      lname = name_cands[1]['text']
+    elif len(name_cands) == 1:
+      fname = name_cands[0]['text']
+
+    return {
+      'fname': fname, 'lname': lname,
+      'nat': '', 'club': '', 'pos': '',
+      'foot': foot, 'rate': rate, 'hgt': hgt,
+      'spe': spe, 'acc': acc, 'sta': sta, 'str': str_,
+      'con': con, 'pas': pas, 'sho': sho, 'tac': tac,
+      'prc': prc, 'status': 1,
+    }
+
+  img = Image.open(img_path).convert("RGB")
+
+  # Detect banner: check if row 1 cell 0 is a banner
+  words_r0 = ocr_words(img, COL_STARTS[0], ROW_STARTS[0])
+  start_row = 1 if is_banner(words_r0) else 0
+
+  players = []
+  for ri in range(start_row, 3):
+    for ci in range(3):
+      words = ocr_words(img, COL_STARTS[ci], ROW_STARTS[ri])
+      p = parse_cell(words)
+      if p:
+        p['_grid'] = f"r{ri}c{ci}"
+        p['_raw']  = ' | '.join(w['text'] for w in words[:20])
+        players.append(p)
+
+  return players, start_row
+
+
+# ── OCRTab ────────────────────────────────────────────────────────────────────
+class OCRTab(ttk.Frame):
+  """OCR market screenshots → extract player cards → preview → add to version."""
+
+  def __init__(self, parent, data_tab, pid_tab):
+    super().__init__(parent)
+    self._data_tab = data_tab
+    self._pid_tab  = pid_tab
+    self._rows     = []
+    self._img_path = None
+    self._build()
+
+  def _build(self):
+    # ── top bar ──────────────────────────────────────────────────────────────
+    top = ttk.Frame(self)
+    top.pack(fill="x", padx=6, pady=6)
+
+    ttk.Button(top, text="Browse image...", command=self._browse).pack(side="left", padx=4)
+    ttk.Button(top, text="Open market folder", command=self._open_folder).pack(side="left", padx=4)
+    self._file_lbl = ttk.Label(top, text="No image selected", foreground="#888888")
+    self._file_lbl.pack(side="left", padx=6)
+
+    ttk.Label(top, text="Target version:").pack(side="left", padx=(20, 4))
+    self._ver_var = tk.StringVar()
+    self._ver_cb  = ttk.Combobox(top, textvariable=self._ver_var, width=10, state="readonly")
+    self._ver_cb.pack(side="left")
+    self._refresh_versions()
+
+    ttk.Button(top, text="Run OCR", command=self._run_ocr,
+               style="Accent.TButton").pack(side="left", padx=12)
+
+    ttk.Button(top, text="Add selected",  command=self._add_selected).pack(side="right", padx=4)
+    ttk.Button(top, text="Add all valid", command=self._add_all_valid).pack(side="right", padx=4)
+
+    # ── image thumbnail + status ──────────────────────────────────────────────
+    mid = ttk.Frame(self)
+    mid.pack(fill="x", padx=6)
+    self._thumb_lbl  = ttk.Label(mid)
+    self._thumb_lbl.pack(side="left", padx=4, pady=4)
+    self._status_lbl = ttk.Label(mid, text="", wraplength=900, justify="left")
+    self._status_lbl.pack(side="left", padx=8, fill="x", expand=True)
+
+    # ── grid cell preview (3x3 thumbnails shown after OCR) ───────────────────
+    self._grid_frame = ttk.LabelFrame(self, text="Cell preview (3×3 grid)")
+    self._grid_frame.pack(fill="x", padx=6, pady=(0, 4))
+    self._cell_labels = []   # list of ttk.Label, populated in _show_grid_preview
+    for r in range(3):
+      row_frame = ttk.Frame(self._grid_frame)
+      row_frame.pack(side="top", fill="x")
+      row_labels = []
+      for c in range(3):
+        lbl = ttk.Label(row_frame, text=f"r{r}c{c}", relief="groove",
+                        width=18, anchor="center")
+        lbl.pack(side="left", padx=2, pady=2)
+        row_labels.append(lbl)
+      self._cell_labels.append(row_labels)
+
+    # ── preview table ─────────────────────────────────────────────────────────
+    self._preview_frame = ttk.Frame(self)
+    self._preview_frame.pack(fill="both", expand=True, padx=4, pady=4)
+    self._tree = None
+
+    if not _ocr_available():
+      import shutil
+      lines = [
+        f"isfile: {os.path.isfile(TESSERACT_CMD)}",
+        f"which:  {shutil.which('tesseract')}",
+        f"path:   {TESSERACT_CMD}",
+      ]
+      try:
+        import pytesseract  # noqa
+        lines.append("pytesseract: OK")
+      except ImportError as e:
+        lines.append(f"pytesseract: MISSING — {e}")
+      try:
+        from PIL import Image  # noqa
+        lines.append("PIL: OK")
+      except ImportError as e:
+        lines.append(f"PIL: MISSING — {e}")
+      ttk.Label(self._preview_frame,
+                text="OCR unavailable:\n" + "\n".join(lines),
+                foreground="red", justify="left").pack(pady=20, padx=10, anchor="w")
+
+  def _refresh_versions(self):
+    vers = list(self._data_tab._ver_tabs.keys())
+    self._ver_cb["values"] = vers
+    if vers:
+      self._ver_var.set(vers[-1])
+
+  def _open_folder(self):
+    if os.path.isdir(SCREENSHOT_MARKET):
+      os.startfile(SCREENSHOT_MARKET)
+    else:
+      messagebox.showwarning("Not found", f"Folder not found:\n{SCREENSHOT_MARKET}")
+
+  def _browse(self):
+    from tkinter import filedialog
+    path = filedialog.askopenfilename(
+      title="Select market screenshot",
+      initialdir=SCREENSHOT_MARKET if os.path.isdir(SCREENSHOT_MARKET) else BASE_DIR,
+      filetypes=[("Images", "*.png *.jpg *.jpeg *.bmp"), ("All files", "*.*")]
+    )
+    if path:
+      self._img_path = path
+      self._file_lbl.config(text=os.path.basename(path), foreground="#000000")
+      self._show_thumbnail(path)
+      self._rows = []
+      self._status_lbl.config(text="Image loaded. Click 'Run OCR' to extract players.")
+
+  def _show_thumbnail(self, path):
+    try:
+      from PIL import Image, ImageTk
+      img = Image.open(path)
+      img.thumbnail((320, 180))
+      self._tk_img = ImageTk.PhotoImage(img)
+      self._thumb_lbl.config(image=self._tk_img)
+    except Exception:
+      self._thumb_lbl.config(image="", text="[preview unavailable]")
+
+  def _show_grid_preview(self, img_path, start_row):
+    """Crop and display the 3x3 grid cells as thumbnails."""
+    try:
+      from PIL import Image, ImageTk, ImageDraw
+    except ImportError:
+      return
+    COL_STARTS = [60, 406, 752]
+    ROW_STARTS = [170, 373, 576]   # shifted up: row1 -10, row2 -20, row3 -30
+    CELL_W, CELL_H = 346, 213
+    THUMB_W, THUMB_H = 200, 124   # thumbnail size per cell
+
+    img = Image.open(img_path).convert("RGB")
+    self._cell_tk_imgs = []   # keep refs to avoid GC
+
+    for r in range(3):
+      for c in range(3):
+        x0 = COL_STARTS[c]
+        y0 = ROW_STARTS[r]
+        cell = img.crop((x0, y0, x0 + CELL_W, y0 + CELL_H))
+        cell_thumb = cell.copy()
+        cell_thumb.thumbnail((THUMB_W, THUMB_H))
+
+        # Draw red border on banner rows, green on player rows
+        draw = ImageDraw.Draw(cell_thumb)
+        is_skip = (r < start_row)
+        color = "#cc0000" if is_skip else "#00aa00"
+        draw.rectangle([0, 0, cell_thumb.width-1, cell_thumb.height-1],
+                       outline=color, width=3)
+
+        tk_img = ImageTk.PhotoImage(cell_thumb)
+        self._cell_tk_imgs.append(tk_img)
+        lbl = self._cell_labels[r][c]
+        lbl.config(image=tk_img, text="", width=THUMB_W)
+    # Force geometry update
+    self._grid_frame.update_idletasks()
+
+  def _run_ocr(self):
+    if not self._img_path:
+      messagebox.showwarning("No image", "Browse to an image first.")
+      return
+    if not _ocr_available():
+      messagebox.showerror("Tesseract missing",
+                           f"Install Tesseract at:\n{TESSERACT_CMD}")
+      return
+    self._status_lbl.config(text="Running OCR... please wait.")
+    self.update_idletasks()
+    try:
+      self._rows, start_row = _parse_market_image(self._img_path)
+    except Exception as e:
+      messagebox.showerror("OCR Error", str(e))
+      self._status_lbl.config(text=f"Error: {e}")
+      return
+    self._show_grid_preview(self._img_path, start_row)
+    self._show_preview()
+
+  def _show_preview(self):
+    for w in self._preview_frame.winfo_children():
+      w.destroy()
+    if not self._rows:
+      ttk.Label(self._preview_frame,
+                text="No player cards detected. Try a different image.",
+                foreground="#888888").pack(pady=20)
+      self._status_lbl.config(text="No players found.")
+      return
+
+    # Build columns: all PREVIEW_COLS (prc last) + grid + raw_ocr + errors
+    all_cols = ([c for c in PREVIEW_COLS if c != "prc"]
+                + ["prc", "grid", "raw_ocr", "errors"])
+
+    frame = ttk.Frame(self._preview_frame)
+    self._tree = ttk.Treeview(frame, columns=all_cols,
+                               show="headings", selectmode="extended")
+
+    col_widths = {
+      "fname": 80, "lname": 80, "nat": 60, "club": 70,
+      "pos": 45, "foot": 40, "rate": 40, "hgt": 40,
+      "spe": 40, "acc": 40, "sta": 40, "str": 40,
+      "con": 40, "pas": 40, "sho": 40, "tac": 40,
+      "prc": 50, "id": 50, "version": 55, "status": 45,
+      "grid": 50, "raw_ocr": 220, "errors": 160,
+    }
+    for c in all_cols:
+      self._tree.heading(c, text=c)
+      self._tree.column(c, width=col_widths.get(c, 55),
+                        minwidth=30, anchor="center")
+    self._tree.column("raw_ocr", anchor="w")
+    self._tree.column("errors",  anchor="w")
+
+    vsb = ttk.Scrollbar(frame, orient="vertical",   command=self._tree.yview)
+    hsb = ttk.Scrollbar(frame, orient="horizontal", command=self._tree.xview)
+    self._tree.configure(yscrollcommand=vsb.set, xscrollcommand=hsb.set)
+    self._tree.grid(row=0, column=0, sticky="nsew")
+    vsb.grid(row=0, column=1, sticky="ns")
+    hsb.grid(row=1, column=0, sticky="ew")
+    frame.rowconfigure(0, weight=1)
+    frame.columnconfigure(0, weight=1)
+
+    self._tree.tag_configure("ok",    background="#e8f5e9")
+    self._tree.tag_configure("error", background="#ffebee")
+
+    for idx, row in enumerate(self._rows):
+      clean = {k: v for k, v in row.items() if not k.startswith("_")}
+      errs  = _validate_row(clean)
+      tag   = "error" if errs else "ok"
+      vals  = []
+      for c in all_cols:
+        if c == "prc":      vals.append(get_price(clean))
+        elif c == "grid":   vals.append(row.get("_grid", ""))
+        elif c == "raw_ocr":vals.append(row.get("_raw", "")[:80])
+        elif c == "errors": vals.append("; ".join(errs) if errs else "")
+        else:               vals.append(clean.get(c, ""))
+      self._tree.insert("", "end", iid=str(idx), values=vals, tags=(tag,))
+
+    frame.pack(fill="both", expand=True)
+    ok = sum(1 for r in self._rows
+             if not _validate_row({k: v for k, v in r.items()
+                                   if not k.startswith("_")}))
+    self._status_lbl.config(
+      text=f"Detected {len(self._rows)} player cards  |  {ok} valid  |  "
+           f"Double-click a row to edit.  Ctrl+click to multi-select."
+    )
+    self._tree.bind("<Double-Button-1>", self._on_edit_row)
+
+  def _on_edit_row(self, event):
+    """Allow editing an OCR-extracted row before committing."""
+    if not self._tree:
+      return
+    sel = self._tree.selection()
+    if not sel:
+      return
+    idx = int(sel[0])
+    row = {k: v for k, v in self._rows[idx].items() if not k.startswith("_")}
+    edit_cols = [c for c in PREVIEW_COLS if c not in ("prc", "version")]
+    dlg = EditDialog(self, row, edit_cols,
+                     pid_lookup=self._pid_tab.lookup_id if self._pid_tab else None)
+    if dlg.result:
+      new_row = dict(self._rows[idx])
+      new_row.update(_cast(dlg.result))
+      new_row["prc"] = get_price(new_row)
+      self._rows[idx] = new_row
+      display_rows = [{k: v for k, v in r.items() if not k.startswith("_")}
+                      for r in self._rows]
+      _populate_preview_tree(self._tree, display_rows)
+
+  def _selected_rows(self):
+    if not self._tree:
+      return []
+    return [{k: v for k, v in self._rows[int(iid)].items() if not k.startswith("_")}
+            for iid in self._tree.selection()]
+
+  def _add_selected(self):
+    rows = self._selected_rows()
+    if not rows:
+      messagebox.showwarning("Nothing selected", "Select rows in the preview table first.")
+      return
+    self._do_add(rows)
+
+  def _add_all_valid(self):
+    rows = [{k: v for k, v in r.items() if not k.startswith("_")}
+            for r in self._rows if not _validate_row(r)]
+    if not rows:
+      messagebox.showwarning("No valid rows", "No valid rows to add.")
+      return
+    self._do_add(rows)
+
+  def _do_add(self, rows):
+    label = self._ver_var.get()
+    vt = self._data_tab._ver_tabs.get(label)
+    if not vt:
+      messagebox.showerror("No version", "Select a target version first.")
+      return
+    vt.ensure_loaded()
+    n = _commit_rows(rows, vt, self._pid_tab)
+    messagebox.showinfo("Done", f"Added {n} rows to version {label}.")
+
+
 # ── PriceMapTab ───────────────────────────────────────────────────────────────
 class PriceMapTab(ttk.Frame):
   """Tab to view and edit price_map.json as a 2-column table (price_id, price)."""
@@ -1099,6 +1766,8 @@ class App(tk.Tk):
     nb.add(SpecialTab(nb),  text=" special.json ")
     nb.add(pid_tab,         text=" playerID ")
     nb.add(PriceMapTab(nb), text=" Price Map ")
+    nb.add(ImportTab(nb, data_tab, pid_tab), text=" Import ")
+    nb.add(OCRTab(nb, data_tab, pid_tab),    text=" OCR ")
 
 
 if __name__ == "__main__":
