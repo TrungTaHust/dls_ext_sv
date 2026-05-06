@@ -969,7 +969,7 @@ class PlayerIDTab(ttk.Frame):
 PREVIEW_COLS = ["fname", "lname", "nat", "club", "pos", "foot", "rate", "hgt",
                 "spe", "acc", "sta", "str", "con", "pas", "sho", "tac", "prc",
                 "id", "version", "status"]
-STAT_COLS    = {"rate", "hgt", "spe", "acc", "sta", "str", "con", "pas", "sho", "tac"}
+STAT_COLS = {"rate", "spe", "acc", "sta", "str", "con", "pas", "sho", "tac"}
 
 def _validate_row(row):
   """Return list of error strings, empty = valid."""
@@ -1151,186 +1151,211 @@ class ImportTab(ttk.Frame):
 
 
 # ── OCR helpers ───────────────────────────────────────────────────────────────
-TESSERACT_CMD = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 SCREENSHOT_MARKET = os.path.join(
   os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
   "resources", "data", "screenshot", "market"
 )
 
-def _get_tesseract_cmd():
-  """Return tesseract path — hardcoded first, then PATH fallback."""
-  import shutil
-  if os.path.isfile(TESSERACT_CMD):
-    return TESSERACT_CMD
-  found = shutil.which("tesseract")
-  return found or TESSERACT_CMD
+# Singleton PaddleOCR engine — initialised once on first use
+_paddle_engine = None
 
 def _ocr_available():
-  import shutil
-  if os.path.isfile(TESSERACT_CMD):
-    tess_ok = True
-  else:
-    tess_ok = bool(shutil.which("tesseract"))
-  if not tess_ok:
-    return False
   try:
-    import pytesseract  # noqa: F401
-    from PIL import Image  # noqa: F401
+    from paddleocr import PaddleOCR  # noqa
+    from PIL import Image             # noqa
     return True
   except ImportError:
     return False
 
-def _parse_market_image(img_path):
-  """
-  Parse a DLS market screenshot.
-  Grid: 3x3 cells, each 346x213px.
-  Row 1 may be banners (Top Picks) — skip if so.
-  """
-  import pytesseract
-  from PIL import Image, ImageEnhance, ImageFilter
-  pytesseract.pytesseract.tesseract_cmd = _get_tesseract_cmd()
+def _get_paddle_engine():
+  global _paddle_engine
+  if _paddle_engine is None:
+    import os as _os
+    _os.environ["FLAGS_use_mkldnn"]      = "0"
+    _os.environ["PADDLE_DISABLE_ONEDNN"] = "1"
+    from paddleocr import PaddleOCR
+    # PP-OCRv3 mobile: much faster than server, still accurate for game UI
+    # use_angle_cls=False: game screenshots are never rotated → skip angle detection
+    _paddle_engine = PaddleOCR(
+      use_angle_cls=False,
+      lang='en',
+      enable_mkldnn=False,
+      det_model_dir=None,   # use default mobile det
+      rec_model_dir=None,   # use default mobile rec
+    )
+  return _paddle_engine
 
-  COL_STARTS = [60, 406, 752]
-  ROW_STARTS = [170, 373, 576]   # shifted up: row1 -10, row2 -20, row3 -30
-  CELL_W, CELL_H = 346, 213
+def _paddle_ocr_cell(cell_img):
+  """Run PaddleOCR on a PIL image, return list of (text, conf)."""
+  import numpy as np
+  from PIL import Image
+  SCALE = 2   # 2x sufficient for mobile model; 4x was overkill and slow
+  w, h = cell_img.size
+  arr = np.array(cell_img.resize((w * SCALE, h * SCALE), Image.LANCZOS))
+  engine = _get_paddle_engine()
+  result = engine.ocr(arr)
+  lines = []
+  if result:
+    for item in result:
+      if isinstance(item, dict):
+        for t, s in zip(item.get('rec_texts', []), item.get('rec_scores', [])):
+          if t.strip():
+            lines.append((t.strip(), float(s)))
+      elif isinstance(item, list):
+        for ln in item:
+          try:
+            t, s = ln[1][0], ln[1][1]
+            if t.strip():
+              lines.append((t.strip(), float(s)))
+          except (IndexError, TypeError):
+            pass
+  return lines
 
-  SKIP_WORDS = {
-    'SPE','ACC','STA','STR','CON','PAS','SHO','TAC','GKR','GKH',
-    'LEFT','RIGHT','LAST','CHANCE','LIVE','TOP','PICKS','TRANSFERS',
-    'SCOUTS','AGENTS','MANAGE','PLAYERS','LOCKED','CHANCE',
+# Stat-label words to ignore when extracting names / pos
+_STAT_LABELS = {
+  'SPE','ACC','STA','STR','CON','PAS','SHO','TAC','GKR','GKH',
+  'LEFT','RIGHT','LAST','CHANCE','LIVE','TOP','PICKS','TRANSFERS',
+  'SCOUTS','AGENTS','MANAGE','PLAYERS','LOCKED',
+}
+
+def _parse_cell_lines(lines):
+  """
+  Parse (text, conf) lines from PaddleOCR into a player dict.
+  Returns None if the cell looks like a banner.
+  """
+  texts = [t for t, _ in lines]
+  full  = ' '.join(texts).upper()
+
+  # Banner detection
+  if any(k in full for k in ('TOP PICKS', 'LIVE TRANSFERS', 'LOCKED')):
+    return None
+
+  # Collect numbers
+  nums = []
+  for t, _ in lines:
+    m = re.search(r'\b(\d{2,3})\b', t)
+    if m:
+      nums.append(int(m.group(1)))
+
+  stat_nums = [n for n in nums if 10 <= n <= 100]
+  if len(stat_nums) < 4:
+    return None   # not enough stats → banner or empty
+
+  # Stats: SPE ACC STA STR CON PAS SHO TAC (in order of appearance)
+  vals = stat_nums[:8]
+  while len(vals) < 8:
+    vals.append(0)
+  spe, acc, sta, str_, con, pas, sho, tac = vals
+
+  # Rate: first 2-digit 50-99 that appears before stat labels
+  rate = 0
+  for t, _ in lines:
+    m = re.search(r'\b([5-9]\d)\b', t)
+    if m:
+      rate = int(m.group(1))
+      break
+
+  # Height: 3-digit 150-220
+  hgt = 0
+  for t, _ in lines:
+    m = re.search(r'\b(1[5-9]\d|2[0-2]\d)\b', t)
+    if m:
+      hgt = int(m.group(1))
+      break
+
+  # Foot
+  foot = 'L' if re.search(r'\bLeft\b', full, re.IGNORECASE) else 'R'
+
+  # Pos: known position codes
+  POSITIONS = {'CF','SS','LW','RW','LM','RM','RWB','LWB','CM','DM','AM',
+               'LB','CB','RB','GK'}
+  pos = ''
+  for t, _ in lines:
+    if t.upper() in POSITIONS:
+      pos = t.upper()
+      break
+
+  # Price: number followed by comma-format or standalone large number near end
+  prc = 0
+  for t, _ in lines:
+    m = re.search(r'([\d,]+)', t)
+    if m:
+      try:
+        v = int(m.group(1).replace(',', ''))
+        if v >= 100:   # prices are always >= 100
+          prc = v
+      except ValueError:
+        pass
+
+  # Name: alphabetic tokens not in stat labels, not pos, not foot
+  name_tokens = []
+  for t, conf in lines:
+    clean = re.sub(r'[^A-Za-z\-\']', '', t)
+    if (len(clean) >= 2
+        and clean.upper() not in _STAT_LABELS
+        and clean.upper() not in POSITIONS
+        and clean.upper() not in ('LEFT', 'RIGHT', 'CM', 'RIGHT')
+        and conf >= 0.5):
+      name_tokens.append(clean)
+
+  fname, lname = '', ''
+  if len(name_tokens) >= 2:
+    fname = name_tokens[0]
+    lname = name_tokens[1]
+  elif len(name_tokens) == 1:
+    fname = name_tokens[0]
+
+  return {
+    'fname': fname, 'lname': lname,
+    'nat': '', 'club': '', 'pos': pos,
+    'foot': foot, 'rate': rate, 'hgt': hgt,
+    'spe': spe, 'acc': acc, 'sta': sta, 'str': str_,
+    'con': con, 'pas': pas, 'sho': sho, 'tac': tac,
+    'prc': prc, 'status': 1,
   }
 
-  def ocr_words(img, x0, y0):
-    cell = img.crop((x0, y0, x0 + CELL_W, y0 + CELL_H))
-    cell = ImageEnhance.Contrast(cell).enhance(2.5)
-    cell = cell.filter(ImageFilter.SHARPEN)
-    data = pytesseract.image_to_data(
-      cell, config='--psm 6', output_type=pytesseract.Output.DICT)
-    words = []
-    for i, t in enumerate(data['text']):
-      t = t.strip()
-      if t and int(data['conf'][i]) > 10:
-        words.append({
-          'text': t,
-          'x': data['left'][i],
-          'y': data['top'][i],
-          'conf': int(data['conf'][i]),
-        })
-    return words
+def _parse_market_image(img_path):
+  """
+  Parse a DLS market screenshot using PaddleOCR.
+  Grid: 3×3 cells at fixed coordinates.
+  Row 0 may be banners (Top Picks) — auto-detected and skipped.
+  """
+  from PIL import Image
 
-  def clean_num(s):
-    """Extract integer from noisy OCR string like '(62', '67)', '72|'."""
-    m = re.search(r'\d{2,3}', s)
-    return int(m.group()) if m else None
-
-  def is_banner(words):
-    text = ' '.join(w['text'] for w in words).upper()
-    if any(k in text for k in ('TOP PICKS','LIVE TRANSFERS','LOCKED')):
-      return True
-    nums = [clean_num(w['text']) for w in words]
-    stat_nums = [n for n in nums if n and 10 <= n <= 100]
-    return len(stat_nums) < 3
-
-  def parse_cell(words):
-    if not words or is_banner(words):
-      return None
-
-    # Extract all numbers with position
-    num_words = []
-    for w in words:
-      n = clean_num(w['text'])
-      if n is not None:
-        num_words.append({'val': n, 'x': w['x'], 'y': w['y']})
-
-    # Stats: values 10-100, sorted by y then x
-    stat_candidates = [n for n in num_words if 10 <= n['val'] <= 100]
-    stat_candidates.sort(key=lambda n: (n['y'], n['x']))
-    if len(stat_candidates) < 4:   # lowered from 6 — SPE row often hidden by avatar
-      return None
-    vals = [n['val'] for n in stat_candidates[:8]]
-    while len(vals) < 8:
-      vals.append(0)
-    # If only 4 stats found, they are likely CON PAS SHO TAC (bottom row)
-    # SPE ACC STA STR (top row) hidden by player avatar
-    if len(stat_candidates) < 5:
-      spe = acc = sta = str_ = 0
-      con, pas, sho, tac = vals[:4]
-    else:
-      spe, acc, sta, str_, con, pas, sho, tac = vals[:8]
-
-    # Rate: 50-99 in top half of cell
-    rate_cands = [n for n in num_words
-                  if 50 <= n['val'] <= 99 and n['y'] < CELL_H // 2]
-    rate = rate_cands[0]['val'] if rate_cands else 0
-
-    # Height: 150-220
-    hgt = 0
-    for w in words:
-      m = re.search(r'\b(1[5-9]\d|2[0-2]\d)\b', w['text'])
-      if m:
-        hgt = int(m.group(1))
-        break
-
-    # Foot
-    full = ' '.join(w['text'] for w in words)
-    foot = 'L' if re.search(r'\bLeft\b', full, re.IGNORECASE) else 'R'
-
-    # Price: number before @ sign
-    prc = 0
-    for i, w in enumerate(words):
-      combined = w['text']
-      if i + 1 < len(words):
-        combined = w['text'] + words[i+1]['text']
-      m = re.search(r'([\d,]{2,})\s*@', combined)
-      if m:
-        try:
-          prc = int(m.group(1).replace(',', ''))
-          break
-        except ValueError:
-          pass
-
-    # Name: alphabetic words in bottom 40% of cell, not stat labels
-    name_area_y = CELL_H * 0.6
-    name_cands = []
-    for w in words:
-      t = re.sub(r'[^A-Za-z\-\']', '', w['text'])
-      if (len(t) >= 2
-          and t.upper() not in SKIP_WORDS
-          and w['y'] >= name_area_y):
-        name_cands.append({'text': t, 'x': w['x'], 'y': w['y']})
-
-    # Sort by x to get left→right order
-    name_cands.sort(key=lambda w: w['x'])
-    fname, lname = '', ''
-    if len(name_cands) >= 2:
-      fname = name_cands[0]['text']
-      lname = name_cands[1]['text']
-    elif len(name_cands) == 1:
-      fname = name_cands[0]['text']
-
-    return {
-      'fname': fname, 'lname': lname,
-      'nat': '', 'club': '', 'pos': '',
-      'foot': foot, 'rate': rate, 'hgt': hgt,
-      'spe': spe, 'acc': acc, 'sta': sta, 'str': str_,
-      'con': con, 'pas': pas, 'sho': sho, 'tac': tac,
-      'prc': prc, 'status': 1,
-    }
+  COL_STARTS = [90, 435, 780]
+  ROW_STARTS = [185, 385, 585]
+  CELL_W, CELL_H = 280, 175
 
   img = Image.open(img_path).convert("RGB")
 
-  # Detect banner: check if row 1 cell 0 is a banner
-  words_r0 = ocr_words(img, COL_STARTS[0], ROW_STARTS[0])
-  start_row = 1 if is_banner(words_r0) else 0
+  # Save cropped cells to screenshot/market/crop/
+  crop_dir  = os.path.join(os.path.dirname(img_path), "crop")
+  os.makedirs(crop_dir, exist_ok=True)
+  img_stem  = os.path.splitext(os.path.basename(img_path))[0]
+  for ri in range(3):
+    for ci in range(3):
+      cell = img.crop((COL_STARTS[ci], ROW_STARTS[ri],
+                       COL_STARTS[ci] + CELL_W, ROW_STARTS[ri] + CELL_H))
+      cell.save(os.path.join(crop_dir, f"{img_stem}_r{ri}c{ci}.png"))
+
+  # Detect banner row: check cell r0c0
+  cell_r0 = img.crop((COL_STARTS[0], ROW_STARTS[0],
+                      COL_STARTS[0] + CELL_W, ROW_STARTS[0] + CELL_H))
+  lines_r0  = _paddle_ocr_cell(cell_r0)
+  text_r0   = ' '.join(t for t, _ in lines_r0).upper()
+  has_banner = any(k in text_r0 for k in ('TOP PICKS', 'LIVE TRANSFERS', 'LOCKED'))
+  start_row  = 1 if has_banner else 0
 
   players = []
   for ri in range(start_row, 3):
     for ci in range(3):
-      words = ocr_words(img, COL_STARTS[ci], ROW_STARTS[ri])
-      p = parse_cell(words)
+      cell = img.crop((COL_STARTS[ci], ROW_STARTS[ri],
+                       COL_STARTS[ci] + CELL_W, ROW_STARTS[ri] + CELL_H))
+      lines = _paddle_ocr_cell(cell)
+      p = _parse_cell_lines(lines)
       if p:
         p['_grid'] = f"r{ri}c{ci}"
-        p['_raw']  = ' | '.join(w['text'] for w in words[:20])
+        p['_raw']  = ' | '.join(t for t, _ in lines[:15])
         players.append(p)
 
   return players, start_row
@@ -1399,24 +1424,9 @@ class OCRTab(ttk.Frame):
     self._tree = None
 
     if not _ocr_available():
-      import shutil
-      lines = [
-        f"isfile: {os.path.isfile(TESSERACT_CMD)}",
-        f"which:  {shutil.which('tesseract')}",
-        f"path:   {TESSERACT_CMD}",
-      ]
-      try:
-        import pytesseract  # noqa
-        lines.append("pytesseract: OK")
-      except ImportError as e:
-        lines.append(f"pytesseract: MISSING — {e}")
-      try:
-        from PIL import Image  # noqa
-        lines.append("PIL: OK")
-      except ImportError as e:
-        lines.append(f"PIL: MISSING — {e}")
       ttk.Label(self._preview_frame,
-                text="OCR unavailable:\n" + "\n".join(lines),
+                text="PaddleOCR not available.\n"
+                     "Install with: pip install paddleocr pillow",
                 foreground="red", justify="left").pack(pady=20, padx=10, anchor="w")
 
   def _refresh_versions(self):
@@ -1461,9 +1471,9 @@ class OCRTab(ttk.Frame):
       from PIL import Image, ImageTk, ImageDraw
     except ImportError:
       return
-    COL_STARTS = [60, 406, 752]
-    ROW_STARTS = [170, 373, 576]   # shifted up: row1 -10, row2 -20, row3 -30
-    CELL_W, CELL_H = 346, 213
+    COL_STARTS = [90, 435, 780]
+    ROW_STARTS = [185, 385, 585]
+    CELL_W, CELL_H = 280, 175
     THUMB_W, THUMB_H = 200, 124   # thumbnail size per cell
 
     img = Image.open(img_path).convert("RGB")
@@ -1496,8 +1506,8 @@ class OCRTab(ttk.Frame):
       messagebox.showwarning("No image", "Browse to an image first.")
       return
     if not _ocr_available():
-      messagebox.showerror("Tesseract missing",
-                           f"Install Tesseract at:\n{TESSERACT_CMD}")
+      messagebox.showerror("PaddleOCR missing",
+                           "Install with: pip install paddleocr pillow")
       return
     self._status_lbl.config(text="Running OCR... please wait.")
     self.update_idletasks()
@@ -1768,6 +1778,11 @@ class App(tk.Tk):
     nb.add(PriceMapTab(nb), text=" Price Map ")
     nb.add(ImportTab(nb, data_tab, pid_tab), text=" Import ")
     nb.add(OCRTab(nb, data_tab, pid_tab),    text=" OCR ")
+
+    # Warm up PaddleOCR engine in background so first OCR run is fast
+    if _ocr_available():
+      import threading
+      threading.Thread(target=_get_paddle_engine, daemon=True).start()
 
 
 if __name__ == "__main__":

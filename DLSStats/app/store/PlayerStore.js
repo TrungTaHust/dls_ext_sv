@@ -35,6 +35,13 @@ Ext.define("DLSStats.store.PlayerStore", {
                     try {
                         var data = Ext.decode(response.responseText);
                         if (Ext.isArray(data)) {
+                            // Thêm (old) vào lname nếu status = 0
+                            data.forEach(function (rec) {
+                                if (rec.status === 0 && rec.lname &&
+                                    rec.lname.indexOf("(old)") === -1) {
+                                    rec.lname = rec.lname + " (old)";
+                                }
+                            });
                             allRecords = allRecords.concat(data);
                         }
                     } catch (e) {
