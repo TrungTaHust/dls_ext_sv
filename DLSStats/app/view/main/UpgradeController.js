@@ -5,6 +5,8 @@ Ext.define("DLSStats.view.main.UpgradeController", {
     _player: null,
     _current: null,
     _maxPoints: 0,
+    _usedExtra: 0,
+    _mode: "custom",
 
     // Stat order: row1 = SPE ACC STA STR, row2 = CON PAS SHO TAC
     STATS: ["spe", "acc", "sta", "str", "con", "pas", "sho", "tac"],
@@ -13,11 +15,21 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         con: "CON", pas: "PAS", sho: "SHO", tac: "TAC"
     },
 
-    // Trọng số điểm: 1 điểm nâng cấp = weight điểm thực
-    // CON = 2x, STR = 1.5x, còn lại = 1x
+    // Trọng số điểm mỗi bậc nâng cấp
     STAT_WEIGHTS: {
-        spe: 1, acc: 1, sta: 1, str: 1.5,
-        con: 2, pas: 1, sho: 1, tac: 1
+        spe: 1.0, acc: 1.0, sta: 1.0, str: 1.5,
+        con: 2,   pas: 1.0, sho: 1.0, tac: 1.0
+    },
+
+    // Coach config
+    COACH_TYPES: {
+        technical: ["con", "pas", "sho", "tac"],
+        fitness:   ["spe", "acc", "sta", "str"]
+    },
+    COACH_TIERS: {
+        common:    { count: 1, bonus: 1, breakChance: 0.05 },
+        rare:      { count: 2, bonus: 2, breakChance: 0.10 },
+        legendary: { count: 3, bonus: 3, breakChance: 0.20 }
     },
 
     init: function () {
@@ -34,9 +46,9 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         } catch (e) {}
     },
 
-    // Deterministic max points: 87-92 based on id
+    // Deterministic max points: 80-85 based on id
     _calcMaxPoints: function (id) {
-        return 87 + (parseInt(id, 10) % 6);
+        return 80 + (parseInt(id, 10) % 6);
     },
 
     onFavSelect: function (grid, record) {
@@ -74,7 +86,17 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         me._maxPoints = me._calcMaxPoints(me._player.id);
         me._usedExtra = 0;
 
+        // Giữ nguyên mode hiện tại, KHÔNG reset về custom
+        var currentMode = me._mode || "custom";
+        var customPanel = me.lookupReference("customPanel");
+        var normalPanel = me.lookupReference("normalPanel");
+
         me._buildStatCells();
+        me._buildNormalStatCells();
+
+        // Hiện đúng panel theo mode hiện tại
+        if (customPanel) customPanel.setVisible(currentMode === "custom");
+        if (normalPanel) normalPanel.setVisible(currentMode === "normal");
 
         // upgradePanel phải visible trước khi canvas có trong DOM
         var panel = me.lookupReference("upgradePanel");
@@ -92,10 +114,189 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         me._current   = Ext.clone(me._player);
         me._usedExtra = 0;
         me._syncStatCells();
+        me._syncNormalStatCells();
         me._updateDisplay();
     },
 
-    // ── Build stat cells ──────────────────────────────────────
+    // ── Mode change ───────────────────────────────────────────
+    onModeChange: function (container, button, pressed) {
+        var me = this;
+        if (!pressed) return;
+        var text = button.getText();
+        var customPanel = me.lookupReference("customPanel");
+        var normalPanel = me.lookupReference("normalPanel");
+        if (text === "Custom") {
+            me._mode = "custom";
+            if (customPanel) customPanel.setVisible(true);
+            if (normalPanel) normalPanel.setVisible(false);
+            if (me._player) {
+                Ext.defer(function () { me._syncStatCells(); }, 30);
+            }
+        } else if (text === "Normal") {
+            me._mode = "normal";
+            if (customPanel) customPanel.setVisible(false);
+            if (normalPanel) normalPanel.setVisible(true);
+            // Defer để DOM render normalPanel xong rồi mới vẽ canvas
+            if (me._player) {
+                Ext.defer(function () { me._syncNormalStatCells(); }, 30);
+            }
+        }
+    },
+
+    // ── Apply Coach (Normal mode) ─────────────────────────────
+    onApplyCoach: function () {
+        var me = this;
+        if (!me._player) return;
+
+        var coachTypeText = me._getSelectedType();   // "technical" or "fitness"
+        var coachTierText = me._getSelectedTier();   // "common", "rare", "legendary"
+
+        var typePool = me.COACH_TYPES[coachTypeText];
+        var tier     = me.COACH_TIERS[coachTierText];
+
+        if (!typePool || !tier) return;
+
+        // Lọc pool: chỉ lấy stats có _current[stat] < 100
+        var pool = typePool.filter(function (stat) {
+            return (me._current[stat] || 0) < 100;
+        });
+
+        if (pool.length === 0) {
+            Ext.Msg.alert("All maxed!", "All stats in this coach's pool are already at 100.");
+            return;
+        }
+
+        // Chọn ngẫu nhiên tier.count stats từ pool (không trùng)
+        var count = Math.min(tier.count, pool.length);
+        var shuffled = pool.slice();
+        for (var i = shuffled.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = shuffled[i];
+            shuffled[i] = shuffled[j];
+            shuffled[j] = tmp;
+        }
+        var chosen = shuffled.slice(0, count);
+
+        // Roll breakthrough
+        var breakthrough = Math.random() < tier.breakChance;
+        var bonusPerStat = tier.bonus + (breakthrough ? 1 : 0);
+
+        // Kiểm tra budget còn lại
+        var usedBefore = me._calcUsedWeighted();
+        var remaining  = me._maxPoints - usedBefore;
+
+        // Áp dụng bonus và tính weighted points
+        var changes = [];
+
+        if (remaining <= 0) {
+            // Hết budget hoàn toàn
+            Ext.toast({ html: "Already at MAX! No points remaining.", align: "b", minWidth: 220 });
+            return;
+        }
+
+        // Tính tổng weighted cost nếu train đầy đủ
+        var totalWeightedCost = 0;
+        chosen.forEach(function (stat) {
+            totalWeightedCost += bonusPerStat * me.STAT_WEIGHTS[stat];
+        });
+
+        // Nếu đủ điểm → train bình thường
+        // Nếu không đủ → chia đều điểm còn lại theo trọng số
+        var actualBonusMap = {};
+        if (totalWeightedCost <= remaining) {
+            // Đủ điểm
+            chosen.forEach(function (stat) {
+                actualBonusMap[stat] = bonusPerStat;
+            });
+        } else {
+            // Không đủ: chia remaining theo tỉ lệ trọng số
+            var totalWeight = 0;
+            chosen.forEach(function (stat) { totalWeight += me.STAT_WEIGHTS[stat]; });
+
+            chosen.forEach(function (stat) {
+                var share = (me.STAT_WEIGHTS[stat] / totalWeight) * remaining;
+                // Số bậc thực tế = share / weight, làm tròn xuống tối thiểu 0
+                var bac = Math.max(0, Math.floor(share / me.STAT_WEIGHTS[stat]));
+                actualBonusMap[stat] = bac;
+            });
+        }
+
+        chosen.forEach(function (stat) {
+            var bonus  = actualBonusMap[stat] || 0;
+            if (bonus <= 0) return;
+            var oldVal = me._current[stat] || 0;
+            var newVal = Math.min(100, oldVal + bonus);
+            var actualBonus = newVal - oldVal;
+            if (actualBonus <= 0) return;
+
+            me._current[stat] = newVal;
+            changes.push(stat.toUpperCase() + " +" + actualBonus);
+        });
+
+        // Tiêu hết điểm còn lại (dù có cộng chỉ số hay không)
+        // để budget đạt max khi không đủ 1 bậc
+        var usedAfter = me._calcUsedWeightedFromBase();
+        if (usedAfter < me._maxPoints && totalWeightedCost > remaining) {
+            // Còn điểm lẻ chưa tiêu — đẩy vào _usedExtra để đạt max
+            me._usedExtra = (me._usedExtra || 0) + (me._maxPoints - usedAfter);
+        }
+
+        me._syncNormalStatCells();
+        me._updateDisplay();
+
+        // Hiển thị toast
+        var msg = changes.length > 0
+            ? "Coach applied! [" + changes.join(", ") + "]"
+            : "No stats changed.";
+        if (breakthrough) msg += " &nbsp;⚡ <b>BREAKTHROUGH!</b>";
+        Ext.toast({ html: msg, align: "b", slideInDuration: 200, minWidth: 220 });
+    },
+
+    // ── Coach toggle handlers ─────────────────────────────────
+    onCoachTypeToggle: function () {
+        this._updateCoachInfoLabel();
+    },
+
+    onCoachTierToggle: function () {
+        this._updateCoachInfoLabel();
+    },
+
+    _updateCoachInfoLabel: function () {
+        var me = this;
+        var label = me.lookupReference("coachInfoLabel");
+        if (!label) return;
+        var tier       = me._getSelectedTier();
+        var type       = me._getSelectedType();
+        var tierConfig = me.COACH_TIERS[tier];
+        var typeStats  = me.COACH_TYPES[type];
+        if (!tierConfig || !typeStats) return;
+        var statsStr = typeStats.map(function (s) { return s.toUpperCase(); }).join(", ");
+        var breakPct = (tierConfig.breakChance * 100) + "%";
+        label.setHtml(
+            "<div style='font-size:11px;color:#555;text-align:center'>" +
+            "<b>" + tier.charAt(0).toUpperCase() + tier.slice(1) + "</b>: " +
+            "+" + tierConfig.bonus + " to " + tierConfig.count + " stat(s) [" + statsStr + "]" +
+            " &nbsp;|&nbsp; " + breakPct + " breakthrough (+" + (tierConfig.bonus + 1) + " each)" +
+            "</div>"
+        );
+    },
+
+    // ── Helpers: get selected coach type/tier ────────────────
+    _getSelectedType: function () {
+        var me = this;
+        var btnFitness = me.lookupReference("btnFitness");
+        if (btnFitness && btnFitness.pressed) return "fitness";
+        return "technical";
+    },
+
+    _getSelectedTier: function () {
+        var me = this;
+        if (me.lookupReference("btnLegendary") && me.lookupReference("btnLegendary").pressed) return "legendary";
+        if (me.lookupReference("btnRare")      && me.lookupReference("btnRare").pressed)      return "rare";
+        return "common";
+    },
+
+    // ── Build stat cells (Custom mode, with arrows) ───────────
     _buildStatCells: function () {
         var me = this;
         var statsGrid = me.lookupReference("statsGrid");
@@ -183,7 +384,66 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         };
     },
 
-    // ── Adjust stat ───────────────────────────────────────────
+    // ── Build normal stat cells (Normal mode, no arrows) ──────
+    _buildNormalStatCells: function () {
+        var me = this;
+        var normalStatsGrid = me.lookupReference("normalStatsGrid");
+        if (!normalStatsGrid) return;
+        var row1 = normalStatsGrid.down("#normalStatsRow1");
+        var row2 = normalStatsGrid.down("#normalStatsRow2");
+        if (!row1 || !row2) return;
+        row1.removeAll(true);
+        row2.removeAll(true);
+
+        // Row 1: SPE ACC STA STR, Row 2: CON PAS SHO TAC
+        var row1Stats = ["spe", "acc", "sta", "str"];
+        var row2Stats = ["con", "pas", "sho", "tac"];
+
+        row1Stats.forEach(function (stat) { row1.add(me._makeNormalStatCell(stat)); });
+        row2Stats.forEach(function (stat) { row2.add(me._makeNormalStatCell(stat)); });
+    },
+
+    _makeNormalStatCell: function (stat) {
+        var me = this;
+        var label  = me.STAT_LABELS[stat];
+        var weight = me.STAT_WEIGHTS[stat];
+        var weightBadge = weight !== 1
+            ? "<span style='font-size:9px;color:#f1c40f;margin-left:2px'>×" + weight + "</span>"
+            : "";
+
+        return {
+            xtype: "container",
+            itemId: "normal_cell_" + stat,
+            layout: { type: "vbox", align: "center" },
+            width: 80,
+            items: [
+                // Stat name + weight badge
+                {
+                    xtype: "component",
+                    html: "<span style='font-size:11px;font-weight:bold;color:#2471a3'>" +
+                          label + "</span>" + weightBadge,
+                    margin: "0 0 4 0",
+                    style: { textAlign: "center" },
+                },
+                // Value circle (canvas only, no arrows)
+                {
+                    xtype: "component",
+                    itemId: "normal_canvas_" + stat,
+                    html: '<canvas id="normal-stat-canvas-' + stat + '" width="56" height="56"></canvas>',
+                },
+                // Delta badge
+                {
+                    xtype: "component",
+                    itemId: "normal_delta_" + stat,
+                    html: "&nbsp;",
+                    margin: "3 0 0 0",
+                    style: { textAlign: "center", minHeight: "16px" },
+                },
+            ],
+        };
+    },
+
+    // ── Adjust stat (Custom mode) ─────────────────────────────
     _adjustStat: function (stat, delta) {
         var me = this;
         if (!me._player) return;
@@ -209,8 +469,6 @@ Ext.define("DLSStats.view.main.UpgradeController", {
                 // Không đủ điểm cho 1 bậc đầy đủ →
                 // tiêu hết điểm còn lại để đạt max budget,
                 // nhưng stat KHÔNG tăng (chỉ số giữ nguyên)
-                // Dùng một "phantom" point để đánh dấu budget đã hết
-                // bằng cách cộng phần dư vào _usedExtra
                 me._usedExtra = (me._usedExtra || 0) + remaining;
             }
         } else {
@@ -237,7 +495,18 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         return total;
     },
 
-    // ── Sync stat cell canvases ───────────────────────────────
+    // Chỉ tính từ stat diffs (không có extra)
+    _calcUsedWeightedFromBase: function () {
+        var me = this;
+        var total = 0;
+        me.STATS.forEach(function (stat) {
+            var diff = (me._current[stat] || 0) - (me._player[stat] || 0);
+            total += diff * me.STAT_WEIGHTS[stat];
+        });
+        return total;
+    },
+
+    // ── Sync stat cell canvases (Custom mode) ─────────────────
     _syncStatCells: function () {
         var me = this;
         me.STATS.forEach(function (stat) {
@@ -293,6 +562,62 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         }
     },
 
+    // ── Sync normal stat cell canvases (Normal mode) ──────────
+    _syncNormalStatCells: function () {
+        var me = this;
+        me.STATS.forEach(function (stat) {
+            me._drawNormalStatCircle(stat);
+            me._updateNormalDelta(stat);
+        });
+    },
+
+    _drawNormalStatCircle: function (stat) {
+        var me = this;
+        var val    = me._current[stat] || 0;
+        var base   = me._player[stat]  || 0;
+        var canvas = document.getElementById("normal-stat-canvas-" + stat);
+        if (!canvas) return;
+
+        var ctx = canvas.getContext("2d");
+        var W = 56, H = 56, cx = W / 2, cy = H / 2, R = 24;
+        ctx.clearRect(0, 0, W, H);
+
+        // Black background circle
+        ctx.beginPath();
+        ctx.arc(cx, cy, R, 0, Math.PI * 2);
+        ctx.fillStyle = "#000";
+        ctx.fill();
+
+        // Thin border — highlight if upgraded
+        ctx.beginPath();
+        ctx.arc(cx, cy, R, 0, Math.PI * 2);
+        ctx.strokeStyle = val > base ? "#2ecc71" : "rgba(255,255,255,0.2)";
+        ctx.lineWidth = val > base ? 2.5 : 1.5;
+        ctx.stroke();
+
+        // Value text
+        ctx.font = "bold 16px Arial";
+        ctx.fillStyle = me._statColor(val);
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(String(val), cx, cy);
+    },
+
+    _updateNormalDelta: function (stat) {
+        var me = this;
+        var normalStatsGrid = me.lookupReference("normalStatsGrid");
+        if (!normalStatsGrid) return;
+        var deltaCmp = normalStatsGrid.down("#normal_delta_" + stat);
+        if (!deltaCmp) return;
+
+        var diff = (me._current[stat] || 0) - (me._player[stat] || 0);
+        if (diff > 0) {
+            deltaCmp.setHtml("<span style='color:#2ecc71;font-weight:bold;font-size:11px'>+" + diff + "</span>");
+        } else {
+            deltaCmp.setHtml("&nbsp;");
+        }
+    },
+
     _statColor: function (val) {
         if (val >= 90) return "cyan";
         if (val >= 80) return "lime";
@@ -305,7 +630,7 @@ Ext.define("DLSStats.view.main.UpgradeController", {
     // ── Update OVR circle + labels ────────────────────────────
     _updateDisplay: function () {
         var me = this;
-        var used    = me._calcUsedWeighted();
+        var used    = Math.min(me._calcUsedWeighted(), me._maxPoints); // clamp không vượt max
         var max     = me._maxPoints;
         var baseOvr = me._player.rate || 0;
         var isMax   = used >= max;
@@ -345,6 +670,7 @@ Ext.define("DLSStats.view.main.UpgradeController", {
 
         me._drawOvrCircle(dispOvr, baseOvr, used, max);
         me._syncStatCells();
+        me._syncNormalStatCells();
     },
 
     _drawOvrCircle: function (dispOvr, baseOvr, used, max) {
@@ -355,7 +681,7 @@ Ext.define("DLSStats.view.main.UpgradeController", {
 
         ctx.clearRect(0, 0, W, H);
 
-        // Màu nền theo ngưỡng OVR (giống màu stat phụ)
+        // Màu nền theo ngưỡng OVR
         var ovrNum = parseFloat(dispOvr) || baseOvr;
         var bgColor;
         if (ovrNum >= 90)      bgColor = "cyan";

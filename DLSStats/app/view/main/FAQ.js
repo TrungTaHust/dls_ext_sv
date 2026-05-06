@@ -191,8 +191,8 @@ Ext.define("DLSStats.view.main.FAQ", {
                         <b>Upgrading stats:</b><br/>
                         • Use the <b>▲ / ▼</b> arrows next to each stat to increase or decrease it.<br/>
                         • Stats cannot go below their original value or above <b>100</b>.<br/>
-                        • Each player has a <b>max upgrade budget</b> of 87–92 points (varies by player).<br/>
-                        • Some stats cost more points per level — <b>CON = ×2</b>, <b>STR = ×1.5</b>, others = ×1.<br/><br/>
+                        • Each player has a <b>max upgrade budget</b> of 82–87 points (varies by player).<br/>
+                        • Some stats cost more points per level — <b>CON = ×2</b>, <b>STR = ×1.5</b>, <b>SPE/ACC/SHO = ×1.0</b>, <b>PAS = ×0.9</b>, <b>TAC = ×0.8</b>, <b>STA = ×0.5</b>.<br/><br/>
                         <b>OVR circle:</b><br/>
                         • The ring around the OVR number fills clockwise from 12 o'clock as you spend points.<br/>
                         • When the budget is fully used, the ring completes and OVR shows <b>base + 10</b>.<br/><br/>

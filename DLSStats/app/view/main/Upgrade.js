@@ -74,7 +74,7 @@ Ext.define("DLSStats.view.main.Upgrade", {
             flex: 1,
             layout: { type: "vbox", align: "center", pack: "start" },
             items: [
-                // White card — wraps only the content, not full height
+                // White card
                 {
                     xtype: "container",
                     layout: { type: "vbox", align: "center" },
@@ -85,7 +85,7 @@ Ext.define("DLSStats.view.main.Upgrade", {
                         padding: "16px 20px",
                     },
                     items: [
-                        // Disclaimer
+                        // 1. Disclaimer
                         {
                             xtype: "component",
                             margin: "0 0 12 0",
@@ -94,7 +94,33 @@ Ext.define("DLSStats.view.main.Upgrade", {
                                   "⚠️ <b>Simulation only.</b> Results are approximate — actual in-game stats may differ by ±1–2 points per attribute." +
                                   "</div>",
                         },
-                        // Search row
+
+                        // 2. Mode selector
+                        {
+                            xtype: "container",
+                            layout: { type: "hbox", align: "middle", pack: "center" },
+                            margin: "0 0 12 0",
+                            items: [
+                                {
+                                    xtype: "component",
+                                    html: "<span style='font-size:12px;font-weight:bold;color:#555;margin-right:8px'>Mode:</span>",
+                                },
+                                {
+                                    xtype: "segmentedbutton",
+                                    reference: "modeBtn",
+                                    allowMultiple: false,
+                                    items: [
+                                        { text: "Custom", pressed: true },
+                                        { text: "Normal" },
+                                    ],
+                                    listeners: {
+                                        toggle: "onModeChange",
+                                    },
+                                },
+                            ],
+                        },
+
+                        // 3. Search row
                         {
                             xtype: "container",
                             layout: { type: "hbox", align: "middle", pack: "center" },
@@ -137,27 +163,27 @@ Ext.define("DLSStats.view.main.Upgrade", {
                             ],
                         },
 
-                        // Upgrade panel (hidden until player loaded)
+                        // 4. Upgrade panel (hidden until player loaded)
                         {
                             xtype: "container",
                             reference: "upgradePanel",
                             hidden: true,
+                            maxHeight: 520,
+                            scrollable: "vertical",
                             layout: { type: "vbox", align: "center" },
                             items: [
-                                // Player name + OVR circle row
+                                // OVR circle + info row
                                 {
                                     xtype: "container",
                                     layout: { type: "hbox", align: "middle", pack: "center" },
                                     margin: "0 0 16 0",
                                     defaults: { margin: "0 16" },
                                     items: [
-                                        // OVR circle
                                         {
                                             xtype: "component",
                                             reference: "ovrCircle",
                                             html: '<canvas id="upgrade-ovr-canvas" width="140" height="140"></canvas>',
                                         },
-                                        // Info column
                                         {
                                             xtype: "container",
                                             layout: { type: "vbox", align: "start" },
@@ -195,26 +221,161 @@ Ext.define("DLSStats.view.main.Upgrade", {
                                     ],
                                 },
 
-                                // Stats grid: 2 rows × 4 cols
+                                // customPanel: statsGrid với arrows
                                 {
                                     xtype: "container",
-                                    reference: "statsGrid",
+                                    reference: "customPanel",
                                     layout: { type: "vbox", align: "center" },
                                     items: [
                                         {
                                             xtype: "container",
-                                            itemId: "statsRow1",
-                                            layout: { type: "hbox", align: "top", pack: "center" },
-                                            margin: "0 0 10 0",
-                                            defaults: { margin: "0 8" },
-                                            items: [],
+                                            reference: "statsGrid",
+                                            layout: { type: "vbox", align: "center" },
+                                            items: [
+                                                {
+                                                    xtype: "container",
+                                                    itemId: "statsRow1",
+                                                    layout: { type: "hbox", align: "top", pack: "center" },
+                                                    margin: "0 0 10 0",
+                                                    defaults: { margin: "0 8" },
+                                                    items: [],
+                                                },
+                                                {
+                                                    xtype: "container",
+                                                    itemId: "statsRow2",
+                                                    layout: { type: "hbox", align: "top", pack: "center" },
+                                                    defaults: { margin: "0 8" },
+                                                    items: [],
+                                                },
+                                            ],
                                         },
+                                    ],
+                                },
+
+                                // normalPanel: coach controls + normalStatsGrid
+                                {
+                                    xtype: "container",
+                                    reference: "normalPanel",
+                                    hidden: true,
+                                    layout: { type: "vbox", align: "center" },
+                                    items: [
+                                        // Coach type selector
                                         {
                                             xtype: "container",
-                                            itemId: "statsRow2",
-                                            layout: { type: "hbox", align: "top", pack: "center" },
-                                            defaults: { margin: "0 8" },
-                                            items: [],
+                                            layout: { type: "hbox", align: "middle", pack: "center" },
+                                            margin: "0 0 6 0",
+                                            defaults: { margin: "0 5" },
+                                            items: [
+                                                {
+                                                    xtype: "component",
+                                                    html: "<span style='font-size:12px;font-weight:bold;color:#333'>Coach Type:</span>",
+                                                    margin: "0 8 0 0",
+                                                },
+                                                {
+                                                    xtype: "button",
+                                                    reference: "btnTechnical",
+                                                    text: "🎯 Technical",
+                                                    enableToggle: true,
+                                                    pressed: true,
+                                                    toggleGroup: "coachType",
+                                                    style: { minWidth: "110px" },
+                                                    listeners: { toggle: "onCoachTypeToggle" },
+                                                },
+                                                {
+                                                    xtype: "button",
+                                                    reference: "btnFitness",
+                                                    text: "💪 Fitness",
+                                                    enableToggle: true,
+                                                    pressed: false,
+                                                    toggleGroup: "coachType",
+                                                    style: { minWidth: "110px" },
+                                                    listeners: { toggle: "onCoachTypeToggle" },
+                                                },
+                                            ],
+                                        },
+                                        // Coach tier selector
+                                        {
+                                            xtype: "container",
+                                            layout: { type: "hbox", align: "middle", pack: "center" },
+                                            margin: "0 0 6 0",
+                                            defaults: { margin: "0 5" },
+                                            items: [
+                                                {
+                                                    xtype: "component",
+                                                    html: "<span style='font-size:12px;font-weight:bold;color:#333'>Coach Tier:</span>",
+                                                    margin: "0 8 0 0",
+                                                },
+                                                {
+                                                    xtype: "button",
+                                                    reference: "btnCommon",
+                                                    text: "Common",
+                                                    enableToggle: true,
+                                                    pressed: true,
+                                                    toggleGroup: "coachTier",
+                                                    style: { minWidth: "90px", backgroundColor: "#7f8c8d", color: "white" },
+                                                    listeners: { toggle: "onCoachTierToggle" },
+                                                },
+                                                {
+                                                    xtype: "button",
+                                                    reference: "btnRare",
+                                                    text: "Rare",
+                                                    enableToggle: true,
+                                                    pressed: false,
+                                                    toggleGroup: "coachTier",
+                                                    style: { minWidth: "90px", backgroundColor: "#2980b9", color: "white" },
+                                                    listeners: { toggle: "onCoachTierToggle" },
+                                                },
+                                                {
+                                                    xtype: "button",
+                                                    reference: "btnLegendary",
+                                                    text: "⭐ Legendary",
+                                                    enableToggle: true,
+                                                    pressed: false,
+                                                    toggleGroup: "coachTier",
+                                                    style: { minWidth: "110px", backgroundColor: "#f39c12", color: "white" },
+                                                    listeners: { toggle: "onCoachTierToggle" },
+                                                },
+                                            ],
+                                        },
+                                        // Coach info label
+                                        {
+                                            xtype: "component",
+                                            reference: "coachInfoLabel",
+                                            margin: "0 0 10 0",
+                                            html: "<div style='font-size:11px;color:#555;text-align:center'>" +
+                                                  "Common: +1 to 1 stat &nbsp;|&nbsp; 5% breakthrough (+1 extra)" +
+                                                  "</div>",
+                                        },
+                                        // Train button
+                                        {
+                                            xtype: "button",
+                                            text: "▶ Train",
+                                            margin: "0 0 8 0",
+                                            style: { backgroundColor: "#8e44ad", color: "white", fontWeight: "bold" },
+                                            handler: "onApplyCoach",
+                                        },
+                                        // normalStatsGrid: 2 rows × 4 cols, no arrows
+                                        {
+                                            xtype: "container",
+                                            reference: "normalStatsGrid",
+                                            layout: { type: "vbox", align: "center" },
+                                            items: [
+                                                {
+                                                    xtype: "container",
+                                                    itemId: "normalStatsRow1",
+                                                    layout: { type: "hbox", align: "top", pack: "center" },
+                                                    margin: "0 0 10 0",
+                                                    defaults: { margin: "0 8" },
+                                                    items: [],
+                                                },
+                                                {
+                                                    xtype: "container",
+                                                    itemId: "normalStatsRow2",
+                                                    layout: { type: "hbox", align: "top", pack: "center" },
+                                                    defaults: { margin: "0 8" },
+                                                    items: [],
+                                                },
+                                            ],
                                         },
                                     ],
                                 },
