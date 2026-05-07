@@ -23,13 +23,14 @@ Ext.define("DLSStats.view.main.BestXI", {
             xtype: "container",
             layout: { type: "hbox", align: "middle", pack: "center" },
             margin: "0 0 10 0",
-            defaults: { margin: "0 6" },
+            defaults: { margin: "0 4" },
+            style: { flexWrap: "wrap", rowGap: "6px" },
             items: [
                 { xtype: "component", html: "<b style='color:#fff;text-shadow:0 1px 3px rgba(0,0,0,0.8)'>Formation:</b>" },
                 {
                     xtype: "combo",
                     reference: "formationCombo",
-                    width: 130,
+                    width: 110,
                     queryMode: "local",
                     editable: false,
                     store: [
@@ -63,12 +64,12 @@ Ext.define("DLSStats.view.main.BestXI", {
                 {
                     xtype: "component",
                     reference: "totalRating",
-                    margin: "0 0 0 8",
+                    margin: "0 0 0 4",
                     html: "<div style='" +
                         "background:rgba(0,0,0,0.65);" +
                         "border:2px solid rgba(255,255,255,0.3);" +
                         "border-radius:8px;" +
-                        "padding:6px 16px;" +
+                        "padding:6px 12px;" +
                         "color:#fff;" +
                         "font-size:13px;" +
                         "font-weight:bold;" +
@@ -79,18 +80,18 @@ Ext.define("DLSStats.view.main.BestXI", {
             ],
         },
 
-        // Pitch
+        // Pitch — responsive: chiều rộng 100% viewport, tỉ lệ cố định 500:680
         {
             xtype: "component",
             reference: "pitch",
-            width: 500,
-            height: 680,
             style: {
                 background: "linear-gradient(180deg,#2d8a4e 0%,#3aad63 50%,#2d8a4e 100%)",
                 border: "3px solid #fff",
                 borderRadius: "8px",
                 position: "relative",
                 overflow: "hidden",
+                width: "min(500px, 96vw)",
+                height: "calc(min(500px, 96vw) * 1.36)",
             },
             html: '<div id="dls-pitch-inner" style="position:relative;width:100%;height:100%"></div>',
         },

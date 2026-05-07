@@ -23,12 +23,20 @@ Ext.define("DLSStats.view.main.Favorites", {
         {
             xtype: "container",
             layout: { type: "hbox", align: "top", pack: "center" },
+            responsiveConfig: {
+                "width < 700": { layout: { type: "vbox", align: "center" } },
+                "width >= 700": { layout: { type: "hbox", align: "top", pack: "center" } },
+            },
             defaults: { margin: 10 },
             items: [
                 // Favorites panel
                 {
                     xtype: "panel",
                     title: "Favorites",
+                    responsiveConfig: {
+                        "width < 700": { width: null, style: { width: "min(380px, 96vw)" } },
+                        "width >= 700": { width: 380 },
+                    },
                     width: 380,
                     tbar: [
                         "->",
@@ -133,6 +141,10 @@ Ext.define("DLSStats.view.main.Favorites", {
                 {
                     xtype: "dls-playerdetails",
                     reference: "playerdetails",
+                    responsiveConfig: {
+                        "width < 700": { width: null, style: { width: "min(340px, 96vw)" } },
+                        "width >= 700": { width: 340 },
+                    },
                     width: 340,
                 },
             ],

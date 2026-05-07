@@ -16,12 +16,24 @@ Ext.define("DLSStats.view.main.Upgrade", {
 
     layout: { type: "hbox", align: "stretch" },
     padding: 16,
+    responsiveConfig: {
+        "width < 700": {
+            layout: { type: "vbox", align: "stretch" },
+        },
+        "width >= 700": {
+            layout: { type: "hbox", align: "stretch" },
+        },
+    },
 
     items: [
         // ── LEFT: Favorites list ──────────────────────────────
         {
             xtype: "panel",
             title: "Favorites",
+            responsiveConfig: {
+                "width < 700": { width: null, height: 200, margin: "0 0 12 0" },
+                "width >= 700": { width: 260, height: null, margin: "0 12 0 0" },
+            },
             width: 260,
             margin: "0 12 0 0",
             layout: "fit",
@@ -265,6 +277,7 @@ Ext.define("DLSStats.view.main.Upgrade", {
                                             layout: { type: "hbox", align: "middle", pack: "center" },
                                             margin: "0 0 6 0",
                                             defaults: { margin: "0 5" },
+                                            style: { flexWrap: "wrap", rowGap: "4px" },
                                             items: [
                                                 {
                                                     xtype: "component",
@@ -291,6 +304,17 @@ Ext.define("DLSStats.view.main.Upgrade", {
                                                     style: { minWidth: "110px" },
                                                     listeners: { toggle: "onCoachTypeToggle" },
                                                 },
+                                                {
+                                                    xtype: "button",
+                                                    reference: "btnGoalkeeping",
+                                                    text: "🧤 Goalkeeping",
+                                                    enableToggle: true,
+                                                    pressed: false,
+                                                    hidden: true,
+                                                    toggleGroup: "coachType",
+                                                    style: { minWidth: "120px", backgroundColor: "#16a085", color: "white" },
+                                                    listeners: { toggle: "onCoachTypeToggle" },
+                                                },
                                             ],
                                         },
                                         // Coach tier selector
@@ -299,6 +323,7 @@ Ext.define("DLSStats.view.main.Upgrade", {
                                             layout: { type: "hbox", align: "middle", pack: "center" },
                                             margin: "0 0 6 0",
                                             defaults: { margin: "0 5" },
+                                            style: { flexWrap: "wrap", rowGap: "4px" },
                                             items: [
                                                 {
                                                     xtype: "component",

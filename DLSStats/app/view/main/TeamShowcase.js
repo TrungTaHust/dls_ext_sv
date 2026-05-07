@@ -23,7 +23,8 @@ Ext.define("DLSStats.view.main.TeamShowcase", {
             xtype: "container",
             layout: { type: "hbox", align: "middle", pack: "center" },
             margin: "0 0 10 0",
-            defaults: { margin: "0 8" },
+            defaults: { margin: "0 6" },
+            style: { flexWrap: "wrap", rowGap: "6px" },
             items: [
                 {
                     xtype: "segmentedbutton",
@@ -45,7 +46,7 @@ Ext.define("DLSStats.view.main.TeamShowcase", {
                     typeAhead: false,
                     anyMatch: true,
                     forceSelection: true,
-                    width: 180,
+                    width: 170,
                     listeners: { select: "onCriteriaSelect" },
                 },
                 {
@@ -59,7 +60,7 @@ Ext.define("DLSStats.view.main.TeamShowcase", {
                     typeAhead: false,
                     anyMatch: true,
                     forceSelection: true,
-                    width: 180,
+                    width: 170,
                     hidden: true,
                     listeners: { select: "onCriteriaSelect" },
                 },
@@ -67,7 +68,6 @@ Ext.define("DLSStats.view.main.TeamShowcase", {
                     xtype: "component",
                     reference: "infoLabel",
                     html: "",
-                    width: 300,
                     style: {
                         background: "rgba(0,0,0,0.65)",
                         borderRadius: "6px",
@@ -79,39 +79,44 @@ Ext.define("DLSStats.view.main.TeamShowcase", {
             ],
         },
 
-        // Main content: pitch + bench + player detail side by side
+        // Main content: pitch + bench + player detail
+        // Trên mobile: vbox (dọc), trên desktop: hbox (ngang)
         {
             xtype: "container",
             layout: { type: "hbox", align: "top" },
-            defaults: { margin: "0 8" },
+            responsiveConfig: {
+                "width < 700": { layout: { type: "vbox", align: "center" } },
+                "width >= 700": { layout: { type: "hbox", align: "top" } },
+            },
+            defaults: { margin: "0 6 8 6" },
             items: [
-                // Pitch
+                // Pitch — responsive width
                 {
                     xtype: "component",
                     reference: "showcasePitch",
-                    width: 500,
-                    height: 680,
                     style: {
                         background: "linear-gradient(180deg,#2d8a4e 0%,#3aad63 50%,#2d8a4e 100%)",
                         border: "3px solid #fff",
                         borderRadius: "8px",
                         position: "relative",
                         overflow: "hidden",
+                        width: "min(500px, 96vw)",
+                        height: "calc(min(500px, 96vw) * 1.36)",
                     },
                     html: '<div id="dls-showcase-pitch-inner" style="position:relative;width:100%;height:100%"></div>',
                 },
 
-                // Bench panel
+                // Bench panel — responsive width
                 {
                     xtype: "component",
                     reference: "benchPanel",
-                    width: 200,
-                    height: 680,
                     style: {
                         background: "rgba(15,15,15,0.92)",
                         border: "3px solid rgba(255,255,255,0.6)",
                         borderRadius: "8px",
                         overflow: "hidden",
+                        width: "min(200px, 96vw)",
+                        minHeight: "200px",
                     },
                     html: '<div id="dls-showcase-bench" style="width:100%;height:100%;padding:8px;box-sizing:border-box">' +
                         '<div style="color:#fff;font-weight:bold;text-align:center;font-size:13px;margin-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.4);padding-bottom:6px">SUBSTITUTES</div>' +
@@ -123,6 +128,10 @@ Ext.define("DLSStats.view.main.TeamShowcase", {
                     xtype: "dls-playerdetails",
                     reference: "showcasePlayerDetails",
                     width: 300,
+                    responsiveConfig: {
+                        "width < 700": { width: null, style: { width: "min(300px, 96vw)" } },
+                        "width >= 700": { width: 300 },
+                    },
                 },
             ],
         },

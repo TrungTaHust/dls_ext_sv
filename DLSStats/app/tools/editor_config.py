@@ -79,15 +79,19 @@ def setup_styles():
   style = ttk.Style()
   style.theme_use("clam")
   style.configure("Treeview",
-          rowheight=23, font=("Segoe UI", 9),
+          rowheight=26, font=("Segoe UI", 10),
           relief="solid", borderwidth=1,
           background="#ffffff", fieldbackground="#ffffff")
   style.configure("Treeview.Heading",
-          font=("Segoe UI", 9, "bold"),
+          font=("Segoe UI", 10, "bold"),
           background="#c0c0c0", relief="solid", borderwidth=1)
   style.map("Treeview",
        background=[("selected", "#3399ff")],
        foreground=[("selected", "white")])
+  style.configure("TButton", font=("Segoe UI", 10))
+  style.configure("TLabel",  font=("Segoe UI", 10))
+  style.configure("TEntry",  font=("Segoe UI", 10))
+  style.configure("TNotebook.Tab", font=("Segoe UI", 10))
 
 
 def _cast(raw):

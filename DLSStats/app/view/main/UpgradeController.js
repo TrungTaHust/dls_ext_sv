@@ -21,7 +21,7 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         con: 2,   pas: 1.0, sho: 1.0, tac: 1.0
     },
 
-    // Coach config
+    // Coach config (non-GK)
     COACH_TYPES: {
         technical: ["con", "pas", "sho", "tac"],
         fitness:   ["spe", "acc", "sta", "str"]
@@ -30,6 +30,21 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         common:    { count: 1, bonus: 1, breakChance: 0.05 },
         rare:      { count: 2, bonus: 2, breakChance: 0.10 },
         legendary: { count: 3, bonus: 3, breakChance: 0.20 }
+    },
+
+    // GK config — sta = GKR, sho = GKH
+    GK_STATS: ["sta", "sho"],
+    GK_STAT_LABELS: { sta: "GKR", sho: "GKH" },
+    GK_STAT_WEIGHTS: { sta: 0.9, sho: 0.9 },
+    GK_MAX_POINTS: 20,
+    GK_COACH_TIERS: {
+        common:    { count: 1, bonus: 1, breakChance: 0 },      // +1 cho 1 random
+        rare:      { count: 1, bonus: 2, breakChance: 0 },      // +2 cho 1 random
+        legendary: { count: 2, bonus: 3, breakChance: 0 }       // +3 cho cả 2
+    },
+
+    _isGK: function () {
+        return this._player && this._player.pos === "GK";
     },
 
     init: function () {
@@ -46,8 +61,9 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         } catch (e) {}
     },
 
-    // Deterministic max points: 80-85 based on id
+    // Deterministic max points: 80-85 based on id (non-GK), 20 for GK
     _calcMaxPoints: function (id) {
+        if (this._isGK()) return this.GK_MAX_POINTS;
         return 80 + (parseInt(id, 10) % 6);
     },
 
@@ -97,6 +113,26 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         // Hiện đúng panel theo mode hiện tại
         if (customPanel) customPanel.setVisible(currentMode === "custom");
         if (normalPanel) normalPanel.setVisible(currentMode === "normal");
+
+        // Ẩn/hiện coach type buttons theo vị trí
+        var btnTechnical  = me.lookupReference("btnTechnical");
+        var btnFitness    = me.lookupReference("btnFitness");
+        var btnGoalkeeping = me.lookupReference("btnGoalkeeping");
+        if (btnTechnical && btnFitness && btnGoalkeeping) {
+            if (me._isGK()) {
+                btnTechnical.setVisible(false);
+                btnFitness.setVisible(false);
+                btnGoalkeeping.setVisible(true);
+                btnGoalkeeping.setPressed(true);
+            } else {
+                btnTechnical.setVisible(true);
+                btnFitness.setVisible(true);
+                btnGoalkeeping.setVisible(false);
+                btnTechnical.setPressed(true);
+            }
+        }
+        // Cập nhật coach info label theo loại coach mới
+        me._updateCoachInfoLabel();
 
         // upgradePanel phải visible trước khi canvas có trong DOM
         var panel = me.lookupReference("upgradePanel");
@@ -148,106 +184,109 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         var me = this;
         if (!me._player) return;
 
-        var coachTypeText = me._getSelectedType();   // "technical" or "fitness"
-        var coachTierText = me._getSelectedTier();   // "common", "rare", "legendary"
+        var isGK          = me._isGK();
+        var coachTypeText = me._getSelectedType();
+        var coachTierText = me._getSelectedTier();
 
-        var typePool = me.COACH_TYPES[coachTypeText];
-        var tier     = me.COACH_TIERS[coachTierText];
+        // Validate: GK chỉ dùng goalkeeping, non-GK không dùng goalkeeping
+        if (isGK && coachTypeText !== "goalkeeping") {
+            Ext.Msg.alert("Wrong Coach", "GK can only use the Goalkeeping coach.");
+            return;
+        }
+        if (!isGK && coachTypeText === "goalkeeping") {
+            Ext.Msg.alert("Wrong Coach", "Only GK can use the Goalkeeping coach.");
+            return;
+        }
 
-        if (!typePool || !tier) return;
+        var tier    = isGK ? me.GK_COACH_TIERS[coachTierText] : me.COACH_TIERS[coachTierText];
+        var weights = isGK ? me.GK_STAT_WEIGHTS : me.STAT_WEIGHTS;
 
-        // Lọc pool: chỉ lấy stats có _current[stat] < 100
-        var pool = typePool.filter(function (stat) {
-            return (me._current[stat] || 0) < 100;
-        });
+        var pool = isGK
+            ? me.GK_STATS.filter(function (s) { return (me._current[s] || 0) < 100; })
+            : me.COACH_TYPES[coachTypeText].filter(function (s) { return (me._current[s] || 0) < 100; });
 
-        if (pool.length === 0) {
+        if (!tier || pool.length === 0) {
             Ext.Msg.alert("All maxed!", "All stats in this coach's pool are already at 100.");
             return;
         }
 
-        // Chọn ngẫu nhiên tier.count stats từ pool (không trùng)
-        var count = Math.min(tier.count, pool.length);
-        var shuffled = pool.slice();
-        for (var i = shuffled.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            var tmp = shuffled[i];
-            shuffled[i] = shuffled[j];
-            shuffled[j] = tmp;
-        }
-        var chosen = shuffled.slice(0, count);
-
-        // Roll breakthrough
-        var breakthrough = Math.random() < tier.breakChance;
-        var bonusPerStat = tier.bonus + (breakthrough ? 1 : 0);
-
-        // Kiểm tra budget còn lại
+        // Kiểm tra budget
         var usedBefore = me._calcUsedWeighted();
         var remaining  = me._maxPoints - usedBefore;
-
-        // Áp dụng bonus và tính weighted points
-        var changes = [];
+        var changes    = [];
 
         if (remaining <= 0) {
-            // Hết budget hoàn toàn
             Ext.toast({ html: "Already at MAX! No points remaining.", align: "b", minWidth: 220 });
             return;
         }
 
-        // Tính tổng weighted cost nếu train đầy đủ
-        var totalWeightedCost = 0;
-        chosen.forEach(function (stat) {
-            totalWeightedCost += bonusPerStat * me.STAT_WEIGHTS[stat];
-        });
+        var chosen, bonusPerStat, breakthrough;
 
-        // Nếu đủ điểm → train bình thường
-        // Nếu không đủ → chia đều điểm còn lại theo trọng số
+        if (isGK) {
+            // GK: không có breakthrough
+            // common: +1 cho 1 random, rare: +2 cho 1 random, legendary: +3 cho cả 2
+            bonusPerStat  = tier.bonus;
+            breakthrough  = false;
+            if (coachTierText === "legendary") {
+                // Legendary: áp dụng cho cả 2 stat (GKR và GKH)
+                chosen = pool.slice();
+            } else {
+                // Common / Rare: chọn 1 random từ pool
+                var randIdx = Math.floor(Math.random() * pool.length);
+                chosen = [pool[randIdx]];
+            }
+        } else {
+            // Non-GK: shuffle + chọn theo tier.count, có breakthrough
+            var shuffled = pool.slice();
+            for (var i = shuffled.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var tmp = shuffled[i]; shuffled[i] = shuffled[j]; shuffled[j] = tmp;
+            }
+            chosen       = shuffled.slice(0, Math.min(tier.count, shuffled.length));
+            breakthrough = Math.random() < tier.breakChance;
+            bonusPerStat = tier.bonus + (breakthrough ? 1 : 0);
+        }
+
+        // Tính tổng weighted cost
+        var totalWeightedCost = 0;
+        chosen.forEach(function (stat) { totalWeightedCost += bonusPerStat * (weights[stat] || 1); });
+
         var actualBonusMap = {};
         if (totalWeightedCost <= remaining) {
-            // Đủ điểm
-            chosen.forEach(function (stat) {
-                actualBonusMap[stat] = bonusPerStat;
-            });
+            chosen.forEach(function (stat) { actualBonusMap[stat] = bonusPerStat; });
         } else {
-            // Không đủ: chia remaining theo tỉ lệ trọng số
             var totalWeight = 0;
-            chosen.forEach(function (stat) { totalWeight += me.STAT_WEIGHTS[stat]; });
-
+            chosen.forEach(function (stat) { totalWeight += (weights[stat] || 1); });
             chosen.forEach(function (stat) {
-                var share = (me.STAT_WEIGHTS[stat] / totalWeight) * remaining;
-                // Số bậc thực tế = share / weight, làm tròn xuống tối thiểu 0
-                var bac = Math.max(0, Math.floor(share / me.STAT_WEIGHTS[stat]));
-                actualBonusMap[stat] = bac;
+                var share = ((weights[stat] || 1) / totalWeight) * remaining;
+                actualBonusMap[stat] = Math.max(0, Math.floor(share / (weights[stat] || 1)));
             });
         }
 
         chosen.forEach(function (stat) {
-            var bonus  = actualBonusMap[stat] || 0;
+            var bonus = actualBonusMap[stat] || 0;
             if (bonus <= 0) return;
             var oldVal = me._current[stat] || 0;
             var newVal = Math.min(100, oldVal + bonus);
             var actualBonus = newVal - oldVal;
             if (actualBonus <= 0) return;
-
             me._current[stat] = newVal;
-            changes.push(stat.toUpperCase() + " +" + actualBonus);
+            var label = isGK ? (me.GK_STAT_LABELS[stat] || stat.toUpperCase()) : stat.toUpperCase();
+            changes.push(label + " +" + actualBonus);
         });
 
-        // Tiêu hết điểm còn lại (dù có cộng chỉ số hay không)
-        // để budget đạt max khi không đủ 1 bậc
+        // Tiêu hết điểm lẻ còn lại
         var usedAfter = me._calcUsedWeightedFromBase();
         if (usedAfter < me._maxPoints && totalWeightedCost > remaining) {
-            // Còn điểm lẻ chưa tiêu — đẩy vào _usedExtra để đạt max
             me._usedExtra = (me._usedExtra || 0) + (me._maxPoints - usedAfter);
         }
 
         me._syncNormalStatCells();
         me._updateDisplay();
 
-        // Hiển thị toast
         var msg = changes.length > 0
-            ? "Coach applied! [" + changes.join(", ") + "]"
-            : "No stats changed.";
+            ? "Trained! [" + changes.join(", ") + "]"
+            : "No stats changed (not enough points for a full level).";
         if (breakthrough) msg += " &nbsp;⚡ <b>BREAKTHROUGH!</b>";
         Ext.toast({ html: msg, align: "b", slideInDuration: 200, minWidth: 220 });
     },
@@ -265,27 +304,46 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         var me = this;
         var label = me.lookupReference("coachInfoLabel");
         if (!label) return;
-        var tier       = me._getSelectedTier();
-        var type       = me._getSelectedType();
-        var tierConfig = me.COACH_TIERS[tier];
-        var typeStats  = me.COACH_TYPES[type];
-        if (!tierConfig || !typeStats) return;
-        var statsStr = typeStats.map(function (s) { return s.toUpperCase(); }).join(", ");
-        var breakPct = (tierConfig.breakChance * 100) + "%";
-        label.setHtml(
-            "<div style='font-size:11px;color:#555;text-align:center'>" +
-            "<b>" + tier.charAt(0).toUpperCase() + tier.slice(1) + "</b>: " +
-            "+" + tierConfig.bonus + " to " + tierConfig.count + " stat(s) [" + statsStr + "]" +
-            " &nbsp;|&nbsp; " + breakPct + " breakthrough (+" + (tierConfig.bonus + 1) + " each)" +
-            "</div>"
-        );
+        var tier = me._getSelectedTier();
+        var type = me._getSelectedType();
+
+        if (type === "goalkeeping") {
+            // GK coach info
+            var gkTier = me.GK_COACH_TIERS[tier];
+            if (!gkTier) return;
+            var gkDesc;
+            if (tier === "legendary") {
+                gkDesc = "+" + gkTier.bonus + " to both GKR &amp; GKH";
+            } else {
+                gkDesc = "+" + gkTier.bonus + " to 1 random (GKR or GKH)";
+            }
+            label.setHtml(
+                "<div style='font-size:11px;color:#555;text-align:center'>" +
+                "<b>" + tier.charAt(0).toUpperCase() + tier.slice(1) + "</b>: " + gkDesc +
+                "</div>"
+            );
+        } else {
+            // Non-GK coach info
+            var tierConfig = me.COACH_TIERS[tier];
+            var typeStats  = me.COACH_TYPES[type];
+            if (!tierConfig || !typeStats) return;
+            var statsStr = typeStats.map(function (s) { return s.toUpperCase(); }).join(", ");
+            var breakPct = (tierConfig.breakChance * 100) + "%";
+            label.setHtml(
+                "<div style='font-size:11px;color:#555;text-align:center'>" +
+                "<b>" + tier.charAt(0).toUpperCase() + tier.slice(1) + "</b>: " +
+                "+" + tierConfig.bonus + " to " + tierConfig.count + " stat(s) [" + statsStr + "]" +
+                " &nbsp;|&nbsp; " + breakPct + " breakthrough (+" + (tierConfig.bonus + 1) + " each)" +
+                "</div>"
+            );
+        }
     },
 
     // ── Helpers: get selected coach type/tier ────────────────
     _getSelectedType: function () {
         var me = this;
-        var btnFitness = me.lookupReference("btnFitness");
-        if (btnFitness && btnFitness.pressed) return "fitness";
+        if (me.lookupReference("btnFitness") && me.lookupReference("btnFitness").pressed) return "fitness";
+        if (me.lookupReference("btnGoalkeeping") && me.lookupReference("btnGoalkeeping").pressed) return "goalkeeping";
         return "technical";
     },
 
@@ -305,17 +363,22 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         row1.removeAll(true);
         row2.removeAll(true);
 
-        var row1Stats = ["spe", "acc", "sta", "str"];
-        var row2Stats = ["con", "pas", "sho", "tac"];
-
-        row1Stats.forEach(function (stat) { row1.add(me._makeStatCell(stat)); });
-        row2Stats.forEach(function (stat) { row2.add(me._makeStatCell(stat)); });
+        if (me._isGK()) {
+            // GK: chỉ hiện GKR (sta) và GKH (sho) ở row1, row2 trống
+            me.GK_STATS.forEach(function (stat) { row1.add(me._makeStatCell(stat)); });
+        } else {
+            var row1Stats = ["spe", "acc", "sta", "str"];
+            var row2Stats = ["con", "pas", "sho", "tac"];
+            row1Stats.forEach(function (stat) { row1.add(me._makeStatCell(stat)); });
+            row2Stats.forEach(function (stat) { row2.add(me._makeStatCell(stat)); });
+        }
     },
 
     _makeStatCell: function (stat) {
         var me = this;
-        var label  = me.STAT_LABELS[stat];
-        var weight = me.STAT_WEIGHTS[stat];
+        var isGK   = me._isGK();
+        var label  = isGK ? (me.GK_STAT_LABELS[stat] || stat.toUpperCase()) : me.STAT_LABELS[stat];
+        var weight = isGK ? (me.GK_STAT_WEIGHTS[stat] || 1) : me.STAT_WEIGHTS[stat];
         var weightBadge = weight !== 1
             ? "<span style='font-size:9px;color:#f1c40f;margin-left:2px'>×" + weight + "</span>"
             : "";
@@ -395,18 +458,22 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         row1.removeAll(true);
         row2.removeAll(true);
 
-        // Row 1: SPE ACC STA STR, Row 2: CON PAS SHO TAC
-        var row1Stats = ["spe", "acc", "sta", "str"];
-        var row2Stats = ["con", "pas", "sho", "tac"];
-
-        row1Stats.forEach(function (stat) { row1.add(me._makeNormalStatCell(stat)); });
-        row2Stats.forEach(function (stat) { row2.add(me._makeNormalStatCell(stat)); });
+        if (me._isGK()) {
+            // GK: chỉ hiện GKR (sta) và GKH (sho) ở row1, row2 trống
+            me.GK_STATS.forEach(function (stat) { row1.add(me._makeNormalStatCell(stat)); });
+        } else {
+            var row1Stats = ["spe", "acc", "sta", "str"];
+            var row2Stats = ["con", "pas", "sho", "tac"];
+            row1Stats.forEach(function (stat) { row1.add(me._makeNormalStatCell(stat)); });
+            row2Stats.forEach(function (stat) { row2.add(me._makeNormalStatCell(stat)); });
+        }
     },
 
     _makeNormalStatCell: function (stat) {
         var me = this;
-        var label  = me.STAT_LABELS[stat];
-        var weight = me.STAT_WEIGHTS[stat];
+        var isGK   = me._isGK();
+        var label  = isGK ? (me.GK_STAT_LABELS[stat] || stat.toUpperCase()) : me.STAT_LABELS[stat];
+        var weight = isGK ? (me.GK_STAT_WEIGHTS[stat] || 1) : me.STAT_WEIGHTS[stat];
         var weightBadge = weight !== 1
             ? "<span style='font-size:9px;color:#f1c40f;margin-left:2px'>×" + weight + "</span>"
             : "";
@@ -455,7 +522,8 @@ Ext.define("DLSStats.view.main.UpgradeController", {
         if (newVal < base) return;
         if (newVal > 100)  return;
 
-        var weight       = me.STAT_WEIGHTS[stat];
+        var isGK   = me._isGK();
+        var weight = isGK ? (me.GK_STAT_WEIGHTS[stat] || 1) : me.STAT_WEIGHTS[stat];
         var usedWeighted = me._calcUsedWeighted();
         var remaining    = me._maxPoints - usedWeighted;
 
@@ -488,9 +556,11 @@ Ext.define("DLSStats.view.main.UpgradeController", {
     _calcUsedWeighted: function () {
         var me = this;
         var total = me._usedExtra || 0;
-        me.STATS.forEach(function (stat) {
+        var stats   = me._isGK() ? me.GK_STATS   : me.STATS;
+        var weights = me._isGK() ? me.GK_STAT_WEIGHTS : me.STAT_WEIGHTS;
+        stats.forEach(function (stat) {
             var diff = (me._current[stat] || 0) - (me._player[stat] || 0);
-            total += diff * me.STAT_WEIGHTS[stat];
+            total += diff * (weights[stat] || 1);
         });
         return total;
     },
@@ -498,10 +568,12 @@ Ext.define("DLSStats.view.main.UpgradeController", {
     // Chỉ tính từ stat diffs (không có extra)
     _calcUsedWeightedFromBase: function () {
         var me = this;
-        var total = 0;
-        me.STATS.forEach(function (stat) {
+        var total   = 0;
+        var stats   = me._isGK() ? me.GK_STATS   : me.STATS;
+        var weights = me._isGK() ? me.GK_STAT_WEIGHTS : me.STAT_WEIGHTS;
+        stats.forEach(function (stat) {
             var diff = (me._current[stat] || 0) - (me._player[stat] || 0);
-            total += diff * me.STAT_WEIGHTS[stat];
+            total += diff * (weights[stat] || 1);
         });
         return total;
     },
@@ -509,7 +581,8 @@ Ext.define("DLSStats.view.main.UpgradeController", {
     // ── Sync stat cell canvases (Custom mode) ─────────────────
     _syncStatCells: function () {
         var me = this;
-        me.STATS.forEach(function (stat) {
+        var stats = me._isGK() ? me.GK_STATS : me.STATS;
+        stats.forEach(function (stat) {
             me._drawStatCircle(stat);
             me._updateDelta(stat);
         });
@@ -565,7 +638,8 @@ Ext.define("DLSStats.view.main.UpgradeController", {
     // ── Sync normal stat cell canvases (Normal mode) ──────────
     _syncNormalStatCells: function () {
         var me = this;
-        me.STATS.forEach(function (stat) {
+        var stats = me._isGK() ? me.GK_STATS : me.STATS;
+        stats.forEach(function (stat) {
             me._drawNormalStatCircle(stat);
             me._updateNormalDelta(stat);
         });

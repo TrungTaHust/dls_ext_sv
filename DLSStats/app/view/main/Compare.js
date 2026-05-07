@@ -27,6 +27,7 @@ Ext.define("DLSStats.view.main.Compare", {
             layout: { type: "hbox", pack: "center", align: "middle" },
             margin: "0 0 10 0",
             defaults: { margin: 6 },
+            style: { flexWrap: "wrap", rowGap: "4px" },
             items: [
                 // Player 1
                 { xtype: "textfield", itemId: "player1Id", emptyText: "ID 1", width: 80 },

@@ -1,13 +1,89 @@
 <!DOCTYPE HTML>
 <html manifest="">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
     <title>DLS26 Player's Stats</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        /* ── Mobile touch & layout fixes ─────────────────────── */
+
+        /* Tăng row height cho grid — dễ bấm ngón tay */
+        @media (max-width: 768px) {
+            .x-grid-item {
+                min-height: 40px !important;
+            }
+            .x-grid-cell-inner {
+                line-height: 40px !important;
+                font-size: 13px !important;
+            }
+
+            /* Tab bar: nhỏ hơn, chữ nhỏ hơn để vừa màn hình */
+            .x-tab {
+                padding: 10px 8px !important;
+                font-size: 11px !important;
+                min-width: 0 !important;
+            }
+            .x-tab-bar {
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch !important;
+            }
+
+            /* Button: tăng touch target */
+            .x-btn {
+                min-height: 36px !important;
+                padding: 6px 10px !important;
+            }
+
+            /* Form fields: tăng chiều cao */
+            .x-form-field {
+                height: 36px !important;
+                font-size: 14px !important;
+            }
+
+            /* Tắt hover effect trên touch (tránh stuck hover) */
+            .x-btn:hover {
+                opacity: 1 !important;
+            }
+        }
+
+        /* Ngăn double-tap zoom trên iOS */
+        * {
+            touch-action: manipulation;
+        }
+
+        /* Scrollable tab bar trên mobile */
+        .x-tab-bar-body {
+            overflow-x: auto !important;
+            -webkit-overflow-scrolling: touch !important;
+        }
+        .x-tab-bar-body::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Pitch player nodes: scale nhỏ lại trên màn hẹp */
+        @media (max-width: 480px) {
+            /* Pitch width ≈ 96vw, tỉ lệ node/pitch = 64/500 = 12.8% */
+            #dls-pitch-inner > div,
+            #dls-showcase-pitch-inner > div {
+                width: 12.5vw !important;
+                height: 12.5vw !important;
+                font-size: 8px !important;
+            }
+            #dls-pitch-inner > div span,
+            #dls-showcase-pitch-inner > div span {
+                font-size: 8px !important;
+                max-width: 11vw !important;
+            }
+        }
+    </style>
 
     <!-- The line below must be kept intact for Sencha Cmd to build your application -->
     <script id="microloader" data-app="20e5c4a2-58e2-4c88-868d-ea31f520f3f0" type="text/javascript"

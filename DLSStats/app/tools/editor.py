@@ -6,19 +6,20 @@ Module layout:
   editor_widgets.py  — EditDialog, TreeTable, RenameEntry
   editor_tabs.py     — VersionTab, DataTab, SpecialTab, PlayerIDTab, PriceMapTab
   editor_import.py   — ImportTab + shared preview/validation helpers
-  editor_ocr.py      — OCRTab + PaddleOCR engine helpers
+  editor_ocr.py      — OCRTab + PaddleOCR engine helpers (disabled, kept for future use)
 """
-
-import tkinter as tk
-from tkinter import ttk
 
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+import tkinter as tk
+from tkinter import ttk
+
 from editor_config import setup_styles
 from editor_tabs import DataTab, SpecialTab, PlayerIDTab, PriceMapTab
 from editor_import import ImportTab
-from editor_ocr import OCRTab, _ocr_available, _get_paddle_engine
+# OCR tab disabled — code kept in editor_ocr.py for future use
+# from editor_ocr import OCRTab, _ocr_available, _get_paddle_engine
 
 
 class App(tk.Tk):
@@ -41,12 +42,7 @@ class App(tk.Tk):
     nb.add(pid_tab,                           text=" playerID ")
     nb.add(PriceMapTab(nb),                   text=" Price Map ")
     nb.add(ImportTab(nb, data_tab, pid_tab),  text=" Import ")
-    nb.add(OCRTab(nb, data_tab, pid_tab),     text=" OCR ")
-
-    # Warm up PaddleOCR engine in background so first OCR run is fast
-    if _ocr_available():
-      import threading
-      threading.Thread(target=_get_paddle_engine, daemon=True).start()
+    # nb.add(OCRTab(nb, data_tab, pid_tab),   text=" OCR ")  # disabled
 
 
 if __name__ == "__main__":
