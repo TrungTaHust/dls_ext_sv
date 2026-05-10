@@ -18,8 +18,7 @@ from tkinter import ttk
 from editor_config import setup_styles
 from editor_tabs import DataTab, SpecialTab, PlayerIDTab, PriceMapTab
 from editor_import import ImportTab
-# OCR tab disabled — code kept in editor_ocr.py for future use
-# from editor_ocr import OCRTab, _ocr_available, _get_paddle_engine
+from editor_ocr import OCRTab
 
 
 class App(tk.Tk):
@@ -42,7 +41,7 @@ class App(tk.Tk):
     nb.add(pid_tab,                           text=" playerID ")
     nb.add(PriceMapTab(nb),                   text=" Price Map ")
     nb.add(ImportTab(nb, data_tab, pid_tab),  text=" Import ")
-    # nb.add(OCRTab(nb, data_tab, pid_tab),   text=" OCR ")  # disabled
+    nb.add(OCRTab(nb, data_tab, pid_tab),     text=" OCR ")
 
 
 if __name__ == "__main__":
