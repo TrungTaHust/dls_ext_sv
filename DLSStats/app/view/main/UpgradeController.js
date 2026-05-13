@@ -64,7 +64,7 @@ Ext.define("DLSStats.view.main.UpgradeController", {
     // Deterministic max points: 80-85 based on id (non-GK), 20 for GK
     _calcMaxPoints: function (id) {
         if (this._isGK()) return this.GK_MAX_POINTS;
-        return 80 + (parseInt(id, 10) % 6);
+        return 81 + (parseInt(id, 10) % 3);
     },
 
     onFavSelect: function (grid, record) {
