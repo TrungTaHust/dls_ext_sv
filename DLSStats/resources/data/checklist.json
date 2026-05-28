@@ -6,61 +6,6 @@
       "nation": "ENG"
     },
     {
-      "club": "Aston Villa",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "Bournemouth",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "Brentford",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "Brighton",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "Burnley",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "Chelsea",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "Crystal Palace",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "Everton",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "Fulham",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "Leeds",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "Liverpool",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
       "club": "Man City",
       "update": 1,
       "nation": "ENG"
@@ -71,177 +16,7 @@
       "nation": "ENG"
     },
     {
-      "club": "Newcastle",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "Nottingham",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "Sunderland",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "Tottenham",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "West Ham",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "Wolves",
-      "update": 1,
-      "nation": "ENG"
-    },
-    {
-      "club": "Blackburn",
-      "update": 1,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Bristol",
-      "update": 1,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Charlton",
-      "update": 1,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Coventry",
-      "update": 1,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Derby",
-      "update": 1,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Hull",
-      "update": 1,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Ipswich",
-      "update": 1,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Leicester",
-      "update": 1,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Middlesbrough",
-      "update": 1,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Oxford",
-      "update": 1,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Portsmouth",
-      "update": 1,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Sheffield United",
-      "update": 1,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Sheffield W",
-      "update": 1,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Swansea",
-      "update": 1,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Alaves",
-      "update": 1,
-      "nation": "ESP"
-    },
-    {
-      "club": "Athletic Bilbao",
-      "update": 1,
-      "nation": "ESP"
-    },
-    {
-      "club": "Atletico Madrid",
-      "update": 1,
-      "nation": "ESP"
-    },
-    {
       "club": "Barcelona",
-      "update": 1,
-      "nation": "ESP"
-    },
-    {
-      "club": "Celta Vigo",
-      "update": 1,
-      "nation": "ESP"
-    },
-    {
-      "club": "Cornella",
-      "update": 1,
-      "nation": "ESP"
-    },
-    {
-      "club": "Elche",
-      "update": 1,
-      "nation": "ESP"
-    },
-    {
-      "club": "Getafe",
-      "update": 1,
-      "nation": "ESP"
-    },
-    {
-      "club": "Girona",
-      "update": 1,
-      "nation": "ESP"
-    },
-    {
-      "club": "Levante",
-      "update": 1,
-      "nation": "ESP"
-    },
-    {
-      "club": "Mallorca",
-      "update": 1,
-      "nation": "ESP"
-    },
-    {
-      "club": "Osasuna",
-      "update": 1,
-      "nation": "ESP"
-    },
-    {
-      "club": "Oviedo",
-      "update": 1,
-      "nation": "ESP"
-    },
-    {
-      "club": "Rayo Vallecano",
-      "update": 1,
-      "nation": "ESP"
-    },
-    {
-      "club": "Real Betis",
       "update": 1,
       "nation": "ESP"
     },
@@ -251,302 +26,102 @@
       "nation": "ESP"
     },
     {
-      "club": "Real Sociedad",
-      "update": 1,
-      "nation": "ESP"
+      "club": "Aston Villa",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Sevilla",
-      "update": 1,
-      "nation": "ESP"
+      "club": "Bournemouth",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Valencia",
-      "update": 1,
-      "nation": "ESP"
+      "club": "Brentford",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Villareal",
-      "update": 1,
-      "nation": "ESP"
+      "club": "Brighton",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Angers",
-      "update": 1,
-      "nation": "FRA"
+      "club": "Burnley",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Auxerre",
-      "update": 1,
-      "nation": "FRA"
+      "club": "Chelsea",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Brest",
-      "update": 1,
-      "nation": "FRA"
+      "club": "Crystal Palace",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Le Havre",
-      "update": 1,
-      "nation": "FRA"
+      "club": "Everton",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Lens",
-      "update": 1,
-      "nation": "FRA"
+      "club": "Fulham",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Lille",
-      "update": 1,
-      "nation": "FRA"
+      "club": "Leeds",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Lorient",
-      "update": 1,
-      "nation": "FRA"
+      "club": "Liverpool",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Lyon",
-      "update": 1,
-      "nation": "FRA"
+      "club": "Newcastle",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Marseille",
-      "update": 1,
-      "nation": "FRA"
+      "club": "Nottingham",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Metz",
-      "update": 1,
-      "nation": "FRA"
+      "club": "Sunderland",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Monaco",
-      "update": 1,
-      "nation": "FRA"
+      "club": "Tottenham",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Nantes",
-      "update": 1,
-      "nation": "FRA"
+      "club": "West Ham",
+      "update": 0,
+      "nation": "ENG"
     },
     {
-      "club": "Nice",
-      "update": 1,
-      "nation": "FRA"
-    },
-    {
-      "club": "Paris",
-      "update": 1,
-      "nation": "FRA"
-    },
-    {
-      "club": "Paris SG",
-      "update": 1,
-      "nation": "FRA"
-    },
-    {
-      "club": "Rennes",
-      "update": 1,
-      "nation": "FRA"
-    },
-    {
-      "club": "Strasbourg",
-      "update": 1,
-      "nation": "FRA"
-    },
-    {
-      "club": "Toulouse",
-      "update": 1,
-      "nation": "FRA"
-    },
-    {
-      "club": "AC Milan",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Atalanta",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Bologna",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Cagliari",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Como",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Cremonese",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Fiorentina",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Genoa",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Inter Milan",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Juventus",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Lazio",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Lecce",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Napoli",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Parma",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Pisa",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Roma",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Sassuolo",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Torino",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Udinese",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Verona",
-      "update": 1,
-      "nation": "ITA"
-    },
-    {
-      "club": "Feyenoord",
-      "update": 1,
-      "nation": "NED"
-    },
-    {
-      "club": "PSV",
-      "update": 1,
-      "nation": "NED"
-    },
-    {
-      "club": "Benfica",
-      "update": 1,
-      "nation": "POR"
-    },
-    {
-      "club": "Braga",
-      "update": 1,
-      "nation": "POR"
-    },
-    {
-      "club": "Porto",
-      "update": 1,
-      "nation": "POR"
-    },
-    {
-      "club": "S Lisbon",
-      "update": 1,
-      "nation": "POR"
-    },
-    {
-      "club": "Aberdeen",
-      "update": 1,
-      "nation": "SCO"
-    },
-    {
-      "club": "Celtic",
-      "update": 1,
-      "nation": "SCO"
-    },
-    {
-      "club": "Dundee",
-      "update": 1,
-      "nation": "SCO"
-    },
-    {
-      "club": "Dundee U",
-      "update": 1,
-      "nation": "SCO"
-    },
-    {
-      "club": "Glasgow R",
-      "update": 1,
-      "nation": "SCO"
-    },
-    {
-      "club": "Hearts",
-      "update": 1,
-      "nation": "SCO"
-    },
-    {
-      "club": "Hibernian",
-      "update": 1,
-      "nation": "SCO"
-    },
-    {
-      "club": "Kilmarnock",
-      "update": 1,
-      "nation": "SCO"
-    },
-    {
-      "club": "Livingston",
-      "update": 1,
-      "nation": "SCO"
-    },
-    {
-      "club": "Motherwell",
-      "update": 1,
-      "nation": "SCO"
-    },
-    {
-      "club": "S Mirren",
-      "update": 1,
-      "nation": "SCO"
+      "club": "Wolves",
+      "update": 0,
+      "nation": "ENG"
     },
     {
       "club": "Birmingham",
+      "update": 0,
+      "nation": "ENG1"
+    },
+    {
+      "club": "Blackburn",
+      "update": 0,
+      "nation": "ENG1"
+    },
+    {
+      "club": "Bristol",
       "update": 0,
       "nation": "ENG1"
     },
@@ -556,12 +131,47 @@
       "nation": "ENG1"
     },
     {
+      "club": "Charlton",
+      "update": 0,
+      "nation": "ENG1"
+    },
+    {
+      "club": "Coventry",
+      "update": 0,
+      "nation": "ENG1"
+    },
+    {
+      "club": "Derby",
+      "update": 0,
+      "nation": "ENG1"
+    },
+    {
       "club": "Huddersfield",
       "update": 0,
       "nation": "ENG1"
     },
     {
+      "club": "Hull",
+      "update": 0,
+      "nation": "ENG1"
+    },
+    {
+      "club": "Ipswich",
+      "update": 0,
+      "nation": "ENG1"
+    },
+    {
+      "club": "Leicester",
+      "update": 0,
+      "nation": "ENG1"
+    },
+    {
       "club": "Luton",
+      "update": 0,
+      "nation": "ENG1"
+    },
+    {
+      "club": "Middlesbrough",
       "update": 0,
       "nation": "ENG1"
     },
@@ -576,7 +186,17 @@
       "nation": "ENG1"
     },
     {
+      "club": "Oxford",
+      "update": 0,
+      "nation": "ENG1"
+    },
+    {
       "club": "Plymouth",
+      "update": 0,
+      "nation": "ENG1"
+    },
+    {
+      "club": "Portsmouth",
       "update": 0,
       "nation": "ENG1"
     },
@@ -596,12 +216,27 @@
       "nation": "ENG1"
     },
     {
+      "club": "Sheffield United",
+      "update": 0,
+      "nation": "ENG1"
+    },
+    {
+      "club": "Sheffield W",
+      "update": 0,
+      "nation": "ENG1"
+    },
+    {
       "club": "Southampton",
       "update": 0,
       "nation": "ENG1"
     },
     {
       "club": "Stoke",
+      "update": 0,
+      "nation": "ENG1"
+    },
+    {
+      "club": "Swansea",
       "update": 0,
       "nation": "ENG1"
     },
@@ -626,7 +261,22 @@
       "nation": "ENG1"
     },
     {
+      "club": "Alaves",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
       "club": "Almeria",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
+      "club": "Athletic Bilbao",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
+      "club": "Atletico Madrid",
       "update": 0,
       "nation": "ESP"
     },
@@ -636,7 +286,32 @@
       "nation": "ESP"
     },
     {
+      "club": "Celta Vigo",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
+      "club": "Cornella",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
       "club": "Eibar",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
+      "club": "Elche",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
+      "club": "Getafe",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
+      "club": "Girona",
       "update": 0,
       "nation": "ESP"
     },
@@ -656,12 +331,117 @@
       "nation": "ESP"
     },
     {
+      "club": "Levante",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
+      "club": "Mallorca",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
+      "club": "Osasuna",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
+      "club": "Oviedo",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
+      "club": "Rayo Vallecano",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
+      "club": "Real Betis",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
+      "club": "Real Sociedad",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
+      "club": "Sevilla",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
+      "club": "Valencia",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
       "club": "Valladolid",
       "update": 0,
       "nation": "ESP"
     },
     {
+      "club": "Villareal",
+      "update": 0,
+      "nation": "ESP"
+    },
+    {
+      "club": "Angers",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "Auxerre",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "Brest",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
       "club": "Clermont-Ferrand",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "Le Havre",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "Lens",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "Lille",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "Lorient",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "Lyon",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "Marseille",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "Metz",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "Monaco",
       "update": 0,
       "nation": "FRA"
     },
@@ -671,7 +451,32 @@
       "nation": "FRA"
     },
     {
+      "club": "Nantes",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "Nice",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "Paris",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "Paris SG",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
       "club": "Reims",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "Rennes",
       "update": 0,
       "nation": "FRA"
     },
@@ -681,7 +486,52 @@
       "nation": "FRA"
     },
     {
+      "club": "Strasbourg",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "Toulouse",
+      "update": 0,
+      "nation": "FRA"
+    },
+    {
+      "club": "AC Milan",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Atalanta",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Bologna",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Cagliari",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Como",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Cremonese",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
       "club": "Empoli",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Fiorentina",
       "update": 0,
       "nation": "ITA"
     },
@@ -691,7 +541,52 @@
       "nation": "ITA"
     },
     {
+      "club": "Genoa",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Inter Milan",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Juventus",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Lazio",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Lecce",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
       "club": "Monza",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Napoli",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Parma",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Pisa",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Roma",
       "update": 0,
       "nation": "ITA"
     },
@@ -701,7 +596,27 @@
       "nation": "ITA"
     },
     {
+      "club": "Sassuolo",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Torino",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Udinese",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
       "club": "Venezia",
+      "update": 0,
+      "nation": "ITA"
+    },
+    {
+      "club": "Verona",
       "update": 0,
       "nation": "ITA"
     },
@@ -717,6 +632,11 @@
     },
     {
       "club": "Breda",
+      "update": 0,
+      "nation": "NED"
+    },
+    {
+      "club": "Feyenoord",
       "update": 0,
       "nation": "NED"
     },
@@ -737,6 +657,11 @@
     },
     {
       "club": "Nijmegen",
+      "update": 0,
+      "nation": "NED"
+    },
+    {
+      "club": "PSV",
       "update": 0,
       "nation": "NED"
     },
@@ -811,7 +736,17 @@
       "nation": "POR"
     },
     {
+      "club": "Benfica",
+      "update": 0,
+      "nation": "POR"
+    },
+    {
       "club": "Boavista",
+      "update": 0,
+      "nation": "POR"
+    },
+    {
+      "club": "Braga",
       "update": 0,
       "nation": "POR"
     },
@@ -866,7 +801,17 @@
       "nation": "POR"
     },
     {
+      "club": "Porto",
+      "update": 0,
+      "nation": "POR"
+    },
+    {
       "club": "Rio Ave",
+      "update": 0,
+      "nation": "POR"
+    },
+    {
+      "club": "S Lisbon",
       "update": 0,
       "nation": "POR"
     },
@@ -881,7 +826,57 @@
       "nation": "POR"
     },
     {
+      "club": "Aberdeen",
+      "update": 0,
+      "nation": "SCO"
+    },
+    {
+      "club": "Celtic",
+      "update": 0,
+      "nation": "SCO"
+    },
+    {
+      "club": "Dundee",
+      "update": 0,
+      "nation": "SCO"
+    },
+    {
+      "club": "Dundee U",
+      "update": 0,
+      "nation": "SCO"
+    },
+    {
       "club": "Falkirk",
+      "update": 0,
+      "nation": "SCO"
+    },
+    {
+      "club": "Glasgow R",
+      "update": 0,
+      "nation": "SCO"
+    },
+    {
+      "club": "Hearts",
+      "update": 0,
+      "nation": "SCO"
+    },
+    {
+      "club": "Hibernian",
+      "update": 0,
+      "nation": "SCO"
+    },
+    {
+      "club": "Kilmarnock",
+      "update": 0,
+      "nation": "SCO"
+    },
+    {
+      "club": "Livingston",
+      "update": 0,
+      "nation": "SCO"
+    },
+    {
+      "club": "Motherwell",
       "update": 0,
       "nation": "SCO"
     },
@@ -892,6 +887,11 @@
     },
     {
       "club": "S Johnstone",
+      "update": 0,
+      "nation": "SCO"
+    },
+    {
+      "club": "S Mirren",
       "update": 0,
       "nation": "SCO"
     }
