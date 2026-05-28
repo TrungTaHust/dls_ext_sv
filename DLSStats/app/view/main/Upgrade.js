@@ -163,7 +163,7 @@ Ext.define("DLSStats.view.main.Upgrade", {
                                     valueField: "version",
                                     queryMode: "local",
                                     editable: false,
-                                    value: "20262",
+                                    value: "20263",
                                     width: 110,
                                 },
                                 {

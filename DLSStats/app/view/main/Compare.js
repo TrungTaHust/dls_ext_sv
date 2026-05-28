@@ -31,16 +31,16 @@ Ext.define("DLSStats.view.main.Compare", {
             items: [
                 // Player 1
                 { xtype: "textfield", itemId: "player1Id", emptyText: "ID 1", width: 80 },
-                { xtype: "combo", itemId: "version1", emptyText: "Ver 1", store: { type: "versionstore" }, displayField: "version", valueField: "version", queryMode: "local", editable: false, value: "20262", width: 100 },
+                { xtype: "combo", itemId: "version1", emptyText: "Ver 1", store: { type: "versionstore" }, displayField: "version", valueField: "version", queryMode: "local", editable: false, value: "20263", width: 100 },
                 // Player 2
                 { xtype: "textfield", itemId: "player2Id", emptyText: "ID 2", width: 80 },
-                { xtype: "combo", itemId: "version2", emptyText: "Ver 2", store: { type: "versionstore" }, displayField: "version", valueField: "version", queryMode: "local", editable: false, value: "20262", width: 100 },
+                { xtype: "combo", itemId: "version2", emptyText: "Ver 2", store: { type: "versionstore" }, displayField: "version", valueField: "version", queryMode: "local", editable: false, value: "20263", width: 100 },
                 // Player 3 (hidden by default)
                 { xtype: "textfield", itemId: "player3Id", emptyText: "ID 3", width: 80, hidden: true },
-                { xtype: "combo", itemId: "version3", emptyText: "Ver 3", store: { type: "versionstore" }, displayField: "version", valueField: "version", queryMode: "local", editable: false, value: "20262", width: 100, hidden: true },
+                { xtype: "combo", itemId: "version3", emptyText: "Ver 3", store: { type: "versionstore" }, displayField: "version", valueField: "version", queryMode: "local", editable: false, value: "20263", width: 100, hidden: true },
                 // Player 4 (hidden by default)
                 { xtype: "textfield", itemId: "player4Id", emptyText: "ID 4", width: 80, hidden: true },
-                { xtype: "combo", itemId: "version4", emptyText: "Ver 4", store: { type: "versionstore" }, displayField: "version", valueField: "version", queryMode: "local", editable: false, value: "20262", width: 100, hidden: true },
+                { xtype: "combo", itemId: "version4", emptyText: "Ver 4", store: { type: "versionstore" }, displayField: "version", valueField: "version", queryMode: "local", editable: false, value: "20263", width: 100, hidden: true },
                 // Action buttons
                 {
                     xtype: "button", reference: "addPlayerBtn", text: "+ Add Player",

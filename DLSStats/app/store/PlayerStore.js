@@ -9,7 +9,7 @@ Ext.define("DLSStats.store.PlayerStore", {
     autoLoad: false,
 
     // Danh sách version cần load (khớp với VersionStore)
-    versions: ["20231", "20241", "20242", "20251", "20252", "20253", "20261", "20262"],
+    versions: ["20231", "20241", "20242", "20251", "20252", "20253", "20261", "20262", "20263"],
 
     constructor: function (config) {
         this.callParent([config]);

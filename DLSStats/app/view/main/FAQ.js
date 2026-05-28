@@ -71,9 +71,13 @@ Ext.define("DLSStats.view.main.FAQ", {
                             <td style="padding:4px 16px 4px 0; color:#2980b9; font-weight:bold;">20261</td>
                             <td style="padding:4px 0; color:#444;">December 2025</td>
                         </tr>
+                        <tr style="border-bottom:1px solid #eee;">
+                            <td style="padding:4px 16px 4px 0; color:#2980b9; font-weight:bold;">20262</td>
+                            <td style="padding:4px 0; color:#444;">February 2026</td>
+                        </tr>
                         <tr>
-                            <td style="padding:4px 16px 4px 0; color:#e67e22; font-weight:bold;">20262 ★</td>
-                            <td style="padding:4px 0; color:#444;">February 2026 <span style="color:#e67e22; font-size:11px; font-weight:bold;">(latest)</span></td>
+                            <td style="padding:4px 16px 4px 0; color:#e67e22; font-weight:bold;">20263 ★</td>
+                            <td style="padding:4px 0; color:#444;">2026 <span style="color:#e67e22; font-size:11px; font-weight:bold;">(latest)</span></td>
                         </tr>
                     </table>
                 </div>

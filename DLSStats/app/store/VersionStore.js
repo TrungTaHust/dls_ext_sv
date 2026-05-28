@@ -6,6 +6,7 @@ Ext.define('DLSStats.store.VersionStore', {
     fields: ['version'],
 
     data: [
+        { version: '20263' },
         { version: '20262' },
         { version: '20261' },
         { version: '20253' },
