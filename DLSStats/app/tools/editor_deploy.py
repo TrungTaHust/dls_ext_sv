@@ -23,20 +23,22 @@ DEPLOY_TARGET = os.path.join(os.path.expanduser("~"), "Desktop", "dls-ext")
 
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
-def _run(cmd: list[str], cwd: str, log_cb, ok_codes: set = None):
+def _run(cmd: list[str], cwd: str, log_cb, ok_codes: set = None, shell: bool = False):
     """
-    Chạy lệnh, stream từng dòng output về log_cb.
-    ok_codes: tập exit code được coi là thành công (mặc định {0}).
-    Raise RuntimeError nếu exit code không nằm trong ok_codes.
+    Chay lenh, stream tung dong output ve log_cb.
+    shell=True: can thiet cho cac lenh la .cmd/.ps1 script tren Windows (vercel, sencha).
+    ok_codes: tap exit code duoc coi la thanh cong (mac dinh {0}).
     """
     if ok_codes is None:
         ok_codes = {0}
     log_cb(f"$ {' '.join(cmd)}")
     proc = subprocess.Popen(
-        cmd, cwd=cwd,
+        cmd if not shell else " ".join(cmd),
+        cwd=cwd,
         stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
         text=True, encoding="utf-8", errors="replace",
-        creationflags=subprocess.CREATE_NO_WINDOW,
+        shell=shell,
+        creationflags=0 if shell else subprocess.CREATE_NO_WINDOW,
     )
     for line in proc.stdout:
         line = line.rstrip()
@@ -110,11 +112,11 @@ def run_pipeline(log_cb, step_cb, done_cb):
     try:
         # ── Bước 1: sencha app clean ──────────────────────────────────────────
         step_cb(0, STEPS[0])
-        _run(["sencha", "app", "clean"], WORKSPACE, log_cb)
+        _run(["sencha", "app", "clean"], WORKSPACE, log_cb, shell=True)
 
         # ── Bước 2: sencha app build ──────────────────────────────────────────
         step_cb(1, STEPS[1])
-        _run(["sencha", "app", "build"], WORKSPACE, log_cb)
+        _run(["sencha", "app", "build"], WORKSPACE, log_cb, shell=True)
 
         # ── Bước 3: git push DLSStats ─────────────────────────────────────────
         step_cb(2, STEPS[2])
@@ -132,8 +134,8 @@ def run_pipeline(log_cb, step_cb, done_cb):
             "robocopy", BUILD_SRC, DEPLOY_TARGET,
             "/E",          # copy subdirs including empty
             "/PURGE",      # xoa file cu trong dest khong con trong source
-            "/XD", ".git", ".vercel", "node_modules",  # nhung giu lai cac thu muc nay
-            "/XF", ".gitignore", ".gitattributes",     # va cac file config nay
+            "/XD", ".git", ".vercel", "node_modules",  # giu lai cac thu muc nay
+            "/XF", ".gitignore", ".gitattributes", "vercel.json", "package.json",  # giu lai cac file config
             "/NFL",        # no file list
             "/NDL",        # no dir list
             "/NJH",        # no job header
@@ -147,7 +149,7 @@ def run_pipeline(log_cb, step_cb, done_cb):
 
         # ── Bước 6: vercel --prod ─────────────────────────────────────────────
         step_cb(5, STEPS[5])
-        _run(["vercel", "--prod", "--yes"], DEPLOY_TARGET, log_cb)
+        _run(["vercel", "--prod", "--yes"], DEPLOY_TARGET, log_cb, shell=True)
 
         done_cb(True, "Deploy completed successfully!")
 
