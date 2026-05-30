@@ -6,6 +6,21 @@
       "nation": "ENG"
     },
     {
+      "club": "Aston Villa",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
+      "club": "Chelsea",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
+      "club": "Liverpool",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
       "club": "Man City",
       "update": 1,
       "nation": "ENG"
@@ -14,6 +29,11 @@
       "club": "Man United",
       "update": 1,
       "nation": "ENG"
+    },
+    {
+      "club": "Atletico Madrid",
+      "update": 1,
+      "nation": "ESP"
     },
     {
       "club": "Barcelona",
@@ -26,9 +46,14 @@
       "nation": "ESP"
     },
     {
-      "club": "Aston Villa",
-      "update": 0,
-      "nation": "ENG"
+      "club": "Paris SG",
+      "update": 1,
+      "nation": "FRA"
+    },
+    {
+      "club": "Inter Milan",
+      "update": 1,
+      "nation": "ITA"
     },
     {
       "club": "Bournemouth",
@@ -51,11 +76,6 @@
       "nation": "ENG"
     },
     {
-      "club": "Chelsea",
-      "update": 0,
-      "nation": "ENG"
-    },
-    {
       "club": "Crystal Palace",
       "update": 0,
       "nation": "ENG"
@@ -72,11 +92,6 @@
     },
     {
       "club": "Leeds",
-      "update": 0,
-      "nation": "ENG"
-    },
-    {
-      "club": "Liverpool",
       "update": 0,
       "nation": "ENG"
     },
@@ -276,11 +291,6 @@
       "nation": "ESP"
     },
     {
-      "club": "Atletico Madrid",
-      "update": 0,
-      "nation": "ESP"
-    },
-    {
       "club": "Cadiz",
       "update": 0,
       "nation": "ESP"
@@ -466,11 +476,6 @@
       "nation": "FRA"
     },
     {
-      "club": "Paris SG",
-      "update": 0,
-      "nation": "FRA"
-    },
-    {
       "club": "Reims",
       "update": 0,
       "nation": "FRA"
@@ -542,11 +547,6 @@
     },
     {
       "club": "Genoa",
-      "update": 0,
-      "nation": "ITA"
-    },
-    {
-      "club": "Inter Milan",
       "update": 0,
       "nation": "ITA"
     },
@@ -898,131 +898,23 @@
   ],
   "nations": [
     {
+      "nation": "Argentina",
+      "updated": 0
+    },
+    {
       "nation": "Australia",
-      "updated": 1
+      "updated": 0
     },
     {
       "nation": "Austria",
-      "updated": 1
+      "updated": 0
     },
     {
       "nation": "Belgium",
-      "updated": 1
+      "updated": 0
     },
     {
       "nation": "Cameroon",
-      "updated": 1
-    },
-    {
-      "nation": "Colombia",
-      "updated": 1
-    },
-    {
-      "nation": "Costa Rica",
-      "updated": 1
-    },
-    {
-      "nation": "Croatia",
-      "updated": 1
-    },
-    {
-      "nation": "Czech Republic",
-      "updated": 1
-    },
-    {
-      "nation": "Denmark",
-      "updated": 1
-    },
-    {
-      "nation": "DR Congo",
-      "updated": 1
-    },
-    {
-      "nation": "Egypt",
-      "updated": 1
-    },
-    {
-      "nation": "France",
-      "updated": 1
-    },
-    {
-      "nation": "Ghana",
-      "updated": 1
-    },
-    {
-      "nation": "Greece",
-      "updated": 1
-    },
-    {
-      "nation": "Hungary",
-      "updated": 1
-    },
-    {
-      "nation": "Ireland",
-      "updated": 1
-    },
-    {
-      "nation": "Morocco",
-      "updated": 1
-    },
-    {
-      "nation": "New Zealand",
-      "updated": 1
-    },
-    {
-      "nation": "Panama",
-      "updated": 1
-    },
-    {
-      "nation": "Paraguay",
-      "updated": 1
-    },
-    {
-      "nation": "Peru",
-      "updated": 1
-    },
-    {
-      "nation": "Romania",
-      "updated": 1
-    },
-    {
-      "nation": "Scotland",
-      "updated": 1
-    },
-    {
-      "nation": "Slovenia",
-      "updated": 1
-    },
-    {
-      "nation": "South Africa",
-      "updated": 1
-    },
-    {
-      "nation": "South Korea",
-      "updated": 1
-    },
-    {
-      "nation": "Spain",
-      "updated": 1
-    },
-    {
-      "nation": "Sweden",
-      "updated": 1
-    },
-    {
-      "nation": "Switzerland",
-      "updated": 1
-    },
-    {
-      "nation": "Ukraine",
-      "updated": 1
-    },
-    {
-      "nation": "Uruguay",
-      "updated": 1
-    },
-    {
-      "nation": "Argentina",
       "updated": 0
     },
     {
@@ -1030,11 +922,59 @@
       "updated": 0
     },
     {
+      "nation": "Colombia",
+      "updated": 0
+    },
+    {
+      "nation": "Costa Rica",
+      "updated": 0
+    },
+    {
+      "nation": "Croatia",
+      "updated": 0
+    },
+    {
+      "nation": "Czech Republic",
+      "updated": 0
+    },
+    {
+      "nation": "Denmark",
+      "updated": 0
+    },
+    {
+      "nation": "DR Congo",
+      "updated": 0
+    },
+    {
+      "nation": "Egypt",
+      "updated": 0
+    },
+    {
       "nation": "England",
       "updated": 0
     },
     {
+      "nation": "France",
+      "updated": 0
+    },
+    {
+      "nation": "Ghana",
+      "updated": 0
+    },
+    {
+      "nation": "Greece",
+      "updated": 0
+    },
+    {
+      "nation": "Hungary",
+      "updated": 0
+    },
+    {
       "nation": "Indonesia",
+      "updated": 0
+    },
+    {
+      "nation": "Ireland",
       "updated": 0
     },
     {
@@ -1046,11 +986,71 @@
       "updated": 0
     },
     {
+      "nation": "Morocco",
+      "updated": 0
+    },
+    {
+      "nation": "New Zealand",
+      "updated": 0
+    },
+    {
       "nation": "Norway",
       "updated": 0
     },
     {
+      "nation": "Panama",
+      "updated": 0
+    },
+    {
+      "nation": "Paraguay",
+      "updated": 0
+    },
+    {
+      "nation": "Peru",
+      "updated": 0
+    },
+    {
       "nation": "Portugal",
+      "updated": 0
+    },
+    {
+      "nation": "Romania",
+      "updated": 0
+    },
+    {
+      "nation": "Scotland",
+      "updated": 0
+    },
+    {
+      "nation": "Slovenia",
+      "updated": 0
+    },
+    {
+      "nation": "South Africa",
+      "updated": 0
+    },
+    {
+      "nation": "South Korea",
+      "updated": 0
+    },
+    {
+      "nation": "Spain",
+      "updated": 0
+    },
+    {
+      "nation": "Sweden",
+      "updated": 0
+    },
+    {
+      "nation": "Switzerland",
+      "updated": 0
+    },
+    {
+      "nation": "Ukraine",
+      "updated": 0
+    },
+    {
+      "nation": "Uruguay",
       "updated": 0
     }
   ]

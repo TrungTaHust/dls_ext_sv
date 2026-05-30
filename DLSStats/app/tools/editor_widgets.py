@@ -7,6 +7,21 @@ from editor_config import (
   default_sort_key, _cast,
 )
 
+# Lazy-load danh sách club/nation từ checklist để tránh circular import
+def _get_club_list():
+    try:
+        from editor_checklist import get_club_list
+        return get_club_list()
+    except Exception:
+        return []
+
+def _get_nation_list():
+    try:
+        from editor_checklist import get_nation_list
+        return get_nation_list()
+    except Exception:
+        return []
+
 
 # ── Edit dialog ───────────────────────────────────────────────────────────────
 class EditDialog(tk.Toplevel):
@@ -31,6 +46,10 @@ class EditDialog(tk.Toplevel):
     self.entries = {}
     self._entry_widgets = []
 
+    # Load danh sách dropdown một lần cho cả dialog
+    _club_values   = _get_club_list()
+    _nation_values = _get_nation_list()
+
     for i, col in enumerate(columns):
       ttk.Label(frame, text=col, width=10, anchor="e").grid(
         row=i, column=0, padx=4, pady=2, sticky="e")
@@ -41,6 +60,27 @@ class EditDialog(tk.Toplevel):
         lbl.grid(row=i, column=1, padx=4, pady=2, sticky="w")
         self._id_entry = lbl
         self._entry_widgets.append(None)
+      elif col == "nat" and _nation_values:
+        cb = ttk.Combobox(frame, textvariable=var, values=_nation_values,
+                          width=28, state="normal")
+        cb.grid(row=i, column=1, padx=4, pady=2)
+        # Lọc dropdown khi gõ
+        def _filter_cb(ev, w=cb, vals=_nation_values, v=var):
+            typed = v.get().lower()
+            filtered = [x for x in vals if typed in x.lower()]
+            w["values"] = filtered if filtered else vals
+        cb.bind("<KeyRelease>", _filter_cb)
+        self._entry_widgets.append(cb)
+      elif col == "club" and _club_values:
+        cb = ttk.Combobox(frame, textvariable=var, values=_club_values,
+                          width=28, state="normal")
+        cb.grid(row=i, column=1, padx=4, pady=2)
+        def _filter_cb(ev, w=cb, vals=_club_values, v=var):
+            typed = v.get().lower()
+            filtered = [x for x in vals if typed in x.lower()]
+            w["values"] = filtered if filtered else vals
+        cb.bind("<KeyRelease>", _filter_cb)
+        self._entry_widgets.append(cb)
       else:
         e = ttk.Entry(frame, textvariable=var, width=30,
                       validate="key", validatecommand=vcmd)

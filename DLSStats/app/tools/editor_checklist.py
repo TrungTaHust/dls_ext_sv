@@ -262,6 +262,18 @@ def _save_checklist(clubs, nations):
         json.dump({"clubs": clubs, "nations": nations}, f, ensure_ascii=False, indent=2)
 
 
+def get_club_list() -> list[str]:
+    """Trả về danh sách tên club sorted a-z, đọc từ checklist.json (hoặc default)."""
+    clubs, _ = _load_checklist()
+    return sorted({r["club"] for r in clubs if r.get("club")}, key=str.lower)
+
+
+def get_nation_list() -> list[str]:
+    """Trả về danh sách tên nation sorted a-z, đọc từ checklist.json (hoặc default)."""
+    _, nations = _load_checklist()
+    return sorted({r["nation"] for r in nations if r.get("nation")}, key=str.lower)
+
+
 # ── ChecklistTable — reusable single-table widget ─────────────────────────────
 class ChecklistTable(ttk.Frame):
     """
