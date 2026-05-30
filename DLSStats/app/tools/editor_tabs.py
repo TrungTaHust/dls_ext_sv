@@ -284,10 +284,13 @@ class PlayerIDTab(ttk.Frame):
     self.data.extend(sorted(seen.values(), key=lambda r: r["id"]))
 
   def _next_id(self):
+    # Lấy tất cả ID đang dùng từ self.data (player_id.json)
     used = {r["id"] for r in self.data if isinstance(r.get("id"), int)}
-    i = 1000
-    while i in used:
-      i += 1
+    # Tìm ID nhỏ nhất chưa dùng, bắt đầu từ max+1 để tránh scan toàn bộ
+    if used:
+      i = max(used) + 1
+    else:
+      i = 1000
     if i > 9999:
       raise ValueError("No available 4-digit IDs left.")
     return i

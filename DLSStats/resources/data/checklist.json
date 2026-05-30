@@ -16,6 +16,16 @@
       "nation": "ENG"
     },
     {
+      "club": "Crystal Palace",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
+      "club": "Everton",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
       "club": "Liverpool",
       "update": 1,
       "nation": "ENG"
@@ -27,6 +37,21 @@
     },
     {
       "club": "Man United",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
+      "club": "Newcastle",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
+      "club": "Nottingham",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
+      "club": "Tottenham",
       "update": 1,
       "nation": "ENG"
     },
@@ -51,7 +76,22 @@
       "nation": "FRA"
     },
     {
+      "club": "AC Milan",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
+      "club": "Bologna",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
       "club": "Inter Milan",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
+      "club": "Juventus",
       "update": 1,
       "nation": "ITA"
     },
@@ -76,16 +116,6 @@
       "nation": "ENG"
     },
     {
-      "club": "Crystal Palace",
-      "update": 0,
-      "nation": "ENG"
-    },
-    {
-      "club": "Everton",
-      "update": 0,
-      "nation": "ENG"
-    },
-    {
       "club": "Fulham",
       "update": 0,
       "nation": "ENG"
@@ -96,22 +126,7 @@
       "nation": "ENG"
     },
     {
-      "club": "Newcastle",
-      "update": 0,
-      "nation": "ENG"
-    },
-    {
-      "club": "Nottingham",
-      "update": 0,
-      "nation": "ENG"
-    },
-    {
       "club": "Sunderland",
-      "update": 0,
-      "nation": "ENG"
-    },
-    {
-      "club": "Tottenham",
       "update": 0,
       "nation": "ENG"
     },
@@ -501,17 +516,7 @@
       "nation": "FRA"
     },
     {
-      "club": "AC Milan",
-      "update": 0,
-      "nation": "ITA"
-    },
-    {
       "club": "Atalanta",
-      "update": 0,
-      "nation": "ITA"
-    },
-    {
-      "club": "Bologna",
       "update": 0,
       "nation": "ITA"
     },
@@ -547,11 +552,6 @@
     },
     {
       "club": "Genoa",
-      "update": 0,
-      "nation": "ITA"
-    },
-    {
-      "club": "Juventus",
       "update": 0,
       "nation": "ITA"
     },

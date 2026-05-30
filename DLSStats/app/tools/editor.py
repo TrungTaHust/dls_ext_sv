@@ -18,6 +18,7 @@ from tkinter import ttk
 from editor_config import setup_styles
 from editor_tabs import DataTab, SpecialTab, PlayerIDTab, PriceMapTab
 from editor_checklist import ChecklistTab
+from editor_deploy import DeployPanel
 # from editor_import import ImportTab   # tạm ẩn
 # from editor_ocr import OCRTab         # tạm ẩn
 
@@ -42,6 +43,7 @@ class App(tk.Tk):
     nb.add(pid_tab,                           text=" playerID ")
     nb.add(PriceMapTab(nb),                   text=" Price Map ")
     nb.add(ChecklistTab(nb),                  text=" Checklist ")
+    nb.add(DeployPanel(nb),                   text=" Deploy ")
     # nb.add(ImportTab(nb, data_tab, pid_tab),  text=" Import ")   # tạm ẩn
     # nb.add(OCRTab(nb, data_tab, pid_tab),     text=" OCR ")      # tạm ẩn
 
