@@ -47,29 +47,41 @@ def _run(cmd: list[str], cwd: str, log_cb, ok_codes: set = None):
         raise RuntimeError(f"Command failed (exit {proc.returncode}): {' '.join(cmd)}")
 
 
-def _git_push(cwd: str, message: str, log_cb):
-    """git add -A, commit (skip nếu không có gì), push branch hiện tại."""
-    # Lấy branch hiện tại
+def _git_push(cwd: str, message: str, log_cb) -> bool:
+    """
+    Kiem tra thay doi, neu co thi add + commit + push.
+    Neu khong co gi thay doi thi skip toan bo, tra ve False.
+    Tra ve True neu da push thanh cong.
+    """
+    # Lay branch hien tai
     result = subprocess.run(
         ["git", "branch", "--show-current"],
         cwd=cwd, capture_output=True, text=True
     )
     branch = result.stdout.strip() or "main"
-    log_cb(f"[git] branch: {branch}")
+    log_cb(f"[git] branch: {branch}  |  cwd: {cwd}")
 
-    _run(["git", "add", "-A"], cwd, log_cb)
-
-    # Kiểm tra có gì để commit không
+    # Kiem tra co thay doi khong (tracked + untracked)
     status = subprocess.run(
         ["git", "status", "--porcelain"],
         cwd=cwd, capture_output=True, text=True
     )
-    if status.stdout.strip():
-        _run(["git", "commit", "-m", message], cwd, log_cb)
-    else:
-        log_cb("[git] Nothing to commit, skipping commit step.")
+    if not status.stdout.strip():
+        log_cb("[git] No changes detected — skipping add/commit/push.")
+        return False
 
+    # Co thay doi — hien thi summary
+    lines = status.stdout.strip().splitlines()
+    log_cb(f"[git] {len(lines)} changed file(s):")
+    for ln in lines[:10]:   # hien toi da 10 dong de khong spam log
+        log_cb(f"       {ln}")
+    if len(lines) > 10:
+        log_cb(f"       ... and {len(lines)-10} more")
+
+    _run(["git", "add", "-A"], cwd, log_cb)
+    _run(["git", "commit", "-m", message], cwd, log_cb)
     _run(["git", "push", "origin", branch], cwd, log_cb)
+    return True
 
 
 # ── Deploy pipeline ────────────────────────────────────────────────────────────
@@ -118,13 +130,15 @@ def run_pipeline(log_cb, step_cb, done_cb):
         log_cb(f"Copying {BUILD_SRC} -> {DEPLOY_TARGET}")
         _run([
             "robocopy", BUILD_SRC, DEPLOY_TARGET,
-            "/E",        # copy subdirs including empty
-            "/PURGE",    # delete dest files not in source
-            "/NFL",      # no file list (less noise)
-            "/NDL",      # no dir list
-            "/NJH",      # no job header
-            "/NJS",      # no job summary
-        ], WORKSPACE, log_cb, ok_codes=set(range(8)))  # robocopy 0-7 = success
+            "/E",          # copy subdirs including empty
+            "/PURGE",      # xoa file cu trong dest khong con trong source
+            "/XD", ".git", ".vercel", "node_modules",  # nhung giu lai cac thu muc nay
+            "/XF", ".gitignore", ".gitattributes",     # va cac file config nay
+            "/NFL",        # no file list
+            "/NDL",        # no dir list
+            "/NJH",        # no job header
+            "/NJS",        # no job summary
+        ], WORKSPACE, log_cb, ok_codes=set(range(8)))
         log_cb("Copy complete.")
 
         # ── Bước 5: git push dls-ext ──────────────────────────────────────────
