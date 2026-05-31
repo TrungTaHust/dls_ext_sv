@@ -101,6 +101,11 @@
       "nation": "ITA"
     },
     {
+      "club": "Porto",
+      "update": 1,
+      "nation": "POR"
+    },
+    {
       "club": "Bournemouth",
       "update": 0,
       "nation": "ENG"
@@ -797,11 +802,6 @@
     },
     {
       "club": "Portimao",
-      "update": 0,
-      "nation": "POR"
-    },
-    {
-      "club": "Porto",
       "update": 0,
       "nation": "POR"
     },
