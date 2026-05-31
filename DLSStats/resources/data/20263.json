@@ -1858,16 +1858,16 @@
         "hgt": 181,
         "spe": 84,
         "acc": 83,
-        "sta": 79,
+        "sta": 80,
         "str": 66,
         "con": 84,
         "pas": 81,
         "sho": 86,
-        "tac": 36,
+        "tac": 35,
         "prc": 1995,
         "id": 3400,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "",
@@ -2382,20 +2382,20 @@
         "club": "S Lisbon",
         "pos": "LW",
         "foot": "R",
-        "rate": 80,
+        "rate": 79,
         "hgt": 173,
         "spe": 76,
         "acc": 80,
-        "sta": 76,
+        "sta": 75,
         "str": 59,
-        "con": 83,
-        "pas": 84,
-        "sho": 83,
-        "tac": 57,
-        "prc": 1850,
+        "con": 82,
+        "pas": 83,
+        "sho": 82,
+        "tac": 54,
+        "prc": 1715,
         "id": 3335,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Leandro",
@@ -2806,14 +2806,14 @@
         "acc": 68,
         "sta": 87,
         "str": 81,
-        "con": 77,
+        "con": 78,
         "pas": 81,
-        "sho": 71,
+        "sho": 70,
         "tac": 82,
         "prc": 1715,
         "id": 3639,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "N'Golo",
@@ -3680,20 +3680,20 @@
         "club": "S Lisbon",
         "pos": "AM",
         "foot": "L",
-        "rate": 79,
+        "rate": 80,
         "hgt": 184,
-        "spe": 78,
+        "spe": 77,
         "acc": 81,
-        "sta": 80,
-        "str": 69,
-        "con": 82,
-        "pas": 81,
-        "sho": 79,
-        "tac": 40,
-        "prc": 1585,
+        "sta": 82,
+        "str": 70,
+        "con": 83,
+        "pas": 83,
+        "sho": 80,
+        "tac": 41,
+        "prc": 1715,
         "id": 6931,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Rodrigo",
@@ -3772,16 +3772,16 @@
         "hgt": 187,
         "spe": 70,
         "acc": 60,
-        "sta": 80,
+        "sta": 84,
         "str": 79,
-        "con": 79,
+        "con": 78,
         "pas": 80,
         "sho": 69,
-        "tac": 78,
+        "tac": 77,
         "prc": 1585,
         "id": 3652,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ruben",
@@ -4120,20 +4120,20 @@
         "club": "Marseille",
         "pos": "CB",
         "foot": "R",
-        "rate": 79,
+        "rate": 78,
         "hgt": 186,
-        "spe": 77,
+        "spe": 76,
         "acc": 69,
         "sta": 74,
         "str": 78,
         "con": 75,
-        "pas": 78,
-        "sho": 57,
-        "tac": 84,
-        "prc": 1420,
+        "pas": 77,
+        "sho": 56,
+        "tac": 82,
+        "prc": 1315,
         "id": 5611,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Cristian",
@@ -4340,20 +4340,20 @@
         "club": "Marseille",
         "pos": "GK",
         "foot": "R",
-        "rate": 79,
+        "rate": 78,
         "hgt": 189,
-        "spe": 65,
-        "acc": 62,
-        "sta": 75,
-        "str": 70,
-        "con": 60,
-        "pas": 63,
+        "spe": 61,
+        "acc": 58,
+        "sta": 74,
+        "str": 69,
+        "con": 59,
+        "pas": 62,
         "sho": 76,
         "tac": 54,
-        "prc": 1290,
+        "prc": 1195,
         "id": 6134,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Wojciech",
@@ -4406,20 +4406,20 @@
         "club": "Marseille",
         "pos": "CF",
         "foot": "R",
-        "rate": 78,
+        "rate": 77,
         "hgt": 187,
-        "spe": 88,
-        "acc": 78,
+        "spe": 87,
+        "acc": 77,
         "sta": 74,
-        "str": 70,
+        "str": 69,
         "con": 79,
-        "pas": 75,
-        "sho": 83,
-        "tac": 31,
-        "prc": 1585,
+        "pas": 76,
+        "sho": 82,
+        "tac": 29,
+        "prc": 1460,
         "id": 1356,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jonathan",
@@ -5268,16 +5268,16 @@
         "hgt": 190,
         "spe": 80,
         "acc": 68,
-        "sta": 73,
-        "str": 81,
+        "sta": 71,
+        "str": 82,
         "con": 73,
-        "pas": 77,
-        "sho": 46,
+        "pas": 76,
+        "sho": 45,
         "tac": 84,
         "prc": 1315,
         "id": 1089,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Nathan",
@@ -5330,20 +5330,20 @@
         "club": "S Lisbon",
         "pos": "CB",
         "foot": "L",
-        "rate": 78,
+        "rate": 79,
         "hgt": 185,
         "spe": 76,
         "acc": 73,
-        "sta": 77,
+        "sta": 78,
         "str": 79,
-        "con": 73,
-        "pas": 79,
-        "sho": 49,
-        "tac": 81,
-        "prc": 1315,
+        "con": 74,
+        "pas": 80,
+        "sho": 50,
+        "tac": 82,
+        "prc": 1420,
         "id": 3741,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ezri",
@@ -5990,20 +5990,20 @@
         "club": "S Lisbon",
         "pos": "CF",
         "foot": "R",
-        "rate": 77,
+        "rate": 78,
         "hgt": 185,
-        "spe": 83,
-        "acc": 79,
-        "sta": 75,
+        "spe": 84,
+        "acc": 80,
+        "sta": 78,
         "str": 76,
         "con": 76,
-        "pas": 71,
-        "sho": 84,
+        "pas": 72,
+        "sho": 85,
         "tac": 31,
-        "prc": 1460,
+        "prc": 1585,
         "id": 6670,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ivan",
@@ -6149,15 +6149,15 @@
         "spe": 82,
         "acc": 84,
         "sta": 74,
-        "str": 65,
+        "str": 66,
         "con": 79,
         "pas": 73,
         "sho": 79,
-        "tac": 34,
+        "tac": 33,
         "prc": 1460,
         "id": 5545,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Iago",
@@ -6628,20 +6628,20 @@
         "club": "Marseille",
         "pos": "CM",
         "foot": "R",
-        "rate": 77,
+        "rate": 76,
         "hgt": 179,
         "spe": 67,
         "acc": 79,
         "sta": 75,
         "str": 71,
         "con": 74,
-        "pas": 77,
+        "pas": 75,
         "sho": 69,
-        "tac": 72,
-        "prc": 1345,
+        "tac": 71,
+        "prc": 1235,
         "id": 6854,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Joey",
@@ -6987,13 +6987,13 @@
         "sta": 74,
         "str": 79,
         "con": 75,
-        "pas": 77,
-        "sho": 42,
-        "tac": 82,
+        "pas": 78,
+        "sho": 43,
+        "tac": 81,
         "prc": 1215,
         "id": 1453,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Sven",
@@ -7422,18 +7422,18 @@
         "foot": "L",
         "rate": 77,
         "hgt": 191,
-        "spe": 58,
-        "acc": 55,
+        "spe": 55,
+        "acc": 53,
         "sta": 75,
-        "str": 61,
+        "str": 63,
         "con": 58,
-        "pas": 60,
+        "pas": 61,
         "sho": 73,
-        "tac": 47,
+        "tac": 46,
         "prc": 1100,
         "id": 6443,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Anatoliy",
@@ -8907,7 +8907,7 @@
         "prc": 1115,
         "id": 2632,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Matteo ",
@@ -11052,18 +11052,18 @@
         "foot": "L",
         "rate": 75,
         "hgt": 184,
-        "spe": 77,
+        "spe": 75,
         "acc": 70,
-        "sta": 70,
-        "str": 78,
+        "sta": 69,
+        "str": 76,
         "con": 72,
         "pas": 75,
-        "sho": 42,
+        "sho": 40,
         "tac": 79,
         "prc": 1020,
         "id": 4845,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Strahinja",
@@ -12031,7 +12031,7 @@
         "prc": 1115,
         "id": 3371,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Evann",
@@ -13087,7 +13087,7 @@
         "prc": 1030,
         "id": 5051,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mamadou",
@@ -13558,20 +13558,20 @@
         "club": "S Lisbon",
         "pos": "LM",
         "foot": "L",
-        "rate": 74,
+        "rate": 72,
         "hgt": 177,
-        "spe": 78,
-        "acc": 80,
-        "sta": 59,
-        "str": 62,
-        "con": 74,
-        "pas": 76,
-        "sho": 72,
+        "spe": 76,
+        "acc": 79,
+        "sta": 58,
+        "str": 61,
+        "con": 70,
+        "pas": 72,
+        "sho": 65,
         "tac": 53,
-        "prc": 1030,
+        "prc": 845,
         "id": 6266,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Tyrick",
@@ -13637,7 +13637,7 @@
         "prc": 1030,
         "id": 2114,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Harry",
@@ -14262,20 +14262,20 @@
         "club": "S Lisbon",
         "pos": "LB",
         "foot": "L",
-        "rate": 74,
+        "rate": 75,
         "hgt": 176,
-        "spe": 76,
+        "spe": 77,
         "acc": 81,
-        "sta": 73,
-        "str": 56,
-        "con": 73,
-        "pas": 77,
-        "sho": 67,
-        "tac": 60,
-        "prc": 935,
+        "sta": 76,
+        "str": 58,
+        "con": 74,
+        "pas": 76,
+        "sho": 69,
+        "tac": 63,
+        "prc": 1020,
         "id": 1277,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Javi",
@@ -15692,20 +15692,20 @@
         "club": "Marseille",
         "pos": "LW",
         "foot": "R",
-        "rate": 73,
+        "rate": 72,
         "hgt": 184,
-        "spe": 76,
-        "acc": 74,
-        "sta": 72,
+        "spe": 74,
+        "acc": 75,
+        "sta": 65,
         "str": 59,
-        "con": 74,
-        "pas": 67,
-        "sho": 71,
-        "tac": 55,
-        "prc": 1015,
+        "con": 72,
+        "pas": 69,
+        "sho": 70,
+        "tac": 54,
+        "prc": 920,
         "id": 6914,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Timo",
@@ -15912,20 +15912,20 @@
         "club": "S Lisbon",
         "pos": "RW",
         "foot": "L",
-        "rate": 73,
+        "rate": 72,
         "hgt": 172,
         "spe": 78,
         "acc": 82,
-        "sta": 70,
+        "sta": 69,
         "str": 58,
-        "con": 79,
-        "pas": 75,
-        "sho": 64,
-        "tac": 25,
-        "prc": 1015,
+        "con": 77,
+        "pas": 72,
+        "sho": 63,
+        "tac": 30,
+        "prc": 920,
         "id": 5839,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Raheem",
@@ -16431,7 +16431,7 @@
         "prc": 935,
         "id": 1814,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Maxence",
@@ -16902,20 +16902,20 @@
         "club": "Marseille",
         "pos": "DM",
         "foot": "L",
-        "rate": 73,
+        "rate": 72,
         "hgt": 188,
-        "spe": 63,
-        "acc": 58,
-        "sta": 66,
-        "str": 83,
+        "spe": 62,
+        "acc": 57,
+        "sta": 65,
+        "str": 82,
         "con": 72,
-        "pas": 73,
+        "pas": 72,
         "sho": 52,
         "tac": 77,
-        "prc": 935,
+        "prc": 845,
         "id": 4124,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jefferson",
@@ -17421,7 +17421,7 @@
         "prc": 935,
         "id": 7230,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ruben",
@@ -17663,7 +17663,7 @@
         "prc": 850,
         "id": 2510,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Axel",
@@ -18271,15 +18271,15 @@
         "spe": 72,
         "acc": 74,
         "sta": 74,
-        "str": 64,
+        "str": 63,
         "con": 72,
         "pas": 74,
-        "sho": 49,
-        "tac": 71,
+        "sho": 50,
+        "tac": 70,
         "prc": 850,
         "id": 5561,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Diego",
@@ -20375,7 +20375,7 @@
         "fname": "Himad",
         "lname": "Abdelli",
         "nat": "Algeria",
-        "club": "Angers",
+        "club": "Marseille",
         "pos": "CM",
         "foot": "L",
         "rate": 72,
@@ -20391,7 +20391,7 @@
         "prc": 845,
         "id": 1013,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Leandro",
@@ -23977,7 +23977,7 @@
         "prc": 830,
         "id": 3751,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Wilson",
@@ -24712,20 +24712,20 @@
         "club": "Marseille",
         "pos": "RW",
         "foot": "L",
-        "rate": 71,
+        "rate": 70,
         "hgt": 176,
         "spe": 80,
         "acc": 82,
-        "sta": 63,
-        "str": 56,
-        "con": 77,
-        "pas": 71,
-        "sho": 71,
-        "tac": 21,
-        "prc": 830,
+        "sta": 61,
+        "str": 55,
+        "con": 76,
+        "pas": 70,
+        "sho": 69,
+        "tac": 20,
+        "prc": 745,
         "id": 5336,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "",
@@ -33201,7 +33201,7 @@
         "fname": "Georgios",
         "lname": "Vagiannidis",
         "nat": "Greece",
-        "club": "Unlicensed",
+        "club": "S Lisbon",
         "pos": "RB",
         "foot": "R",
         "rate": 70,
@@ -33217,7 +33217,7 @@
         "prc": 625,
         "id": 6992,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Milan",
@@ -39927,7 +39927,7 @@
         "prc": 555,
         "id": 3125,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Anton",
@@ -58495,7 +58495,7 @@
         "prc": 385,
         "id": 2489,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Remy",
@@ -62323,7 +62323,7 @@
         "prc": 410,
         "id": 6454,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Victor",
@@ -84719,7 +84719,7 @@
         "prc": 210,
         "id": 7152,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ali",
@@ -118840,6 +118840,28 @@
         "tac": 21,
         "prc": 455,
         "id": 7463,
+        "version": 20263,
+        "status": 1
+    },
+    {
+        "fname": "Ugo",
+        "lname": "Kadmiri",
+        "nat": "Sweden",
+        "club": "Marseille",
+        "pos": "CF",
+        "foot": "R",
+        "rate": 72,
+        "hgt": 177,
+        "spe": 74,
+        "acc": 75,
+        "sta": 65,
+        "str": 59,
+        "con": 72,
+        "pas": 69,
+        "sho": 70,
+        "tac": 54,
+        "prc": 920,
+        "id": 7464,
         "version": 20263,
         "status": 1
     }
