@@ -1628,7 +1628,7 @@
         "status": 1
     },
     {
-        "fname": "Domenico ",
+        "fname": "Domenico",
         "lname": "Berardi",
         "nat": "Italy",
         "club": "Sassuolo",
@@ -9705,7 +9705,7 @@
         "fname": "Thomas",
         "lname": "Meunier",
         "nat": "Belgium",
-        "club": "Belgium",
+        "club": "Unlicensed",
         "pos": "RB",
         "foot": "R",
         "rate": 75,
@@ -10517,7 +10517,7 @@
     },
     {
         "fname": "Mateus",
-        "lname": "Uribe ",
+        "lname": "Uribe",
         "nat": "Colombia",
         "club": "Unlicensed",
         "pos": "DM",
@@ -11817,7 +11817,7 @@
         "fname": "Hans",
         "lname": "Vanaken",
         "nat": "Belgium",
-        "club": "Belgium",
+        "club": "Unlicensed",
         "pos": "AM",
         "foot": "R",
         "rate": 73,
@@ -12189,7 +12189,7 @@
     },
     {
         "fname": "Wilmar",
-        "lname": "Barrios ",
+        "lname": "Barrios",
         "nat": "Colombia",
         "club": "Unlicensed",
         "pos": "DM",
@@ -13269,7 +13269,7 @@
         "fname": "Taty",
         "lname": "Castellanos",
         "nat": "Spain",
-        "club": "Argentina",
+        "club": "Girona",
         "pos": "CF",
         "foot": "R",
         "rate": 72,
@@ -16391,7 +16391,7 @@
     },
     {
         "fname": "Jefferson",
-        "lname": "Lerma ",
+        "lname": "Lerma",
         "nat": "Colombia",
         "club": "Bournemouth",
         "pos": "DM",
@@ -16701,7 +16701,7 @@
         "fname": "Sebastiaan",
         "lname": "Bornauw",
         "nat": "Belgium",
-        "club": "Belgium",
+        "club": "Unlicensed",
         "pos": "CB",
         "foot": "R",
         "rate": 71,
@@ -17248,7 +17248,7 @@
         "status": 1
     },
     {
-        "fname": "Patrick ",
+        "fname": "Patrick",
         "lname": "Van Aanholt",
         "nat": "Netherlands",
         "club": "PSV",
@@ -17688,8 +17688,8 @@
         "status": 1
     },
     {
-        "fname": "Radamel ",
-        "lname": "Falcao ",
+        "fname": "Radamel",
+        "lname": "Falcao",
         "nat": "Colombia",
         "club": "Vallecano",
         "pos": "CF",
@@ -18173,7 +18173,7 @@
     },
     {
         "fname": "Diego",
-        "lname": "Valoyes ",
+        "lname": "Valoyes",
         "nat": "Colombia",
         "club": "Unlicensed",
         "pos": "RW",
@@ -19338,7 +19338,7 @@
         "status": 1
     },
     {
-        "fname": "Jhon ",
+        "fname": "Jhon",
         "lname": "Lucumi",
         "nat": "Colombia",
         "club": "Bologna",

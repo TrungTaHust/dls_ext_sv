@@ -682,7 +682,7 @@
         "status": 1
     },
     {
-        "fname": "Viktor ",
+        "fname": "Viktor",
         "lname": "Gyokeres",
         "nat": "Sweden",
         "club": "Arsenal",
@@ -4532,7 +4532,7 @@
         "status": 1
     },
     {
-        "fname": "Domenico ",
+        "fname": "Domenico",
         "lname": "Berardi",
         "nat": "Italy",
         "club": "Sassuolo",
@@ -6314,7 +6314,7 @@
         "status": 1
     },
     {
-        "fname": "Elliot ",
+        "fname": "Elliot",
         "lname": "Anderson",
         "nat": "England",
         "club": "Nottingham",
@@ -8259,9 +8259,9 @@
         "rate": 76,
         "hgt": 184,
         "spe": 73,
-        "acc": 7,
-        "sta": 7,
-        "str": 180,
+        "acc": 70,
+        "sta": 71,
+        "str": 80,
         "con": 73,
         "pas": 74,
         "sho": 47,
@@ -12342,7 +12342,7 @@
         "status": 1
     },
     {
-        "fname": "Matteo ",
+        "fname": "Matteo",
         "lname": "Gabbia",
         "nat": "Italy",
         "club": "AC Milan",
@@ -12540,7 +12540,7 @@
         "status": 1
     },
     {
-        "fname": "Jhon ",
+        "fname": "Jhon",
         "lname": "Lucumi",
         "nat": "Colombia",
         "club": "Bologna",
@@ -14191,7 +14191,7 @@
     },
     {
         "fname": "Jefferson",
-        "lname": "Lerma ",
+        "lname": "Lerma",
         "nat": "Colombia",
         "club": "Crystal Palace",
         "pos": "DM",
@@ -17117,7 +17117,7 @@
     },
     {
         "fname": "Marcus",
-        "lname": "Tavernier ",
+        "lname": "Tavernier",
         "nat": "England",
         "club": "Bournemouth",
         "pos": "AM",
@@ -18855,7 +18855,7 @@
     },
     {
         "fname": "Lloyd",
-        "lname": "Kelly ",
+        "lname": "Kelly",
         "nat": "England",
         "club": "Juventus",
         "pos": "CB",
@@ -19074,7 +19074,7 @@
         "status": 1
     },
     {
-        "fname": "Luca ",
+        "fname": "Luca",
         "lname": "Ranieri",
         "nat": "Italy",
         "club": "Fiorentina",
@@ -21692,7 +21692,7 @@
         "status": 1
     },
     {
-        "fname": "Ao ",
+        "fname": "Ao",
         "lname": "Tanaka",
         "nat": "Japan",
         "club": "Leeds",
@@ -29392,7 +29392,7 @@
         "status": 1
     },
     {
-        "fname": "Luis ",
+        "fname": "Luis",
         "lname": "Advincula",
         "nat": "Peru",
         "club": "Unlicensed",
@@ -29590,7 +29590,7 @@
         "status": 1
     },
     {
-        "fname": "Trai ",
+        "fname": "Trai",
         "lname": "Hume",
         "nat": "North. Ireland",
         "club": "Sunderland",
@@ -29910,7 +29910,7 @@
         "acc": 42,
         "sta": 67,
         "str": 60,
-        "con": 5,
+        "con": 50,
         "pas": 52,
         "sho": 64,
         "tac": 36,
@@ -31680,7 +31680,7 @@
         "status": 1
     },
     {
-        "fname": "Jens ",
+        "fname": "Jens",
         "lname": "Cajuste",
         "nat": "Sweden",
         "club": "Ipswich",
@@ -34958,7 +34958,7 @@
         "status": 1
     },
     {
-        "fname": "Kieffer ",
+        "fname": "Kieffer",
         "lname": "Moore",
         "nat": "Wales",
         "club": "Wrexham",
@@ -36124,7 +36124,7 @@
         "status": 1
     },
     {
-        "fname": "Luca ",
+        "fname": "Luca",
         "lname": "Mazzitelli",
         "nat": "Italy",
         "club": "Cagliari",
@@ -38126,7 +38126,7 @@
         "status": 1
     },
     {
-        "fname": "Jack ",
+        "fname": "Jack",
         "lname": "Robinson",
         "nat": "England",
         "club": "Birmingham",
@@ -38215,7 +38215,7 @@
     },
     {
         "fname": "Juan Pablo",
-        "lname": "Vargas ",
+        "lname": "Vargas",
         "nat": "Costa Rica",
         "club": "Unlicensed",
         "pos": "CB",
@@ -39512,7 +39512,7 @@
         "status": 1
     },
     {
-        "fname": "Martin ",
+        "fname": "Martin",
         "lname": "Boyle",
         "nat": "Australia",
         "club": "Hibernian",
@@ -42559,8 +42559,8 @@
         "spe": 67,
         "acc": 65,
         "sta": 63,
-        "str": 6,
-        "con": 169,
+        "str": 60,
+        "con": 69,
         "pas": 64,
         "sho": 62,
         "tac": 20,
@@ -45904,8 +45904,8 @@
         "acc": 72,
         "sta": 67,
         "str": 55,
-        "con": 6,
-        "pas": 159,
+        "con": 60,
+        "pas": 59,
         "sho": 41,
         "tac": 55,
         "prc": 310,
@@ -51459,11 +51459,11 @@
     },
     {
         "fname": "Kenneth",
-        "lname": "Vargas ",
+        "lname": "Vargas",
         "nat": "Costa Rica",
         "club": "Unlicensed",
         "pos": "CF",
-        "foot": "RW",
+        "foot": "R",
         "rate": 60,
         "hgt": 178,
         "spe": 70,
