@@ -5596,18 +5596,18 @@
         "foot": "L",
         "rate": 78,
         "hgt": 183,
-        "spe": 86,
+        "spe": 85,
         "acc": 79,
-        "sta": 83,
+        "sta": 82,
         "str": 71,
         "con": 75,
-        "pas": 78,
-        "sho": 37,
-        "tac": 77,
+        "pas": 77,
+        "sho": 40,
+        "tac": 76,
         "prc": 1315,
         "id": 6014,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Matheus",
@@ -6828,18 +6828,18 @@
         "foot": "R",
         "rate": 77,
         "hgt": 183,
-        "spe": 78,
-        "acc": 75,
-        "sta": 81,
+        "spe": 76,
+        "acc": 74,
+        "sta": 82,
         "str": 68,
-        "con": 78,
-        "pas": 75,
-        "sho": 70,
-        "tac": 54,
+        "con": 77,
+        "pas": 77,
+        "sho": 69,
+        "tac": 58,
         "prc": 1345,
         "id": 3788,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Kaoru",
@@ -10702,16 +10702,16 @@
         "hgt": 192,
         "spe": 65,
         "acc": 60,
-        "sta": 76,
+        "sta": 77,
         "str": 87,
-        "con": 71,
+        "con": 70,
         "pas": 76,
-        "sho": 47,
+        "sho": 46,
         "tac": 80,
         "prc": 1020,
         "id": 1220,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Loic",
@@ -12515,7 +12515,7 @@
         "prc": 1115,
         "id": 2210,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Romain",
@@ -13646,20 +13646,20 @@
         "club": "Fulham",
         "pos": "RM",
         "foot": "L",
-        "rate": 74,
+        "rate": 75,
         "hgt": 173,
         "spe": 75,
         "acc": 79,
-        "sta": 72,
-        "str": 54,
-        "con": 75,
-        "pas": 76,
-        "sho": 75,
-        "tac": 44,
-        "prc": 1030,
+        "sta": 75,
+        "str": 55,
+        "con": 76,
+        "pas": 77,
+        "sho": 76,
+        "tac": 45,
+        "prc": 1130,
         "id": 7294,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Raoul",
@@ -14627,7 +14627,7 @@
         "prc": 935,
         "id": 6812,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Takehiro",
@@ -14781,7 +14781,7 @@
         "prc": 840,
         "id": 4358,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Dominik",
@@ -15309,7 +15309,7 @@
         "prc": 1015,
         "id": 3853,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Arnaud",
@@ -16264,20 +16264,20 @@
         "club": "Fulham",
         "pos": "AM",
         "foot": "R",
-        "rate": 73,
+        "rate": 72,
         "hgt": 182,
         "spe": 72,
         "acc": 76,
-        "sta": 68,
+        "sta": 69,
         "str": 59,
         "con": 77,
-        "pas": 76,
-        "sho": 71,
+        "pas": 74,
+        "sho": 70,
         "tac": 39,
-        "prc": 935,
+        "prc": 845,
         "id": 6516,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Fabio",
@@ -19775,7 +19775,7 @@
         "prc": 920,
         "id": 1712,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Rachid",
@@ -20721,7 +20721,7 @@
         "prc": 845,
         "id": 4496,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ruslan",
@@ -21095,7 +21095,7 @@
         "prc": 845,
         "id": 1622,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Adrian",
@@ -22019,7 +22019,7 @@
         "prc": 770,
         "id": 1531,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jaka",
@@ -23097,7 +23097,7 @@
         "prc": 770,
         "id": 2100,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Alessandro",
@@ -24131,7 +24131,7 @@
         "prc": 830,
         "id": 5122,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ricardo",
@@ -27085,23 +27085,23 @@
         "fname": "Issa",
         "lname": "Diop",
         "nat": "France",
-        "club": "Unlicensed",
+        "club": "Fulham",
         "pos": "CB",
         "foot": "R",
         "rate": 71,
         "hgt": 194,
-        "spe": 72,
-        "acc": 72,
-        "sta": 67,
-        "str": 78,
+        "spe": 73,
+        "acc": 71,
+        "sta": 66,
+        "str": 77,
         "con": 62,
-        "pas": 63,
-        "sho": 42,
-        "tac": 74,
+        "pas": 64,
+        "sho": 43,
+        "tac": 73,
         "prc": 695,
         "id": 2639,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Dakonam",
@@ -28135,7 +28135,7 @@
         "prc": 695,
         "id": 6381,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Hector",
@@ -40389,7 +40389,7 @@
         "prc": 495,
         "id": 4322,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Josep",
@@ -42721,7 +42721,7 @@
         "prc": 535,
         "id": 4068,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Dong-Gyeong",

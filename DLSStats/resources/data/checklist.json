@@ -11,6 +11,11 @@
       "nation": "ENG"
     },
     {
+      "club": "Brentford",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
       "club": "Chelsea",
       "update": 1,
       "nation": "ENG"
@@ -22,6 +27,11 @@
     },
     {
       "club": "Everton",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
+      "club": "Fulham",
       "update": 1,
       "nation": "ENG"
     },
@@ -121,22 +131,12 @@
       "nation": "ENG"
     },
     {
-      "club": "Brentford",
-      "update": 0,
-      "nation": "ENG"
-    },
-    {
       "club": "Brighton",
       "update": 0,
       "nation": "ENG"
     },
     {
       "club": "Burnley",
-      "update": 0,
-      "nation": "ENG"
-    },
-    {
-      "club": "Fulham",
       "update": 0,
       "nation": "ENG"
     },
