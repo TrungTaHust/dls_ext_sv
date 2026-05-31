@@ -7684,20 +7684,20 @@
         "club": "Brentford",
         "pos": "CF",
         "foot": "R",
-        "rate": 76,
+        "rate": 78,
         "hgt": 188,
         "spe": 74,
-        "acc": 67,
-        "sta": 75,
-        "str": 84,
-        "con": 77,
-        "pas": 70,
-        "sho": 84,
-        "tac": 35,
-        "prc": 1340,
+        "acc": 69,
+        "sta": 77,
+        "str": 85,
+        "con": 78,
+        "pas": 72,
+        "sho": 87,
+        "tac": 37,
+        "prc": 1585,
         "id": 6821,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Chris",
@@ -7950,18 +7950,18 @@
         "foot": "R",
         "rate": 76,
         "hgt": 180,
-        "spe": 74,
+        "spe": 73,
         "acc": 77,
-        "sta": 72,
+        "sta": 73,
         "str": 60,
         "con": 78,
         "pas": 78,
-        "sho": 67,
-        "tac": 63,
+        "sho": 68,
+        "tac": 64,
         "prc": 1235,
         "id": 2433,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Kang-In",
@@ -9446,18 +9446,18 @@
         "foot": "R",
         "rate": 76,
         "hgt": 179,
-        "spe": 78,
+        "spe": 77,
         "acc": 79,
-        "sta": 74,
-        "str": 74,
+        "sta": 78,
+        "str": 75,
         "con": 74,
-        "pas": 73,
+        "pas": 74,
         "sho": 38,
-        "tac": 75,
+        "tac": 76,
         "prc": 1115,
         "id": 4003,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Rasmus",
@@ -11584,14 +11584,14 @@
         "acc": 60,
         "sta": 72,
         "str": 61,
-        "con": 56,
+        "con": 57,
         "pas": 60,
         "sho": 72,
-        "tac": 42,
+        "tac": 41,
         "prc": 925,
         "id": 4015,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "",
@@ -12427,7 +12427,7 @@
         "prc": 1115,
         "id": 6307,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mathys",
@@ -16550,20 +16550,20 @@
         "club": "Brentford",
         "pos": "CM",
         "foot": "R",
-        "rate": 73,
+        "rate": 75,
         "hgt": 180,
-        "spe": 64,
-        "acc": 72,
-        "sta": 71,
+        "spe": 65,
+        "acc": 73,
+        "sta": 74,
         "str": 64,
-        "con": 71,
-        "pas": 77,
-        "sho": 64,
-        "tac": 66,
-        "prc": 935,
+        "con": 75,
+        "pas": 79,
+        "sho": 67,
+        "tac": 69,
+        "prc": 1130,
         "id": 3844,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Senny",
@@ -16883,17 +16883,17 @@
         "rate": 73,
         "hgt": 184,
         "spe": 67,
-        "acc": 60,
-        "sta": 78,
+        "acc": 59,
+        "sta": 77,
         "str": 72,
-        "con": 72,
+        "con": 71,
         "pas": 73,
-        "sho": 61,
+        "sho": 60,
         "tac": 71,
         "prc": 935,
         "id": 3816,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Geoffrey",
@@ -17377,7 +17377,7 @@
         "prc": 935,
         "id": 5506,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Roland",
@@ -17631,17 +17631,17 @@
         "rate": 73,
         "hgt": 193,
         "spe": 70,
-        "acc": 61,
+        "acc": 60,
         "sta": 76,
         "str": 83,
-        "con": 66,
+        "con": 65,
         "pas": 70,
         "sho": 47,
         "tac": 81,
         "prc": 850,
         "id": 2265,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Zeno",
@@ -18072,16 +18072,16 @@
         "hgt": 192,
         "spe": 78,
         "acc": 62,
-        "sta": 71,
+        "sta": 72,
         "str": 82,
-        "con": 65,
+        "con": 67,
         "pas": 69,
         "sho": 42,
         "tac": 78,
         "prc": 850,
         "id": 7026,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Maxim",
@@ -20926,22 +20926,22 @@
         "lname": "Yarmolyuk",
         "nat": "Ukraine",
         "club": "Brentford",
-        "pos": "CM",
+        "pos": "DM",
         "foot": "R",
-        "rate": 72,
+        "rate": 73,
         "hgt": 180,
-        "spe": 71,
+        "spe": 72,
         "acc": 69,
         "sta": 72,
         "str": 64,
         "con": 71,
         "pas": 74,
-        "sho": 51,
-        "tac": 71,
-        "prc": 845,
+        "sho": 52,
+        "tac": 72,
+        "prc": 935,
         "id": 7345,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Szymon",
@@ -21613,17 +21613,17 @@
         "rate": 72,
         "hgt": 170,
         "spe": 73,
-        "acc": 79,
+        "acc": 78,
         "sta": 73,
-        "str": 53,
-        "con": 71,
-        "pas": 71,
-        "sho": 65,
-        "tac": 65,
+        "str": 51,
+        "con": 70,
+        "pas": 70,
+        "sho": 67,
+        "tac": 63,
         "prc": 845,
         "id": 4381,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Dwight",
@@ -21918,20 +21918,20 @@
         "club": "Brentford",
         "pos": "CB",
         "foot": "R",
-        "rate": 72,
+        "rate": 73,
         "hgt": 196,
         "spe": 76,
-        "acc": 61,
-        "sta": 69,
+        "acc": 63,
+        "sta": 70,
         "str": 79,
         "con": 67,
         "pas": 68,
-        "sho": 43,
-        "tac": 74,
-        "prc": 770,
+        "sho": 44,
+        "tac": 73,
+        "prc": 850,
         "id": 1117,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Benoit",
@@ -27981,7 +27981,7 @@
         "prc": 695,
         "id": 3603,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Bradley",
@@ -39405,7 +39405,7 @@
         "fname": "Aaron",
         "lname": "Hickey",
         "nat": "Scotland",
-        "club": "Unlicensed",
+        "club": "Brentford",
         "pos": "LB",
         "foot": "L",
         "rate": 69,
@@ -39421,7 +39421,7 @@
         "prc": 555,
         "id": 3625,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Derrick",
@@ -42391,7 +42391,7 @@
         "prc": 590,
         "id": 5237,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Nathan",
@@ -42793,7 +42793,7 @@
         "fname": "Antoni",
         "lname": "Milambo",
         "nat": "Netherlands",
-        "club": "Feyenoord",
+        "club": "Brentford",
         "pos": "AM",
         "foot": "R",
         "rate": 68,
@@ -42809,7 +42809,7 @@
         "prc": 535,
         "id": 4923,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Callum",
@@ -67207,7 +67207,7 @@
         "prc": 335,
         "id": 6994,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Radek",
@@ -97809,7 +97809,7 @@
         "prc": 155,
         "id": 3145,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Callum",
