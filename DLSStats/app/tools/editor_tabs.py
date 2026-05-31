@@ -305,8 +305,14 @@ class PlayerIDTab(ttk.Frame):
   def add_player(self, fname, lname):
     new_id = self._next_id()
     self.data.append({"id": new_id, "fname": fname.strip(), "lname": lname.strip()})
+    self._save_silent()
     self.tbl.refresh()
     return new_id
+
+  def _save_silent(self):
+    """Lưu player_id.json không hiện messagebox — dùng khi auto-save."""
+    with open(PLAYER_ID_FILE, "w", encoding="utf-8") as f:
+      json.dump(self.data, f, ensure_ascii=False, indent=4)
 
   def _build(self):
     top = ttk.Frame(self)

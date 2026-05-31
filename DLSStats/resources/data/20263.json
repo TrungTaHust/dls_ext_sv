@@ -2190,14 +2190,14 @@
         "acc": 61,
         "sta": 80,
         "str": 61,
-        "con": 58,
+        "con": 57,
         "pas": 59,
-        "sho": 76,
-        "tac": 51,
+        "sho": 77,
+        "tac": 49,
         "prc": 1500,
         "id": 2063,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Gregor",
@@ -3728,16 +3728,16 @@
         "hgt": 183,
         "spe": 78,
         "acc": 66,
-        "sta": 85,
+        "sta": 87,
         "str": 73,
         "con": 77,
         "pas": 80,
-        "sho": 67,
-        "tac": 79,
+        "sho": 68,
+        "tac": 80,
         "prc": 1585,
         "id": 2794,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Exequiel",
@@ -4743,13 +4743,13 @@
         "sta": 75,
         "str": 74,
         "con": 83,
-        "pas": 80,
+        "pas": 79,
         "sho": 74,
         "tac": 49,
         "prc": 1465,
         "id": 2483,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Morgan",
@@ -6699,15 +6699,15 @@
         "spe": 69,
         "acc": 61,
         "sta": 86,
-        "str": 75,
-        "con": 75,
-        "pas": 78,
+        "str": 74,
+        "con": 76,
+        "pas": 77,
         "sho": 64,
-        "tac": 82,
+        "tac": 81,
         "prc": 1345,
         "id": 2497,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Boubacar",
@@ -8302,18 +8302,18 @@
         "foot": "R",
         "rate": 76,
         "hgt": 188,
-        "spe": 71,
+        "spe": 68,
         "acc": 63,
-        "sta": 71,
+        "sta": 72,
         "str": 71,
         "con": 80,
-        "pas": 78,
-        "sho": 73,
-        "tac": 60,
+        "pas": 79,
+        "sho": 74,
+        "tac": 63,
         "prc": 1235,
         "id": 5588,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Valentin",
@@ -10689,7 +10689,7 @@
         "prc": 1130,
         "id": 7406,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Joachim",
@@ -10909,7 +10909,7 @@
         "prc": 1020,
         "id": 2664,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Wesley",
@@ -12163,7 +12163,7 @@
         "prc": 1115,
         "id": 6303,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ayase",
@@ -13681,7 +13681,7 @@
         "prc": 1030,
         "id": 1581,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Zeki",
@@ -16057,7 +16057,7 @@
         "prc": 1015,
         "id": 5909,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Wesley",
@@ -17817,7 +17817,7 @@
         "prc": 850,
         "id": 3627,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Juan",
@@ -17875,15 +17875,15 @@
         "spe": 72,
         "acc": 64,
         "sta": 69,
-        "str": 79,
+        "str": 77,
         "con": 67,
         "pas": 71,
-        "sho": 50,
+        "sho": 49,
         "tac": 76,
         "prc": 850,
         "id": 4114,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Odilon",
@@ -17905,7 +17905,7 @@
         "prc": 850,
         "id": 4139,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ladislav",
@@ -18037,7 +18037,7 @@
         "prc": 850,
         "id": 6302,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Josip",
@@ -24052,20 +24052,20 @@
         "club": "Atalanta",
         "pos": "CF",
         "foot": "R",
-        "rate": 71,
+        "rate": 73,
         "hgt": 185,
         "spe": 75,
         "acc": 70,
         "sta": 75,
         "str": 77,
-        "con": 68,
+        "con": 69,
         "pas": 65,
-        "sho": 73,
-        "tac": 28,
-        "prc": 830,
+        "sho": 75,
+        "tac": 35,
+        "prc": 1015,
         "id": 4191,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Alonso",
@@ -26472,20 +26472,20 @@
         "club": "Atalanta",
         "pos": "LM",
         "foot": "B",
-        "rate": 71,
+        "rate": 72,
         "hgt": 175,
-        "spe": 77,
-        "acc": 77,
+        "spe": 76,
+        "acc": 80,
         "sta": 71,
-        "str": 57,
-        "con": 70,
-        "pas": 71,
-        "sho": 54,
-        "tac": 55,
-        "prc": 760,
+        "str": 56,
+        "con": 72,
+        "pas": 73,
+        "sho": 55,
+        "tac": 58,
+        "prc": 845,
         "id": 7392,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Cristiano",
@@ -27899,23 +27899,23 @@
         "fname": "Mitchel",
         "lname": "Bakker",
         "nat": "Netherlands",
-        "club": "Unlicensed",
-        "pos": "LB",
+        "club": "Atalanta",
+        "pos": "LWB",
         "foot": "L",
-        "rate": 71,
+        "rate": 69,
         "hgt": 185,
-        "spe": 79,
-        "acc": 73,
+        "spe": 76,
+        "acc": 68,
         "sta": 66,
         "str": 65,
         "con": 67,
         "pas": 67,
         "sho": 45,
-        "tac": 67,
-        "prc": 695,
+        "tac": 65,
+        "prc": 605,
         "id": 1435,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "El Hadji Malick",
@@ -33701,7 +33701,7 @@
         "prc": 555,
         "id": 6597,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Camilo",
@@ -45119,7 +45119,7 @@
         "prc": 535,
         "id": 1637,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Hugo",
@@ -56337,7 +56337,7 @@
         "sho": 31,
         "tac": 70,
         "prc": 435,
-        "id": 5404,
+        "id": 5405,
         "version": 20263,
         "status": 0
     },
@@ -72309,7 +72309,7 @@
         "sho": 33,
         "tac": 65,
         "prc": 335,
-        "id": 4736,
+        "id": 4737,
         "version": 20263,
         "status": 0
     },
