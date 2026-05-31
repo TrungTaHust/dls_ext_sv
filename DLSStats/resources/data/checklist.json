@@ -71,6 +71,11 @@
       "nation": "ESP"
     },
     {
+      "club": "Marseille",
+      "update": 1,
+      "nation": "FRA"
+    },
+    {
       "club": "Paris SG",
       "update": 1,
       "nation": "FRA"
@@ -102,6 +107,11 @@
     },
     {
       "club": "Porto",
+      "update": 1,
+      "nation": "POR"
+    },
+    {
+      "club": "S Lisbon",
       "update": 1,
       "nation": "POR"
     },
@@ -466,11 +476,6 @@
       "nation": "FRA"
     },
     {
-      "club": "Marseille",
-      "update": 0,
-      "nation": "FRA"
-    },
-    {
       "club": "Metz",
       "update": 0,
       "nation": "FRA"
@@ -808,11 +813,6 @@
     {
       "club": "Rio Ave",
       "update": 0,
-      "nation": "POR"
-    },
-    {
-      "club": "S Lisbon",
-      "update": 1,
       "nation": "POR"
     },
     {

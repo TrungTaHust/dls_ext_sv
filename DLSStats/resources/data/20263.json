@@ -1766,20 +1766,20 @@
         "club": "Athletic Bilbao",
         "pos": "GK",
         "foot": "R",
-        "rate": 82,
+        "rate": 81,
         "hgt": 190,
         "spe": 62,
         "acc": 60,
-        "sta": 79,
+        "sta": 78,
         "str": 61,
         "con": 60,
         "pas": 62,
         "sho": 77,
-        "tac": 53,
-        "prc": 1615,
+        "tac": 54,
+        "prc": 1500,
         "id": 6456,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Yann",
@@ -2430,16 +2430,16 @@
         "hgt": 181,
         "spe": 89,
         "acc": 91,
-        "sta": 78,
+        "sta": 75,
         "str": 60,
         "con": 87,
-        "pas": 78,
-        "sho": 76,
-        "tac": 35,
+        "pas": 77,
+        "sho": 77,
+        "tac": 36,
         "prc": 1850,
         "id": 7281,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mattia",
@@ -3064,20 +3064,20 @@
         "club": "Athletic Bilbao",
         "pos": "CB",
         "foot": "R",
-        "rate": 80,
+        "rate": 79,
         "hgt": 183,
-        "spe": 81,
+        "spe": 79,
         "acc": 73,
-        "sta": 79,
-        "str": 80,
-        "con": 74,
-        "pas": 77,
-        "sho": 52,
-        "tac": 85,
-        "prc": 1535,
+        "sta": 78,
+        "str": 78,
+        "con": 73,
+        "pas": 76,
+        "sho": 51,
+        "tac": 84,
+        "prc": 1420,
         "id": 7162,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Alejandro",
@@ -3658,20 +3658,20 @@
         "club": "Athletic Bilbao",
         "pos": "AM",
         "foot": "R",
-        "rate": 79,
+        "rate": 78,
         "hgt": 188,
-        "spe": 76,
-        "acc": 75,
+        "spe": 74,
+        "acc": 73,
         "sta": 77,
-        "str": 76,
+        "str": 75,
         "con": 76,
-        "pas": 77,
-        "sho": 79,
+        "pas": 76,
+        "sho": 77,
         "tac": 59,
-        "prc": 1585,
+        "prc": 1465,
         "id": 6222,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "",
@@ -4080,16 +4080,16 @@
         "hgt": 189,
         "spe": 75,
         "acc": 65,
-        "sta": 71,
+        "sta": 73,
         "str": 84,
         "con": 77,
-        "pas": 79,
-        "sho": 50,
+        "pas": 78,
+        "sho": 51,
         "tac": 84,
         "prc": 1420,
         "id": 4277,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Nicolas",
@@ -4692,20 +4692,20 @@
         "club": "Athletic Bilbao",
         "pos": "RW",
         "foot": "R",
-        "rate": 78,
+        "rate": 77,
         "hgt": 186,
         "spe": 88,
-        "acc": 80,
-        "sta": 81,
+        "acc": 79,
+        "sta": 80,
         "str": 76,
-        "con": 76,
-        "pas": 72,
-        "sho": 75,
+        "con": 75,
+        "pas": 71,
+        "sho": 74,
         "tac": 32,
-        "prc": 1585,
+        "prc": 1460,
         "id": 7276,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Rafa",
@@ -6782,20 +6782,20 @@
         "club": "Athletic Bilbao",
         "pos": "LM",
         "foot": "R",
-        "rate": 77,
+        "rate": 76,
         "hgt": 175,
-        "spe": 80,
-        "acc": 82,
-        "sta": 76,
+        "spe": 78,
+        "acc": 81,
+        "sta": 77,
         "str": 60,
-        "con": 78,
-        "pas": 80,
-        "sho": 73,
+        "con": 77,
+        "pas": 78,
+        "sho": 72,
         "tac": 53,
-        "prc": 1345,
+        "prc": 1235,
         "id": 1619,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Abde",
@@ -6958,20 +6958,20 @@
         "club": "Athletic Bilbao",
         "pos": "CB",
         "foot": "R",
-        "rate": 77,
+        "rate": 76,
         "hgt": 182,
-        "spe": 71,
+        "spe": 70,
         "acc": 68,
-        "sta": 69,
-        "str": 83,
+        "sta": 65,
+        "str": 79,
         "con": 74,
-        "pas": 79,
-        "sho": 50,
+        "pas": 78,
+        "sho": 49,
         "tac": 85,
-        "prc": 1215,
+        "prc": 1115,
         "id": 1197,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Leonardo",
@@ -9193,7 +9193,7 @@
         "prc": 1115,
         "id": 1618,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Sergi",
@@ -10227,7 +10227,7 @@
         "prc": 1130,
         "id": 6133,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Andrey",
@@ -12075,7 +12075,7 @@
         "prc": 1115,
         "id": 3469,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Georges",
@@ -12977,7 +12977,7 @@
         "prc": 1030,
         "id": 3829,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Davy",
@@ -16638,20 +16638,20 @@
         "club": "Athletic Bilbao",
         "pos": "CM",
         "foot": "R",
-        "rate": 73,
+        "rate": 72,
         "hgt": 180,
-        "spe": 70,
-        "acc": 70,
-        "sta": 72,
+        "spe": 69,
+        "acc": 68,
+        "sta": 70,
         "str": 70,
         "con": 71,
         "pas": 70,
-        "sho": 55,
+        "sho": 52,
         "tac": 72,
-        "prc": 935,
+        "prc": 845,
         "id": 5802,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Lucas",
@@ -18354,20 +18354,20 @@
         "club": "Athletic Bilbao",
         "pos": "RB",
         "foot": "R",
-        "rate": 73,
+        "rate": 72,
         "hgt": 182,
-        "spe": 73,
-        "acc": 72,
-        "sta": 78,
-        "str": 69,
+        "spe": 72,
+        "acc": 70,
+        "sta": 76,
+        "str": 70,
         "con": 70,
-        "pas": 72,
-        "sho": 42,
-        "tac": 73,
-        "prc": 850,
+        "pas": 71,
+        "sho": 40,
+        "tac": 72,
+        "prc": 770,
         "id": 1293,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jose Angel",
@@ -28251,7 +28251,7 @@
         "fname": "Andoni",
         "lname": "Gorosabel",
         "nat": "Spain",
-        "club": "Unlicensed",
+        "club": "Athletic Bilbao",
         "pos": "RB",
         "foot": "R",
         "rate": 71,
@@ -28267,7 +28267,7 @@
         "prc": 695,
         "id": 3366,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Emil",
@@ -45537,7 +45537,7 @@
         "prc": 535,
         "id": 5204,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Arnaud",
@@ -65409,7 +65409,7 @@
         "fname": "Adama",
         "lname": "Boiro",
         "nat": "Spain",
-        "club": "Unlicensed",
+        "club": "Athletic Bilbao",
         "pos": "LB",
         "foot": "L",
         "rate": 66,
@@ -65425,7 +65425,7 @@
         "prc": 380,
         "id": 1721,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Liberato",
@@ -89097,7 +89097,7 @@
         "prc": 175,
         "id": 5537,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Simone",
@@ -118862,6 +118862,28 @@
         "tac": 54,
         "prc": 920,
         "id": 7464,
+        "version": 20263,
+        "status": 1
+    },
+    {
+        "fname": "Urko",
+        "lname": "Izeta",
+        "nat": "Spain",
+        "club": "Athletic Bilbao",
+        "pos": "CF",
+        "foot": "R",
+        "rate": 66,
+        "hgt": 175,
+        "spe": 68,
+        "acc": 72,
+        "sta": 66,
+        "str": 64,
+        "con": 63,
+        "pas": 63,
+        "sho": 68,
+        "tac": 19,
+        "prc": 455,
+        "id": 7465,
         "version": 20263,
         "status": 1
     }
