@@ -96,6 +96,11 @@
       "nation": "ITA"
     },
     {
+      "club": "Napoli",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
       "club": "Bournemouth",
       "update": 0,
       "nation": "ENG"
@@ -567,11 +572,6 @@
     },
     {
       "club": "Monza",
-      "update": 0,
-      "nation": "ITA"
-    },
-    {
-      "club": "Napoli",
       "update": 0,
       "nation": "ITA"
     },
