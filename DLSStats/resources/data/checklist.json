@@ -36,6 +36,11 @@
       "nation": "ENG"
     },
     {
+      "club": "Leeds",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
       "club": "Liverpool",
       "update": 1,
       "nation": "ENG"
@@ -61,9 +66,24 @@
       "nation": "ENG"
     },
     {
+      "club": "Sunderland",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
       "club": "Tottenham",
       "update": 1,
       "nation": "ENG"
+    },
+    {
+      "club": "West Ham",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
+      "club": "Stoke",
+      "update": 1,
+      "nation": "ENG1"
     },
     {
       "club": "Atletico Madrid",
@@ -137,21 +157,6 @@
     },
     {
       "club": "Burnley",
-      "update": 0,
-      "nation": "ENG"
-    },
-    {
-      "club": "Leeds",
-      "update": 0,
-      "nation": "ENG"
-    },
-    {
-      "club": "Sunderland",
-      "update": 0,
-      "nation": "ENG"
-    },
-    {
-      "club": "West Ham",
       "update": 0,
       "nation": "ENG"
     },
@@ -277,11 +282,6 @@
     },
     {
       "club": "Southampton",
-      "update": 0,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Stoke",
       "update": 0,
       "nation": "ENG1"
     },
