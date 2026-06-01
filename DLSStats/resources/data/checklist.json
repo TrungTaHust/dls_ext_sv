@@ -96,6 +96,11 @@
       "nation": "ENG1"
     },
     {
+      "club": "Athletic Bilbao",
+      "update": 1,
+      "nation": "ESP"
+    },
+    {
       "club": "Atletico Madrid",
       "update": 1,
       "nation": "ESP"
@@ -111,6 +116,11 @@
       "nation": "ESP"
     },
     {
+      "club": "Real Sociedad",
+      "update": 1,
+      "nation": "ESP"
+    },
+    {
       "club": "Marseille",
       "update": 1,
       "nation": "FRA"
@@ -122,6 +132,11 @@
     },
     {
       "club": "AC Milan",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
+      "club": "Atalanta",
       "update": 1,
       "nation": "ITA"
     },
@@ -146,6 +161,11 @@
       "nation": "ITA"
     },
     {
+      "club": "Roma",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
       "club": "Porto",
       "update": 1,
       "nation": "POR"
@@ -154,6 +174,16 @@
       "club": "S Lisbon",
       "update": 1,
       "nation": "POR"
+    },
+    {
+      "club": "Dundee U",
+      "update": 1,
+      "nation": "SCO"
+    },
+    {
+      "club": "Hearts",
+      "update": 1,
+      "nation": "SCO"
     },
     {
       "club": "Bournemouth",
@@ -321,11 +351,6 @@
       "nation": "ESP"
     },
     {
-      "club": "Athletic Bilbao",
-      "update": 0,
-      "nation": "ESP"
-    },
-    {
       "club": "Cadiz",
       "update": 0,
       "nation": "ESP"
@@ -402,11 +427,6 @@
     },
     {
       "club": "Real Betis",
-      "update": 0,
-      "nation": "ESP"
-    },
-    {
-      "club": "Real Sociedad",
       "update": 0,
       "nation": "ESP"
     },
@@ -531,11 +551,6 @@
       "nation": "FRA"
     },
     {
-      "club": "Atalanta",
-      "update": 0,
-      "nation": "ITA"
-    },
-    {
       "club": "Cagliari",
       "update": 0,
       "nation": "ITA"
@@ -592,11 +607,6 @@
     },
     {
       "club": "Pisa",
-      "update": 0,
-      "nation": "ITA"
-    },
-    {
-      "club": "Roma",
       "update": 0,
       "nation": "ITA"
     },
@@ -841,22 +851,12 @@
       "nation": "SCO"
     },
     {
-      "club": "Dundee U",
-      "update": 0,
-      "nation": "SCO"
-    },
-    {
       "club": "Falkirk",
       "update": 0,
       "nation": "SCO"
     },
     {
       "club": "Glasgow R",
-      "update": 0,
-      "nation": "SCO"
-    },
-    {
-      "club": "Hearts",
       "update": 0,
       "nation": "SCO"
     },

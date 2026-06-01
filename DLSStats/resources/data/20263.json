@@ -34656,20 +34656,20 @@
         "club": "Hearts",
         "pos": "CF",
         "foot": "R",
-        "rate": 69,
+        "rate": 70,
         "hgt": 185,
         "spe": 67,
         "acc": 62,
-        "sta": 72,
+        "sta": 74,
         "str": 75,
-        "con": 68,
-        "pas": 67,
-        "sho": 72,
+        "con": 71,
+        "pas": 69,
+        "sho": 74,
         "tac": 26,
-        "prc": 665,
+        "prc": 745,
         "id": 6387,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Eldor",
@@ -44138,20 +44138,20 @@
         "club": "Hearts",
         "pos": "DM",
         "foot": "R",
-        "rate": 68,
+        "rate": 69,
         "hgt": 169,
         "spe": 65,
         "acc": 71,
-        "sta": 84,
+        "sta": 85,
         "str": 60,
-        "con": 65,
+        "con": 67,
         "pas": 69,
-        "sho": 42,
+        "sho": 45,
         "tac": 71,
-        "prc": 535,
+        "prc": 605,
         "id": 2559,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Flynn",
@@ -44930,20 +44930,20 @@
         "club": "Hearts",
         "pos": "LM",
         "foot": "B",
-        "rate": 68,
+        "rate": 69,
         "hgt": 179,
         "spe": 76,
         "acc": 78,
-        "sta": 69,
-        "str": 56,
-        "con": 72,
-        "pas": 70,
+        "sta": 70,
+        "str": 59,
+        "con": 73,
+        "pas": 71,
         "sho": 65,
-        "tac": 19,
-        "prc": 535,
+        "tac": 22,
+        "prc": 605,
         "id": 4232,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Stephy",
@@ -59032,20 +59032,20 @@
         "club": "Hearts",
         "pos": "GK",
         "foot": "R",
-        "rate": 67,
+        "rate": 68,
         "hgt": 190,
         "spe": 52,
         "acc": 49,
-        "sta": 64,
+        "sta": 65,
         "str": 53,
         "con": 50,
         "pas": 52,
-        "sho": 62,
+        "sho": 63,
         "tac": 38,
-        "prc": 385,
+        "prc": 435,
         "id": 6334,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Simone",
@@ -59362,20 +59362,20 @@
         "club": "Hearts",
         "pos": "CF",
         "foot": "R",
-        "rate": 66,
+        "rate": 70,
         "hgt": 180,
-        "spe": 66,
-        "acc": 66,
-        "sta": 70,
-        "str": 68,
-        "con": 68,
-        "pas": 62,
-        "sho": 70,
-        "tac": 18,
-        "prc": 455,
+        "spe": 70,
+        "acc": 69,
+        "sta": 77,
+        "str": 69,
+        "con": 72,
+        "pas": 68,
+        "sho": 73,
+        "tac": 20,
+        "prc": 745,
         "id": 1813,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Tyrese",
@@ -64457,7 +64457,7 @@
         "prc": 380,
         "id": 3497,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jamal",
@@ -65720,20 +65720,20 @@
         "club": "Hearts",
         "pos": "LB",
         "foot": "L",
-        "rate": 66,
+        "rate": 68,
         "hgt": 183,
         "spe": 72,
         "acc": 69,
-        "sta": 68,
-        "str": 60,
-        "con": 61,
-        "pas": 65,
-        "sho": 47,
-        "tac": 59,
-        "prc": 380,
+        "sta": 71,
+        "str": 65,
+        "con": 64,
+        "pas": 70,
+        "sho": 43,
+        "tac": 61,
+        "prc": 495,
         "id": 4940,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Bogdan",
@@ -68505,7 +68505,7 @@
         "prc": 400,
         "id": 2174,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Palko",
@@ -70265,7 +70265,7 @@
         "prc": 355,
         "id": 1480,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Connor",
@@ -71827,7 +71827,7 @@
         "prc": 335,
         "id": 3034,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Facundo",
@@ -79140,20 +79140,20 @@
         "club": "Hearts",
         "pos": "GK",
         "foot": "L",
-        "rate": 64,
+        "rate": 62,
         "hgt": 193,
-        "spe": 43,
+        "spe": 42,
         "acc": 38,
-        "sta": 62,
+        "sta": 60,
         "str": 57,
         "con": 50,
-        "pas": 52,
-        "sho": 60,
+        "pas": 53,
+        "sho": 59,
         "tac": 40,
-        "prc": 245,
+        "prc": 175,
         "id": 3359,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Regis",
@@ -81340,20 +81340,20 @@
         "club": "Hearts",
         "pos": "CM",
         "foot": "R",
-        "rate": 63,
+        "rate": 64,
         "hgt": 180,
         "spe": 62,
         "acc": 62,
-        "sta": 62,
+        "sta": 69,
         "str": 61,
-        "con": 61,
-        "pas": 65,
+        "con": 64,
+        "pas": 67,
         "sho": 39,
-        "tac": 58,
-        "prc": 265,
+        "tac": 61,
+        "prc": 310,
         "id": 4361,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Sipho",
@@ -87117,7 +87117,7 @@
         "prc": 220,
         "id": 6595,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Harry",
@@ -87557,7 +87557,7 @@
         "prc": 210,
         "id": 4032,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Joel",
@@ -87865,7 +87865,7 @@
         "prc": 210,
         "id": 6620,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Finn",
@@ -89581,7 +89581,7 @@
         "prc": 215,
         "id": 3930,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Augustus",
@@ -91803,7 +91803,7 @@
         "prc": 175,
         "id": 4073,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mats",
@@ -96489,7 +96489,7 @@
         "prc": 145,
         "id": 4803,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Paul",
@@ -119104,6 +119104,28 @@
         "tac": 24,
         "prc": 155,
         "id": 7475,
+        "version": 20263,
+        "status": 1
+    },
+    {
+        "fname": "",
+        "lname": "Ageu",
+        "nat": "Brazil",
+        "club": "Hearts",
+        "pos": "CM",
+        "foot": "R",
+        "rate": 62,
+        "hgt": 181,
+        "spe": 59,
+        "acc": 59,
+        "sta": 62,
+        "str": 61,
+        "con": 58,
+        "pas": 62,
+        "sho": 51,
+        "tac": 58,
+        "prc": 220,
+        "id": 7476,
         "version": 20263,
         "status": 1
     }
