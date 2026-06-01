@@ -24681,7 +24681,7 @@
         "prc": 830,
         "id": 2959,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Goncalo",
@@ -37362,20 +37362,20 @@
         "club": "Leicester",
         "pos": "DM",
         "foot": "R",
-        "rate": 69,
+        "rate": 67,
         "hgt": 178,
-        "spe": 62,
+        "spe": 59,
         "acc": 68,
         "sta": 69,
-        "str": 60,
-        "con": 72,
+        "str": 56,
+        "con": 70,
         "pas": 74,
-        "sho": 60,
-        "tac": 55,
-        "prc": 605,
+        "sho": 51,
+        "tac": 60,
+        "prc": 470,
         "id": 7304,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ramiz",
@@ -39144,20 +39144,20 @@
         "club": "Leicester",
         "pos": "CB",
         "foot": "B",
-        "rate": 69,
+        "rate": 68,
         "hgt": 199,
         "spe": 61,
-        "acc": 57,
-        "sta": 58,
+        "acc": 52,
+        "sta": 65,
         "str": 81,
-        "con": 65,
-        "pas": 70,
+        "con": 64,
+        "pas": 67,
         "sho": 48,
-        "tac": 73,
-        "prc": 555,
+        "tac": 67,
+        "prc": 495,
         "id": 7114,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Martin",
@@ -39452,20 +39452,20 @@
         "club": "Leicester",
         "pos": "LB",
         "foot": "L",
-        "rate": 69,
+        "rate": 67,
         "hgt": 181,
-        "spe": 74,
-        "acc": 68,
-        "sta": 70,
-        "str": 64,
+        "spe": 72,
+        "acc": 66,
+        "sta": 65,
+        "str": 62,
         "con": 66,
         "pas": 65,
         "sho": 40,
-        "tac": 69,
-        "prc": 555,
+        "tac": 68,
+        "prc": 435,
         "id": 4186,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Javi",
@@ -43381,7 +43381,7 @@
         "prc": 535,
         "id": 3809,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Lasse Berg",
@@ -44776,20 +44776,20 @@
         "club": "Leicester",
         "pos": "DM",
         "foot": "R",
-        "rate": 68,
+        "rate": 67,
         "hgt": 175,
-        "spe": 65,
-        "acc": 70,
-        "sta": 67,
+        "spe": 62,
+        "acc": 69,
+        "sta": 68,
         "str": 60,
-        "con": 68,
-        "pas": 69,
+        "con": 66,
+        "pas": 68,
         "sho": 46,
         "tac": 65,
-        "prc": 535,
+        "prc": 470,
         "id": 6484,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Marko",
@@ -44965,7 +44965,7 @@
         "prc": 535,
         "id": 4742,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Riley",
@@ -47413,23 +47413,23 @@
         "fname": "Harry",
         "lname": "Souttar",
         "nat": "Australia",
-        "club": "Unlicensed",
+        "club": "Leicester",
         "pos": "CB",
         "foot": "R",
-        "rate": 68,
+        "rate": 67,
         "hgt": 198,
-        "spe": 63,
-        "acc": 53,
-        "sta": 57,
+        "spe": 62,
+        "acc": 50,
+        "sta": 55,
         "str": 89,
         "con": 63,
         "pas": 68,
-        "sho": 39,
-        "tac": 72,
-        "prc": 495,
+        "sho": 37,
+        "tac": 71,
+        "prc": 435,
         "id": 6579,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "John",
@@ -53177,8 +53177,8 @@
         "fname": "Hamza",
         "lname": "Choudhury",
         "nat": "England",
-        "club": "Unlicensed",
-        "pos": "DM",
+        "club": "Leicester",
+        "pos": "RB",
         "foot": "R",
         "rate": 67,
         "hgt": 178,
@@ -53190,10 +53190,10 @@
         "pas": 67,
         "sho": 39,
         "tac": 68,
-        "prc": 470,
+        "prc": 435,
         "id": 2200,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Santiago",
@@ -56018,20 +56018,20 @@
         "club": "Leicester",
         "pos": "CB",
         "foot": "R",
-        "rate": 67,
+        "rate": 66,
         "hgt": 188,
-        "spe": 70,
-        "acc": 57,
-        "sta": 51,
+        "spe": 68,
+        "acc": 53,
+        "sta": 53,
         "str": 80,
         "con": 61,
         "pas": 65,
-        "sho": 41,
-        "tac": 70,
-        "prc": 435,
+        "sho": 40,
+        "tac": 68,
+        "prc": 380,
         "id": 4286,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Darragh",
@@ -58108,20 +58108,20 @@
         "club": "Leicester",
         "pos": "RB",
         "foot": "R",
-        "rate": 67,
+        "rate": 65,
         "hgt": 175,
-        "spe": 65,
-        "acc": 71,
-        "sta": 65,
-        "str": 56,
-        "con": 68,
-        "pas": 69,
-        "sho": 47,
-        "tac": 66,
-        "prc": 435,
+        "spe": 62,
+        "acc": 68,
+        "sta": 67,
+        "str": 55,
+        "con": 66,
+        "pas": 68,
+        "sho": 44,
+        "tac": 64,
+        "prc": 335,
         "id": 5672,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jose Luis",
@@ -59265,7 +59265,7 @@
         "prc": 455,
         "id": 1377,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ivan",
@@ -61267,7 +61267,7 @@
         "prc": 410,
         "id": 2512,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Vladyslav",
@@ -67559,7 +67559,7 @@
         "prc": 400,
         "id": 2426,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Lewis",
@@ -74115,7 +74115,7 @@
         "prc": 290,
         "id": 6644,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Stefan",
@@ -74209,7 +74209,7 @@
         "fname": "Fran",
         "lname": "Vieites",
         "nat": "Spain",
-        "club": "Unlicensed",
+        "club": "Leicester",
         "pos": "GK",
         "foot": "L",
         "rate": 65,
@@ -74225,7 +74225,7 @@
         "prc": 290,
         "id": 7131,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Christian",
@@ -78405,7 +78405,7 @@
         "prc": 285,
         "id": 6824,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Brandon",
@@ -93827,7 +93827,7 @@
         "prc": 185,
         "id": 5967,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Dailon",
@@ -119082,6 +119082,28 @@
         "tac": 61,
         "prc": 355,
         "id": 7474,
+        "version": 20263,
+        "status": 1
+    },
+    {
+        "fname": "Divine",
+        "lname": "Mukasa",
+        "nat": "England",
+        "club": "Leicester",
+        "pos": "AM",
+        "foot": "L",
+        "rate": 60,
+        "hgt": 180,
+        "spe": 64,
+        "acc": 67,
+        "sta": 58,
+        "str": 50,
+        "con": 62,
+        "pas": 61,
+        "sho": 57,
+        "tac": 24,
+        "prc": 155,
+        "id": 7475,
         "version": 20263,
         "status": 1
     }

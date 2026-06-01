@@ -81,6 +81,11 @@
       "nation": "ENG"
     },
     {
+      "club": "Leicester",
+      "update": 1,
+      "nation": "ENG1"
+    },
+    {
       "club": "Stoke",
       "update": 1,
       "nation": "ENG1"
@@ -217,11 +222,6 @@
     },
     {
       "club": "Ipswich",
-      "update": 0,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Leicester",
       "update": 0,
       "nation": "ENG1"
     },
