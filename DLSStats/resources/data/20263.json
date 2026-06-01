@@ -3486,16 +3486,16 @@
         "hgt": 175,
         "spe": 79,
         "acc": 81,
-        "sta": 83,
+        "sta": 85,
         "str": 66,
-        "con": 80,
-        "pas": 76,
-        "sho": 81,
-        "tac": 47,
+        "con": 79,
+        "pas": 80,
+        "sho": 82,
+        "tac": 48,
         "prc": 1715,
         "id": 1795,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Riccardo",
@@ -5792,20 +5792,20 @@
         "club": "West Ham",
         "pos": "CF",
         "foot": "R",
-        "rate": 77,
+        "rate": 76,
         "hgt": 178,
         "spe": 75,
-        "acc": 77,
-        "sta": 78,
+        "acc": 76,
+        "sta": 77,
         "str": 75,
-        "con": 78,
-        "pas": 74,
-        "sho": 78,
+        "con": 77,
+        "pas": 73,
+        "sho": 76,
         "tac": 38,
-        "prc": 1460,
+        "prc": 1340,
         "id": 2103,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Artem",
@@ -6320,20 +6320,20 @@
         "club": "Unlicensed",
         "pos": "SS",
         "foot": "R",
-        "rate": 77,
+        "rate": 78,
         "hgt": 181,
         "spe": 77,
         "acc": 82,
-        "sta": 72,
+        "sta": 74,
         "str": 61,
         "con": 83,
-        "pas": 77,
-        "sho": 78,
-        "tac": 42,
-        "prc": 1460,
+        "pas": 79,
+        "sho": 80,
+        "tac": 43,
+        "prc": 1585,
         "id": 2978,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Christoph",
@@ -11437,7 +11437,7 @@
         "prc": 1020,
         "id": 7204,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jean",
@@ -15683,7 +15683,7 @@
         "prc": 1015,
         "id": 6682,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Hamed Junior",
@@ -16497,7 +16497,7 @@
         "prc": 935,
         "id": 2994,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Seko",
@@ -17063,13 +17063,13 @@
         "sta": 78,
         "str": 81,
         "con": 69,
-        "pas": 69,
-        "sho": 71,
+        "pas": 68,
+        "sho": 70,
         "tac": 72,
         "prc": 935,
         "id": 6570,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Petar",
@@ -17685,7 +17685,7 @@
         "prc": 850,
         "id": 2648,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Lewis",
@@ -18706,20 +18706,20 @@
         "club": "West Ham",
         "pos": "GK",
         "foot": "R",
-        "rate": 73,
+        "rate": 72,
         "hgt": 195,
         "spe": 65,
         "acc": 63,
-        "sta": 70,
+        "sta": 69,
         "str": 58,
         "con": 58,
-        "pas": 58,
+        "pas": 57,
         "sho": 69,
         "tac": 42,
-        "prc": 765,
+        "prc": 690,
         "id": 1291,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Marco",
@@ -19413,17 +19413,17 @@
         "rate": 72,
         "hgt": 180,
         "spe": 77,
-        "acc": 71,
-        "sta": 64,
+        "acc": 70,
+        "sta": 62,
         "str": 72,
-        "con": 74,
+        "con": 73,
         "pas": 67,
         "sho": 74,
         "tac": 30,
         "prc": 920,
         "id": 7291,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Nicolo",
@@ -22701,7 +22701,7 @@
         "prc": 770,
         "id": 6858,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Rafael",
@@ -23493,7 +23493,7 @@
         "prc": 690,
         "id": 3606,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Filip",
@@ -24800,20 +24800,20 @@
         "club": "West Ham",
         "pos": "RW",
         "foot": "R",
-        "rate": 71,
+        "rate": 70,
         "hgt": 178,
         "spe": 86,
-        "acc": 73,
-        "sta": 58,
-        "str": 80,
+        "acc": 71,
+        "sta": 57,
+        "str": 79,
         "con": 75,
-        "pas": 65,
-        "sho": 55,
+        "pas": 63,
+        "sho": 53,
         "tac": 15,
-        "prc": 830,
+        "prc": 745,
         "id": 6916,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Sebastiano",
@@ -27286,20 +27286,20 @@
         "club": "West Ham",
         "pos": "CB",
         "foot": "L",
-        "rate": 71,
+        "rate": 70,
         "hgt": 194,
         "spe": 67,
         "acc": 58,
-        "sta": 75,
+        "sta": 73,
         "str": 79,
-        "con": 70,
+        "con": 69,
         "pas": 70,
         "sho": 35,
-        "tac": 75,
-        "prc": 695,
+        "tac": 74,
+        "prc": 625,
         "id": 4051,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Marash",
@@ -27440,20 +27440,20 @@
         "club": "West Ham",
         "pos": "CB",
         "foot": "R",
-        "rate": 71,
+        "rate": 72,
         "hgt": 194,
-        "spe": 78,
-        "acc": 63,
-        "sta": 67,
+        "spe": 79,
+        "acc": 62,
+        "sta": 69,
         "str": 82,
-        "con": 62,
+        "con": 63,
         "pas": 69,
-        "sho": 38,
+        "sho": 42,
         "tac": 72,
-        "prc": 695,
+        "prc": 770,
         "id": 4743,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Yerry",
@@ -27924,20 +27924,20 @@
         "club": "West Ham",
         "pos": "LB",
         "foot": "L",
-        "rate": 71,
+        "rate": 72,
         "hgt": 183,
         "spe": 75,
-        "acc": 66,
-        "sta": 71,
-        "str": 66,
+        "acc": 67,
+        "sta": 72,
+        "str": 67,
         "con": 68,
         "pas": 68,
         "sho": 55,
         "tac": 68,
-        "prc": 695,
+        "prc": 770,
         "id": 2645,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Junior",
@@ -31618,7 +31618,7 @@
         "lname": "Walker-Peters",
         "nat": "England",
         "club": "West Ham",
-        "pos": "RWB",
+        "pos": "RB",
         "foot": "R",
         "rate": 70,
         "hgt": 173,
@@ -31630,10 +31630,10 @@
         "pas": 71,
         "sho": 50,
         "tac": 63,
-        "prc": 680,
+        "prc": 625,
         "id": 7193,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Anel",
@@ -38035,7 +38035,7 @@
         "prc": 605,
         "id": 3935,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Valentino",
@@ -41476,20 +41476,20 @@
         "club": "West Ham",
         "pos": "CF",
         "foot": "R",
-        "rate": 68,
+        "rate": 69,
         "hgt": 184,
-        "spe": 69,
-        "acc": 66,
+        "spe": 70,
+        "acc": 67,
         "sta": 64,
-        "str": 73,
-        "con": 63,
-        "pas": 60,
+        "str": 71,
+        "con": 67,
+        "pas": 61,
         "sho": 67,
-        "tac": 40,
-        "prc": 590,
+        "tac": 41,
+        "prc": 665,
         "id": 5530,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mateo",
@@ -44459,7 +44459,7 @@
         "prc": 535,
         "id": 4545,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Antoine",
@@ -44745,7 +44745,7 @@
         "prc": 535,
         "id": 6397,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Manolis",
@@ -49233,7 +49233,7 @@
         "prc": 435,
         "id": 7207,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Elijah",
@@ -50069,7 +50069,7 @@
         "prc": 520,
         "id": 5021,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Orri",
@@ -51662,20 +51662,20 @@
         "club": "Wrexham",
         "pos": "AM",
         "foot": "L",
-        "rate": 67,
+        "rate": 69,
         "hgt": 173,
-        "spe": 65,
-        "acc": 67,
-        "sta": 71,
+        "spe": 62,
+        "acc": 72,
+        "sta": 74,
         "str": 57,
-        "con": 65,
-        "pas": 65,
-        "sho": 55,
-        "tac": 61,
-        "prc": 470,
+        "con": 70,
+        "pas": 69,
+        "sho": 56,
+        "tac": 64,
+        "prc": 605,
         "id": 5346,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Isaac",
@@ -55547,7 +55547,7 @@
         "prc": 435,
         "id": 2731,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Vanja",
@@ -62939,7 +62939,7 @@
         "prc": 410,
         "id": 5796,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Matteo",
@@ -63212,20 +63212,20 @@
         "club": "Wrexham",
         "pos": "LM",
         "foot": "R",
-        "rate": 66,
+        "rate": 67,
         "hgt": 178,
         "spe": 72,
         "acc": 73,
-        "sta": 59,
-        "str": 57,
-        "con": 66,
+        "sta": 61,
+        "str": 58,
+        "con": 68,
         "pas": 64,
-        "sho": 65,
+        "sho": 67,
         "tac": 27,
-        "prc": 410,
+        "prc": 470,
         "id": 1854,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Emil Konradsen",
@@ -64501,7 +64501,7 @@
         "prc": 380,
         "id": 3706,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "",
@@ -65432,7 +65432,7 @@
         "lname": "Cacace",
         "nat": "New Zealand",
         "club": "Wrexham",
-        "pos": "LB",
+        "pos": "LWB",
         "foot": "L",
         "rate": 66,
         "hgt": 183,
@@ -65444,10 +65444,10 @@
         "pas": 61,
         "sho": 45,
         "tac": 64,
-        "prc": 380,
+        "prc": 410,
         "id": 1947,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Alexandru",
@@ -69416,20 +69416,20 @@
         "club": "Wrexham",
         "pos": "AM",
         "foot": "R",
-        "rate": 65,
+        "rate": 67,
         "hgt": 175,
-        "spe": 70,
-        "acc": 72,
-        "sta": 65,
-        "str": 62,
+        "spe": 76,
+        "acc": 76,
+        "sta": 67,
+        "str": 61,
         "con": 65,
-        "pas": 63,
-        "sho": 67,
+        "pas": 64,
+        "sho": 68,
         "tac": 20,
-        "prc": 355,
+        "prc": 470,
         "id": 7302,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ebenezer",
@@ -72889,7 +72889,7 @@
         "fname": "Zak",
         "lname": "Vyner",
         "nat": "England",
-        "club": "Bristol",
+        "club": "Wrexham",
         "pos": "CB",
         "foot": "R",
         "rate": 65,
@@ -72905,7 +72905,7 @@
         "prc": 335,
         "id": 7182,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Scott",
@@ -77314,20 +77314,20 @@
         "club": "Wrexham",
         "pos": "CB",
         "foot": "R",
-        "rate": 64,
+        "rate": 65,
         "hgt": 191,
-        "spe": 57,
-        "acc": 55,
-        "sta": 68,
-        "str": 73,
+        "spe": 62,
+        "acc": 60,
+        "sta": 70,
+        "str": 71,
         "con": 58,
-        "pas": 61,
+        "pas": 64,
         "sho": 43,
-        "tac": 64,
-        "prc": 285,
+        "tac": 67,
+        "prc": 335,
         "id": 2248,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Soumaila",
@@ -79338,20 +79338,20 @@
         "club": "Wrexham",
         "pos": "GK",
         "foot": "R",
-        "rate": 64,
+        "rate": 65,
         "hgt": 198,
         "spe": 55,
         "acc": 48,
         "sta": 60,
-        "str": 56,
+        "str": 57,
         "con": 48,
         "pas": 53,
-        "sho": 60,
+        "sho": 63,
         "tac": 37,
-        "prc": 245,
+        "prc": 290,
         "id": 5406,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Max",
@@ -80099,7 +80099,7 @@
         "prc": 300,
         "id": 6514,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Adam",
@@ -81516,20 +81516,20 @@
         "club": "Wrexham",
         "pos": "DM",
         "foot": "R",
-        "rate": 63,
+        "rate": 65,
         "hgt": 185,
-        "spe": 61,
-        "acc": 60,
-        "sta": 69,
-        "str": 62,
-        "con": 58,
-        "pas": 63,
-        "sho": 44,
-        "tac": 62,
-        "prc": 265,
+        "spe": 59,
+        "acc": 56,
+        "sta": 76,
+        "str": 66,
+        "con": 63,
+        "pas": 65,
+        "sho": 50,
+        "tac": 65,
+        "prc": 355,
         "id": 2670,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Andre",
@@ -81617,7 +81617,7 @@
         "prc": 265,
         "id": 3811,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Amadou",
@@ -118994,6 +118994,94 @@
         "tac": 36,
         "prc": 210,
         "id": 7470,
+        "version": 20263,
+        "status": 1
+    },
+    {
+        "fname": "Joaquin",
+        "lname": "Seys",
+        "nat": "Belgium",
+        "club": "Unlicensed",
+        "pos": "LB",
+        "foot": "L",
+        "rate": 72,
+        "hgt": 178,
+        "spe": 73,
+        "acc": 76,
+        "sta": 73,
+        "str": 62,
+        "con": 68,
+        "pas": 70,
+        "sho": 50,
+        "tac": 70,
+        "prc": 770,
+        "id": 7471,
+        "version": 20263,
+        "status": 1
+    },
+    {
+        "fname": "Davis",
+        "lname": "Keillor-Dunn",
+        "nat": "England",
+        "club": "Wrexham",
+        "pos": "AM",
+        "foot": "R",
+        "rate": 63,
+        "hgt": 180,
+        "spe": 65,
+        "acc": 65,
+        "sta": 63,
+        "str": 56,
+        "con": 61,
+        "pas": 61,
+        "sho": 65,
+        "tac": 40,
+        "prc": 265,
+        "id": 7472,
+        "version": 20263,
+        "status": 1
+    },
+    {
+        "fname": "Ryan",
+        "lname": "Barnett",
+        "nat": "England",
+        "club": "Wrexham",
+        "pos": "RWB",
+        "foot": "R",
+        "rate": 61,
+        "hgt": 180,
+        "spe": 65,
+        "acc": 65,
+        "sta": 65,
+        "str": 53,
+        "con": 57,
+        "pas": 63,
+        "sho": 41,
+        "tac": 54,
+        "prc": 185,
+        "id": 7473,
+        "version": 20263,
+        "status": 1
+    },
+    {
+        "fname": "George",
+        "lname": "Thomason",
+        "nat": "England",
+        "club": "Wrexham",
+        "pos": "LM",
+        "foot": "L",
+        "rate": 65,
+        "hgt": 177,
+        "spe": 57,
+        "acc": 64,
+        "sta": 69,
+        "str": 58,
+        "con": 63,
+        "pas": 65,
+        "sho": 52,
+        "tac": 61,
+        "prc": 355,
+        "id": 7474,
         "version": 20263,
         "status": 1
     }

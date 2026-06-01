@@ -86,6 +86,11 @@
       "nation": "ENG1"
     },
     {
+      "club": "Wrexham",
+      "update": 1,
+      "nation": "ENG1"
+    },
+    {
       "club": "Atletico Madrid",
       "update": 1,
       "nation": "ESP"
@@ -302,11 +307,6 @@
     },
     {
       "club": "Wigan",
-      "update": 0,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Wrexham",
       "update": 0,
       "nation": "ENG1"
     },
