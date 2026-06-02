@@ -6861,7 +6861,7 @@
         "prc": 1345,
         "id": 4967,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Christos",
@@ -9140,16 +9140,16 @@
         "hgt": 189,
         "spe": 70,
         "acc": 64,
-        "sta": 77,
-        "str": 82,
+        "sta": 78,
+        "str": 81,
         "con": 75,
         "pas": 78,
         "sho": 46,
-        "tac": 80,
+        "tac": 81,
         "prc": 1115,
         "id": 7040,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Illia",
@@ -10020,7 +10020,7 @@
         "hgt": 180,
         "spe": 90,
         "acc": 90,
-        "sta": 74,
+        "sta": 75,
         "str": 53,
         "con": 81,
         "pas": 74,
@@ -10029,7 +10029,7 @@
         "prc": 1225,
         "id": 4951,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Yeremy",
@@ -10285,15 +10285,15 @@
         "spe": 77,
         "acc": 70,
         "sta": 72,
-        "str": 73,
-        "con": 72,
+        "str": 72,
+        "con": 70,
         "pas": 72,
-        "sho": 57,
-        "tac": 71,
+        "sho": 53,
+        "tac": 75,
         "prc": 1130,
         "id": 1452,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Yves",
@@ -12216,20 +12216,20 @@
         "club": "Brighton",
         "pos": "CF",
         "foot": "R",
-        "rate": 74,
+        "rate": 75,
         "hgt": 185,
-        "spe": 73,
-        "acc": 70,
-        "sta": 72,
+        "spe": 74,
+        "acc": 71,
+        "sta": 73,
         "str": 74,
-        "con": 75,
+        "con": 76,
         "pas": 72,
-        "sho": 78,
-        "tac": 35,
-        "prc": 1115,
+        "sho": 80,
+        "tac": 36,
+        "prc": 1225,
         "id": 7236,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Duvan",
@@ -12845,7 +12845,7 @@
         "prc": 1030,
         "id": 1373,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Lamine",
@@ -12945,17 +12945,17 @@
         "rate": 74,
         "hgt": 181,
         "spe": 63,
-        "acc": 62,
+        "acc": 61,
         "sta": 76,
         "str": 66,
-        "con": 78,
+        "con": 77,
         "pas": 83,
         "sho": 68,
-        "tac": 67,
+        "tac": 69,
         "prc": 1030,
         "id": 3419,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mikel",
@@ -13483,7 +13483,7 @@
         "prc": 1030,
         "id": 7264,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "",
@@ -13879,7 +13879,7 @@
         "prc": 935,
         "id": 1773,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Enzo",
@@ -14988,20 +14988,20 @@
         "club": "Brighton",
         "pos": "GK",
         "foot": "R",
-        "rate": 74,
+        "rate": 75,
         "hgt": 193,
         "spe": 58,
         "acc": 52,
-        "sta": 72,
+        "sta": 73,
         "str": 60,
-        "con": 58,
-        "pas": 61,
-        "sho": 69,
-        "tac": 43,
-        "prc": 840,
+        "con": 60,
+        "pas": 62,
+        "sho": 71,
+        "tac": 42,
+        "prc": 925,
         "id": 7101,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Tammy",
@@ -17707,7 +17707,7 @@
         "prc": 850,
         "id": 2764,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Nico",
@@ -18103,7 +18103,7 @@
         "prc": 850,
         "id": 2476,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Souffian",
@@ -18222,20 +18222,20 @@
         "club": "Brighton",
         "pos": "LB",
         "foot": "R",
-        "rate": 73,
+        "rate": 74,
         "hgt": 174,
         "spe": 77,
         "acc": 78,
-        "sta": 73,
-        "str": 59,
+        "sta": 77,
+        "str": 60,
         "con": 70,
         "pas": 71,
         "sho": 53,
-        "tac": 69,
-        "prc": 850,
+        "tac": 70,
+        "prc": 935,
         "id": 3937,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Francisco",
@@ -19929,7 +19929,7 @@
         "prc": 920,
         "id": 6140,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Andre",
@@ -23351,17 +23351,17 @@
         "rate": 72,
         "hgt": 184,
         "spe": 71,
-        "acc": 64,
-        "sta": 69,
+        "acc": 63,
+        "sta": 67,
         "str": 73,
         "con": 70,
-        "pas": 71,
+        "pas": 69,
         "sho": 45,
         "tac": 76,
         "prc": 770,
         "id": 7093,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Emil",
@@ -25372,20 +25372,20 @@
         "club": "Brighton",
         "pos": "CM",
         "foot": "R",
-        "rate": 71,
+        "rate": 72,
         "hgt": 185,
-        "spe": 63,
+        "spe": 64,
         "acc": 67,
-        "sta": 69,
+        "sta": 71,
         "str": 69,
         "con": 70,
-        "pas": 71,
-        "sho": 65,
-        "tac": 64,
-        "prc": 760,
+        "pas": 70,
+        "sho": 70,
+        "tac": 65,
+        "prc": 845,
         "id": 3318,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Javi",
@@ -30982,20 +30982,20 @@
         "club": "Brighton",
         "pos": "DM",
         "foot": "R",
-        "rate": 70,
+        "rate": 71,
         "hgt": 181,
-        "spe": 69,
+        "spe": 71,
         "acc": 68,
-        "sta": 70,
+        "sta": 71,
         "str": 65,
-        "con": 68,
-        "pas": 70,
-        "sho": 50,
+        "con": 69,
+        "pas": 69,
+        "sho": 53,
         "tac": 68,
-        "prc": 680,
+        "prc": 760,
         "id": 3635,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jesper",
@@ -40587,7 +40587,7 @@
         "prc": 495,
         "id": 6615,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Stefano",
@@ -41225,7 +41225,7 @@
         "prc": 590,
         "id": 4142,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jean-Philippe",

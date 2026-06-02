@@ -25,7 +25,7 @@ def _validate_row(row):
         errs.append(f"{col} > 100 ({v})")
     except (ValueError, TypeError):
       errs.append(f"{col} not int ({v})")
-  if str(row.get("status", "1")) not in ("0", "1"):
+  if str(row.get("status", "1")) not in ("0", "1", "2", "3"):
     errs.append(f"status invalid ({row.get('status')})")
   return errs
 

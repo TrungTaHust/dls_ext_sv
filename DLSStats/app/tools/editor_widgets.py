@@ -172,8 +172,8 @@ class EditDialog(tk.Toplevel):
 
   def _save(self):
     vals = {col: var.get() for col, var in self.entries.items()}
-    if "status" in vals and vals["status"] not in ("0", "1"):
-      messagebox.showerror("Invalid", "status must be 0 or 1."); return
+    if "status" in vals and vals["status"] not in ("0", "1", "2", "3"):
+      messagebox.showerror("Invalid", "status must be 0, 1, 2 or 3."); return
     CAPPED = {"rate", "spe", "acc", "sta", "str", "con", "pas", "sho", "tac"}
     for col in CAPPED:
       if col not in vals:
