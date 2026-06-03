@@ -21,6 +21,11 @@
       "nation": "ENG"
     },
     {
+      "club": "Burnley",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
       "club": "Chelsea",
       "update": 1,
       "nation": "ENG"
@@ -202,11 +207,6 @@
     },
     {
       "club": "Bournemouth",
-      "update": 0,
-      "nation": "ENG"
-    },
-    {
-      "club": "Burnley",
       "update": 0,
       "nation": "ENG"
     },

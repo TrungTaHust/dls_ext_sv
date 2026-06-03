@@ -1814,16 +1814,16 @@
         "hgt": 176,
         "spe": 72,
         "acc": 82,
-        "sta": 75,
-        "str": 70,
+        "sta": 73,
+        "str": 69,
         "con": 87,
         "pas": 83,
-        "sho": 83,
+        "sho": 82,
         "tac": 58,
         "prc": 1995,
         "id": 3408,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Patrik",
@@ -10390,20 +10390,20 @@
         "club": "Burnley",
         "pos": "DM",
         "foot": "R",
-        "rate": 75,
+        "rate": 73,
         "hgt": 184,
-        "spe": 71,
-        "acc": 66,
-        "sta": 81,
-        "str": 77,
-        "con": 72,
-        "pas": 75,
-        "sho": 52,
-        "tac": 79,
-        "prc": 1130,
+        "spe": 69,
+        "acc": 64,
+        "sta": 76,
+        "str": 74,
+        "con": 70,
+        "pas": 73,
+        "sho": 51,
+        "tac": 75,
+        "prc": 935,
         "id": 3055,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Remo",
@@ -11402,20 +11402,20 @@
         "club": "Burnley",
         "pos": "RB",
         "foot": "R",
-        "rate": 75,
+        "rate": 74,
         "hgt": 183,
         "spe": 80,
-        "acc": 74,
-        "sta": 73,
-        "str": 73,
-        "con": 72,
-        "pas": 72,
-        "sho": 44,
-        "tac": 76,
-        "prc": 1020,
+        "acc": 73,
+        "sta": 74,
+        "str": 72,
+        "con": 71,
+        "pas": 71,
+        "sho": 43,
+        "tac": 74,
+        "prc": 935,
         "id": 7192,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Aaron",
@@ -21183,7 +21183,7 @@
         "prc": 845,
         "id": 2396,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Cheick",
@@ -22138,20 +22138,20 @@
         "club": "Burnley",
         "pos": "CB",
         "foot": "L",
-        "rate": 72,
+        "rate": 71,
         "hgt": 193,
         "spe": 73,
         "acc": 62,
         "sta": 74,
-        "str": 81,
+        "str": 80,
         "con": 65,
-        "pas": 70,
+        "pas": 69,
         "sho": 37,
-        "tac": 78,
-        "prc": 770,
+        "tac": 76,
+        "prc": 695,
         "id": 2917,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ryan",
@@ -22823,17 +22823,17 @@
         "rate": 72,
         "hgt": 183,
         "spe": 77,
-        "acc": 75,
+        "acc": 74,
         "sta": 68,
-        "str": 68,
+        "str": 67,
         "con": 69,
         "pas": 70,
-        "sho": 41,
-        "tac": 70,
+        "sho": 40,
+        "tac": 69,
         "prc": 770,
         "id": 3542,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Joakim",
@@ -23427,7 +23427,7 @@
         "prc": 690,
         "id": 2751,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Lukasz",
@@ -25856,20 +25856,20 @@
         "club": "Burnley",
         "pos": "CM",
         "foot": "R",
-        "rate": 71,
+        "rate": 69,
         "hgt": 173,
-        "spe": 63,
-        "acc": 60,
-        "sta": 76,
-        "str": 62,
-        "con": 70,
+        "spe": 62,
+        "acc": 59,
+        "sta": 75,
+        "str": 61,
+        "con": 69,
         "pas": 80,
         "sho": 72,
-        "tac": 57,
-        "prc": 760,
+        "tac": 55,
+        "prc": 605,
         "id": 7211,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Laurent",
@@ -26323,15 +26323,15 @@
         "spe": 78,
         "acc": 78,
         "sta": 74,
-        "str": 61,
+        "str": 60,
         "con": 72,
-        "pas": 66,
-        "sho": 68,
-        "tac": 27,
+        "pas": 67,
+        "sho": 69,
+        "tac": 28,
         "prc": 760,
         "id": 1253,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Theo",
@@ -26582,20 +26582,20 @@
         "club": "Burnley",
         "pos": "RM",
         "foot": "L",
-        "rate": 71,
+        "rate": 70,
         "hgt": 168,
-        "spe": 79,
-        "acc": 84,
-        "sta": 68,
+        "spe": 78,
+        "acc": 82,
+        "sta": 67,
         "str": 52,
-        "con": 77,
+        "con": 74,
         "pas": 70,
-        "sho": 70,
+        "sho": 68,
         "tac": 23,
-        "prc": 760,
+        "prc": 680,
         "id": 2806,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Adrian",
@@ -33789,7 +33789,7 @@
         "prc": 665,
         "id": 1207,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Alex",
@@ -37353,7 +37353,7 @@
         "prc": 605,
         "id": 6976,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Harry",
@@ -38233,7 +38233,7 @@
         "prc": 555,
         "id": 1658,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Sebastiaan",
@@ -40059,7 +40059,7 @@
         "prc": 555,
         "id": 6004,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Young-Woo",
@@ -41014,20 +41014,20 @@
         "club": "Burnley",
         "pos": "CF",
         "foot": "R",
-        "rate": 68,
+        "rate": 71,
         "hgt": 185,
         "spe": 68,
-        "acc": 63,
-        "sta": 72,
-        "str": 69,
-        "con": 67,
+        "acc": 61,
+        "sta": 75,
+        "str": 78,
+        "con": 69,
         "pas": 66,
-        "sho": 69,
-        "tac": 41,
-        "prc": 590,
+        "sho": 73,
+        "tac": 40,
+        "prc": 830,
         "id": 3053,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Lyle",
@@ -42787,7 +42787,7 @@
         "prc": 535,
         "id": 4859,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Antoni",
@@ -45251,7 +45251,7 @@
         "prc": 535,
         "id": 5745,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "David Moller",
@@ -45361,7 +45361,7 @@
         "prc": 535,
         "id": 1875,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jofre",
@@ -46945,7 +46945,7 @@
         "prc": 495,
         "id": 3695,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jay",
@@ -59177,7 +59177,7 @@
         "prc": 385,
         "id": 7234,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jacob",
