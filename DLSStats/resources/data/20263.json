@@ -2278,14 +2278,14 @@
         "acc": 74,
         "sta": 84,
         "str": 81,
-        "con": 79,
+        "con": 78,
         "pas": 77,
         "sho": 87,
         "tac": 41,
         "prc": 1850,
         "id": 5613,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ferran",
@@ -4102,16 +4102,16 @@
         "hgt": 183,
         "spe": 70,
         "acc": 61,
-        "sta": 81,
+        "sta": 82,
         "str": 87,
         "con": 75,
         "pas": 78,
         "sho": 58,
-        "tac": 86,
+        "tac": 84,
         "prc": 1420,
         "id": 5496,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Benjamin",
@@ -4648,20 +4648,20 @@
         "club": "Benfica",
         "pos": "RW",
         "foot": "L",
-        "rate": 78,
+        "rate": 77,
         "hgt": 187,
         "spe": 84,
-        "acc": 82,
-        "sta": 70,
+        "acc": 81,
+        "sta": 69,
         "str": 68,
-        "con": 84,
-        "pas": 76,
-        "sho": 79,
-        "tac": 30,
-        "prc": 1585,
+        "con": 83,
+        "pas": 75,
+        "sho": 76,
+        "tac": 29,
+        "prc": 1460,
         "id": 4495,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Pedro",
@@ -4714,20 +4714,20 @@
         "club": "Benfica",
         "pos": "SS",
         "foot": "R",
-        "rate": 78,
+        "rate": 77,
         "hgt": 172,
-        "spe": 86,
+        "spe": 84,
         "acc": 87,
         "sta": 74,
         "str": 54,
         "con": 81,
-        "pas": 78,
+        "pas": 77,
         "sho": 75,
         "tac": 43,
-        "prc": 1585,
+        "prc": 1460,
         "id": 6442,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Charles",
@@ -7447,15 +7447,15 @@
         "spe": 59,
         "acc": 57,
         "sta": 76,
-        "str": 64,
+        "str": 65,
         "con": 57,
-        "pas": 60,
+        "pas": 59,
         "sho": 71,
-        "tac": 42,
+        "tac": 40,
         "prc": 1100,
         "id": 6937,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Samu",
@@ -8071,7 +8071,7 @@
         "prc": 1235,
         "id": 6676,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Florian",
@@ -8511,7 +8511,7 @@
         "prc": 1235,
         "id": 5985,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Nicolo",
@@ -8747,13 +8747,13 @@
         "sta": 86,
         "str": 67,
         "con": 76,
-        "pas": 76,
-        "sho": 60,
-        "tac": 74,
+        "pas": 77,
+        "sho": 61,
+        "tac": 73,
         "prc": 1235,
         "id": 1364,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Edon",
@@ -11094,20 +11094,20 @@
         "club": "Benfica",
         "pos": "CB",
         "foot": "R",
-        "rate": 75,
+        "rate": 74,
         "hgt": 187,
-        "spe": 76,
-        "acc": 70,
+        "spe": 73,
+        "acc": 69,
         "sta": 71,
-        "str": 81,
+        "str": 79,
         "con": 70,
-        "pas": 76,
-        "sho": 43,
+        "pas": 75,
+        "sho": 42,
         "tac": 80,
-        "prc": 1020,
+        "prc": 935,
         "id": 6429,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Oumar",
@@ -13813,7 +13813,7 @@
         "prc": 935,
         "id": 1280,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Raul",
@@ -16849,7 +16849,7 @@
         "prc": 935,
         "id": 1514,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Danilo",
@@ -20413,7 +20413,7 @@
         "prc": 845,
         "id": 1513,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Lucas",
@@ -23053,7 +23053,7 @@
         "prc": 770,
         "id": 1413,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Sergio",
@@ -24021,7 +24021,7 @@
         "prc": 830,
         "id": 3782,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Igor",
@@ -29838,20 +29838,20 @@
         "club": "Benfica",
         "pos": "LW",
         "foot": "R",
-        "rate": 70,
+        "rate": 71,
         "hgt": 176,
         "spe": 75,
         "acc": 79,
-        "sta": 66,
-        "str": 53,
-        "con": 73,
-        "pas": 70,
-        "sho": 68,
-        "tac": 32,
-        "prc": 745,
+        "sta": 72,
+        "str": 57,
+        "con": 75,
+        "pas": 71,
+        "sho": 72,
+        "tac": 30,
+        "prc": 830,
         "id": 6315,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Abdallah",
@@ -32720,20 +32720,20 @@
         "club": "Benfica",
         "pos": "LB",
         "foot": "L",
-        "rate": 70,
+        "rate": 71,
         "hgt": 174,
-        "spe": 76,
-        "acc": 79,
-        "sta": 72,
-        "str": 57,
+        "spe": 75,
+        "acc": 77,
+        "sta": 76,
+        "str": 56,
         "con": 70,
-        "pas": 66,
-        "sho": 46,
-        "tac": 62,
-        "prc": 625,
+        "pas": 69,
+        "sho": 45,
+        "tac": 65,
+        "prc": 695,
         "id": 2423,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Leif",
@@ -54623,7 +54623,7 @@
         "prc": 470,
         "id": 5809,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Patrick",
@@ -67119,7 +67119,7 @@
         "prc": 335,
         "id": 6521,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Hugo",
@@ -119126,6 +119126,28 @@
         "tac": 58,
         "prc": 220,
         "id": 7476,
+        "version": 20263,
+        "status": 1
+    },
+    {
+        "fname": "Jose",
+        "lname": "Neto",
+        "nat": "Portugal",
+        "club": "Benfica",
+        "pos": "LB",
+        "foot": "L",
+        "rate": 57,
+        "hgt": 184,
+        "spe": 63,
+        "acc": 63,
+        "sta": 52,
+        "str": 55,
+        "con": 52,
+        "pas": 53,
+        "sho": 34,
+        "tac": 50,
+        "prc": 75,
+        "id": 7477,
         "version": 20263,
         "status": 1
     }

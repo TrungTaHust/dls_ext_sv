@@ -16,6 +16,11 @@
       "nation": "ENG"
     },
     {
+      "club": "Brighton",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
       "club": "Chelsea",
       "update": 1,
       "nation": "ENG"
@@ -166,6 +171,11 @@
       "nation": "ITA"
     },
     {
+      "club": "Benfica",
+      "update": 1,
+      "nation": "POR"
+    },
+    {
       "club": "Porto",
       "update": 1,
       "nation": "POR"
@@ -187,11 +197,6 @@
     },
     {
       "club": "Bournemouth",
-      "update": 0,
-      "nation": "ENG"
-    },
-    {
-      "club": "Brighton",
       "update": 0,
       "nation": "ENG"
     },
@@ -752,11 +757,6 @@
     },
     {
       "club": "Barcelos",
-      "update": 0,
-      "nation": "POR"
-    },
-    {
-      "club": "Benfica",
       "update": 0,
       "nation": "POR"
     },
