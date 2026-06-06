@@ -11,6 +11,11 @@
       "nation": "ENG"
     },
     {
+      "club": "Bournemouth",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
       "club": "Brentford",
       "update": 1,
       "nation": "ENG"
@@ -87,6 +92,11 @@
     },
     {
       "club": "West Ham",
+      "update": 1,
+      "nation": "ENG"
+    },
+    {
+      "club": "Wolves",
       "update": 1,
       "nation": "ENG"
     },
@@ -204,16 +214,6 @@
       "club": "Hearts",
       "update": 1,
       "nation": "SCO"
-    },
-    {
-      "club": "Bournemouth",
-      "update": 0,
-      "nation": "ENG"
-    },
-    {
-      "club": "Wolves",
-      "update": 0,
-      "nation": "ENG"
     },
     {
       "club": "Birmingham",
