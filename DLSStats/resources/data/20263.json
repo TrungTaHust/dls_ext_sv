@@ -1112,14 +1112,14 @@
         "acc": 73,
         "sta": 79,
         "str": 83,
-        "con": 86,
-        "pas": 75,
-        "sho": 92,
-        "tac": 39,
+        "con": 87,
+        "pas": 74,
+        "sho": 93,
+        "tac": 37,
         "prc": 2145,
         "id": 6084,
         "version": 20263,
-        "status": 0
+        "status": 2
     },
     {
         "fname": "Heung-Min",
