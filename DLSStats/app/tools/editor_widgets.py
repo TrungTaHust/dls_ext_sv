@@ -447,7 +447,27 @@ class TreeTable(ttk.Frame):
       if col == "pos_id":    cell = str(get_pos_id(row))
       elif col == "price_id": cell = str(get_price_id(row))
       elif col == "prc":     cell = str(get_price(row))
-      elif col == "status":  cell = str(get_status(row))
+      elif col == "status":
+        # Status filter đặc biệt: hỗ trợ đa giá trị và loại trừ
+        # VD: "0;1"  → lấy status 0 hoặc 1
+        #     "-3;-1" → loại status 3 và 1
+        #     "0;-2"  → lấy 0 VÀ loại 2 (kết hợp)
+        sv = get_status(row)
+        include = set()   # nếu rỗng = không có điều kiện include
+        exclude = set()
+        for t in terms:
+          try:
+            if t.startswith("-"):
+              exclude.add(int(t[1:]))
+            else:
+              include.add(int(t))
+          except ValueError:
+            pass   # bỏ qua token không phải số
+        if include and sv not in include:
+          return False
+        if sv in exclude:
+          return False
+        continue        # đã xử lý xong status, sang cột tiếp theo
       else:                  cell = str(row.get(col, ""))
       if not any(t.lower() in cell.lower() for t in terms):
         return False
@@ -490,7 +510,7 @@ class TreeTable(ttk.Frame):
   def _repopulate(self):
     self.tree.delete(*self.tree.get_children())
     for idx, row in enumerate(self.filtered):
-      is_active = get_status(row) == 1
+      is_active = get_status(row) != 0
       tag = ("even_active" if idx % 2 == 0 else "odd_active") if is_active \
             else ("even"   if idx % 2 == 0 else "odd")
       self.tree.insert("", "end", iid=str(idx),

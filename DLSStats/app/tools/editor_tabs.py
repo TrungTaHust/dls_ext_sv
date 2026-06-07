@@ -58,8 +58,8 @@ class VersionTab(ttk.Frame):
 
   def _add_row(self):
     self.ensure_loaded()
-    # Edit cols: DATA_COLS_VER minus status (auto-default 1)
-    edit_cols = [c for c in DATA_COLS_VER if c != "status"]
+    # Edit cols: bao gồm status để user chọn (0/1/2/3)
+    edit_cols = list(DATA_COLS_VER)   # giữ nguyên status trong danh sách
     # Numeric fields default to empty string (not 0) so user types fresh values
     BLANK_FIELDS = {"rate", "hgt", "spe", "acc", "sta", "str", "con", "pas", "sho", "tac"}
     empty = {c: ("" if c in BLANK_FIELDS else (0 if c in INT_FIELDS else "")) for c in edit_cols}
@@ -69,7 +69,6 @@ class VersionTab(ttk.Frame):
     if not dlg.result:
       return
     new_row = _cast(dlg.result)
-    new_row.setdefault("status", 1)
     new_row["version"] = self.ver
     fname = new_row.get("fname", "").strip()
     lname = new_row.get("lname", "").strip()

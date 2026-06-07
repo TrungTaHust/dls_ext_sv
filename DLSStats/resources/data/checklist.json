@@ -902,11 +902,15 @@
       "updated": 1
     },
     {
-      "nation": "Argentina",
-      "updated": 0
+      "nation": "Austria",
+      "updated": 1
     },
     {
-      "nation": "Austria",
+      "nation": "Costa Rica",
+      "updated": 1
+    },
+    {
+      "nation": "Argentina",
       "updated": 0
     },
     {
@@ -923,10 +927,6 @@
     },
     {
       "nation": "Colombia",
-      "updated": 0
-    },
-    {
-      "nation": "Costa Rica",
       "updated": 0
     },
     {
