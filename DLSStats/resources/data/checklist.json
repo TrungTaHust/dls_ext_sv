@@ -934,6 +934,18 @@
       "updated": 1
     },
     {
+      "nation": "England",
+      "updated": 1
+    },
+    {
+      "nation": "France",
+      "updated": 1
+    },
+    {
+      "nation": "Ghana",
+      "updated": 1
+    },
+    {
       "nation": "Cameroon",
       "updated": 0
     },
@@ -947,18 +959,6 @@
     },
     {
       "nation": "DR Congo",
-      "updated": 0
-    },
-    {
-      "nation": "England",
-      "updated": 0
-    },
-    {
-      "nation": "France",
-      "updated": 0
-    },
-    {
-      "nation": "Ghana",
       "updated": 0
     },
     {
