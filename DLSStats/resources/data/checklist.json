@@ -898,6 +898,10 @@
   ],
   "nations": [
     {
+      "nation": "Argentina",
+      "updated": 1
+    },
+    {
       "nation": "Australia",
       "updated": 1
     },
@@ -906,16 +910,28 @@
       "updated": 1
     },
     {
+      "nation": "Belgium",
+      "updated": 1
+    },
+    {
+      "nation": "Colombia",
+      "updated": 1
+    },
+    {
       "nation": "Costa Rica",
       "updated": 1
     },
     {
-      "nation": "Argentina",
-      "updated": 0
+      "nation": "Croatia",
+      "updated": 1
     },
     {
-      "nation": "Belgium",
-      "updated": 0
+      "nation": "Czech Republic",
+      "updated": 1
+    },
+    {
+      "nation": "Egypt",
+      "updated": 1
     },
     {
       "nation": "Cameroon",
@@ -926,27 +942,11 @@
       "updated": 0
     },
     {
-      "nation": "Colombia",
-      "updated": 0
-    },
-    {
-      "nation": "Croatia",
-      "updated": 0
-    },
-    {
-      "nation": "Czech Republic",
-      "updated": 0
-    },
-    {
       "nation": "Denmark",
       "updated": 0
     },
     {
       "nation": "DR Congo",
-      "updated": 0
-    },
-    {
-      "nation": "Egypt",
       "updated": 0
     },
     {

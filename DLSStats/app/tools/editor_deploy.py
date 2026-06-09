@@ -19,7 +19,7 @@ from datetime import datetime
 # ── Paths ──────────────────────────────────────────────────────────────────────
 WORKSPACE     = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 BUILD_SRC     = os.path.join(WORKSPACE, "build", "production", "DLSStats")
-DEPLOY_TARGET = os.path.join(os.path.expanduser("~"), "Desktop", "dls-ext")
+DEPLOY_TARGET = os.path.join(os.path.expanduser("~"), "Desktop", "all", "dls-ext")
 
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
