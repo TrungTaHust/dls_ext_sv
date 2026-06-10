@@ -966,6 +966,14 @@
       "updated": 1
     },
     {
+      "nation": "Panama",
+      "updated": 1
+    },
+    {
+      "nation": "Paraguay",
+      "updated": 1
+    },
+    {
       "nation": "South Korea",
       "updated": 1
     },
@@ -999,14 +1007,6 @@
     },
     {
       "nation": "Italy",
-      "updated": 0
-    },
-    {
-      "nation": "Panama",
-      "updated": 0
-    },
-    {
-      "nation": "Paraguay",
       "updated": 0
     },
     {
