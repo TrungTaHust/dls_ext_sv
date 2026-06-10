@@ -946,6 +946,30 @@
       "updated": 1
     },
     {
+      "nation": "Ireland",
+      "updated": 1
+    },
+    {
+      "nation": "Japan",
+      "updated": 1
+    },
+    {
+      "nation": "Morocco",
+      "updated": 1
+    },
+    {
+      "nation": "New Zealand",
+      "updated": 1
+    },
+    {
+      "nation": "Norway",
+      "updated": 1
+    },
+    {
+      "nation": "South Korea",
+      "updated": 1
+    },
+    {
       "nation": "Cameroon",
       "updated": 0
     },
@@ -974,27 +998,7 @@
       "updated": 0
     },
     {
-      "nation": "Ireland",
-      "updated": 0
-    },
-    {
       "nation": "Italy",
-      "updated": 0
-    },
-    {
-      "nation": "Japan",
-      "updated": 0
-    },
-    {
-      "nation": "Morocco",
-      "updated": 0
-    },
-    {
-      "nation": "New Zealand",
-      "updated": 0
-    },
-    {
-      "nation": "Norway",
       "updated": 0
     },
     {
@@ -1027,10 +1031,6 @@
     },
     {
       "nation": "South Africa",
-      "updated": 0
-    },
-    {
-      "nation": "South Korea",
       "updated": 0
     },
     {
