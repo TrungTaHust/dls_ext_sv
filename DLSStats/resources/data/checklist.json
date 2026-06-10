@@ -974,7 +974,39 @@
       "updated": 1
     },
     {
+      "nation": "Portugal",
+      "updated": 1
+    },
+    {
+      "nation": "Romania",
+      "updated": 1
+    },
+    {
+      "nation": "Scotland",
+      "updated": 1
+    },
+    {
+      "nation": "South Africa",
+      "updated": 1
+    },
+    {
       "nation": "South Korea",
+      "updated": 1
+    },
+    {
+      "nation": "Spain",
+      "updated": 1
+    },
+    {
+      "nation": "Sweden",
+      "updated": 1
+    },
+    {
+      "nation": "Switzerland",
+      "updated": 1
+    },
+    {
+      "nation": "Venezuela",
       "updated": 1
     },
     {
@@ -1014,35 +1046,7 @@
       "updated": 0
     },
     {
-      "nation": "Portugal",
-      "updated": 0
-    },
-    {
-      "nation": "Romania",
-      "updated": 0
-    },
-    {
-      "nation": "Scotland",
-      "updated": 0
-    },
-    {
       "nation": "Slovenia",
-      "updated": 0
-    },
-    {
-      "nation": "South Africa",
-      "updated": 0
-    },
-    {
-      "nation": "Spain",
-      "updated": 0
-    },
-    {
-      "nation": "Sweden",
-      "updated": 0
-    },
-    {
-      "nation": "Switzerland",
       "updated": 0
     },
     {

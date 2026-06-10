@@ -72314,28 +72314,6 @@
         "status": 1
     },
     {
-        "fname": "Alan",
-        "lname": "Matturro",
-        "nat": "Uruguay",
-        "club": "Unlicensed",
-        "pos": "CB",
-        "foot": "L",
-        "rate": 65,
-        "hgt": 189,
-        "spe": 69,
-        "acc": 63,
-        "sta": 59,
-        "str": 69,
-        "con": 56,
-        "pas": 59,
-        "sho": 33,
-        "tac": 65,
-        "prc": 335,
-        "id": 4737,
-        "version": 20262,
-        "status": 0
-    },
-    {
         "fname": "Mbekezeli",
         "lname": "Mbokazi",
         "nat": "South Africa",

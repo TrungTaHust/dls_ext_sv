@@ -10142,28 +10142,6 @@
         "status": 1
     },
     {
-        "fname": "Cristiano",
-        "lname": "Biraghi",
-        "nat": "Italy",
-        "club": "Fiorentina",
-        "pos": "LB",
-        "foot": "L",
-        "rate": 75,
-        "hgt": 185,
-        "spe": 73,
-        "acc": 70,
-        "sta": 82,
-        "str": 66,
-        "con": 70,
-        "pas": 83,
-        "sho": 65,
-        "tac": 69,
-        "prc": 1020,
-        "id": 1677,
-        "version": 20241,
-        "status": 1
-    },
-    {
         "fname": "Marc",
         "lname": "Cucurella",
         "nat": "Italy",
