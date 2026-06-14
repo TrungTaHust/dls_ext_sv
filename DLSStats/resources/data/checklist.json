@@ -146,6 +146,11 @@
       "nation": "ESP"
     },
     {
+      "club": "Angers",
+      "update": 1,
+      "nation": "FRA"
+    },
+    {
       "club": "Marseille",
       "update": 1,
       "nation": "FRA"
@@ -167,6 +172,11 @@
     },
     {
       "club": "Bologna",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
+      "club": "Como",
       "update": 1,
       "nation": "ITA"
     },
@@ -456,11 +466,6 @@
       "nation": "ESP"
     },
     {
-      "club": "Angers",
-      "update": 0,
-      "nation": "FRA"
-    },
-    {
       "club": "Auxerre",
       "update": 0,
       "nation": "FRA"
@@ -557,11 +562,6 @@
     },
     {
       "club": "Cagliari",
-      "update": 0,
-      "nation": "ITA"
-    },
-    {
-      "club": "Como",
       "update": 0,
       "nation": "ITA"
     },
