@@ -146,6 +146,11 @@
       "nation": "ESP"
     },
     {
+      "club": "Villareal",
+      "update": 1,
+      "nation": "ESP"
+    },
+    {
       "club": "Angers",
       "update": 1,
       "nation": "FRA"
@@ -214,6 +219,11 @@
       "club": "S Lisbon",
       "update": 1,
       "nation": "POR"
+    },
+    {
+      "club": "Celtic",
+      "update": 1,
+      "nation": "SCO"
     },
     {
       "club": "Dundee U",
@@ -457,11 +467,6 @@
     },
     {
       "club": "Valladolid",
-      "update": 0,
-      "nation": "ESP"
-    },
-    {
-      "club": "Villareal",
       "update": 0,
       "nation": "ESP"
     },
@@ -837,11 +842,6 @@
     },
     {
       "club": "Aberdeen",
-      "update": 0,
-      "nation": "SCO"
-    },
-    {
-      "club": "Celtic",
       "update": 0,
       "nation": "SCO"
     },
