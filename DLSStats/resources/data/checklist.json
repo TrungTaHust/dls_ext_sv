@@ -131,6 +131,11 @@
       "nation": "ESP"
     },
     {
+      "club": "Celta Vigo",
+      "update": 1,
+      "nation": "ESP"
+    },
+    {
       "club": "Real Betis",
       "update": 1,
       "nation": "ESP"
@@ -392,11 +397,6 @@
     },
     {
       "club": "Cadiz",
-      "update": 0,
-      "nation": "ESP"
-    },
-    {
-      "club": "Celta Vigo",
       "update": 0,
       "nation": "ESP"
     },
