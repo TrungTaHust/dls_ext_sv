@@ -156,6 +156,11 @@
       "nation": "FRA"
     },
     {
+      "club": "Brest",
+      "update": 1,
+      "nation": "FRA"
+    },
+    {
       "club": "Marseille",
       "update": 1,
       "nation": "FRA"
@@ -177,6 +182,11 @@
     },
     {
       "club": "Bologna",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
+      "club": "Cagliari",
       "update": 1,
       "nation": "ITA"
     },
@@ -476,11 +486,6 @@
       "nation": "FRA"
     },
     {
-      "club": "Brest",
-      "update": 0,
-      "nation": "FRA"
-    },
-    {
       "club": "Clermont-Ferrand",
       "update": 0,
       "nation": "FRA"
@@ -564,11 +569,6 @@
       "club": "Toulouse",
       "update": 0,
       "nation": "FRA"
-    },
-    {
-      "club": "Cagliari",
-      "update": 0,
-      "nation": "ITA"
     },
     {
       "club": "Cremonese",
