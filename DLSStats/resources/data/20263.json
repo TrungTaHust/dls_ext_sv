@@ -12537,7 +12537,7 @@
         "prc": 1115,
         "id": 2518,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Anders",
@@ -15045,7 +15045,7 @@
         "prc": 1015,
         "id": 1118,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Marko",
@@ -19049,7 +19049,7 @@
         "prc": 920,
         "id": 1448,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Folarin",
@@ -22041,7 +22041,7 @@
         "prc": 770,
         "id": 2156,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "",
@@ -27950,16 +27950,16 @@
         "hgt": 180,
         "spe": 71,
         "acc": 71,
-        "sta": 76,
-        "str": 67,
+        "sta": 74,
+        "str": 65,
         "con": 68,
         "pas": 69,
         "sho": 43,
-        "tac": 73,
+        "tac": 72,
         "prc": 695,
         "id": 4425,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Tyrell",
@@ -28301,17 +28301,17 @@
         "rate": 71,
         "hgt": 178,
         "spe": 75,
-        "acc": 75,
+        "acc": 70,
         "sta": 72,
         "str": 62,
         "con": 68,
-        "pas": 67,
-        "sho": 48,
-        "tac": 69,
+        "pas": 68,
+        "sho": 49,
+        "tac": 68,
         "prc": 695,
         "id": 4254,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jordan",
@@ -33481,7 +33481,7 @@
         "prc": 555,
         "id": 4568,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Steve",
@@ -44063,7 +44063,7 @@
         "prc": 535,
         "id": 2199,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Cameron",
@@ -44789,7 +44789,7 @@
         "prc": 535,
         "id": 6899,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Sondre",
@@ -51301,7 +51301,7 @@
         "prc": 470,
         "id": 2723,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Andre",
@@ -52467,7 +52467,7 @@
         "prc": 470,
         "id": 4550,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Youssef",
@@ -54293,7 +54293,7 @@
         "prc": 470,
         "id": 2630,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ben",
@@ -55415,7 +55415,7 @@
         "prc": 435,
         "id": 2603,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Nasser",
@@ -60387,7 +60387,7 @@
         "prc": 455,
         "id": 4233,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jan",
@@ -75193,7 +75193,7 @@
         "prc": 345,
         "id": 4777,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Seon-Min",
@@ -77182,20 +77182,20 @@
         "club": "Brest",
         "pos": "CB",
         "foot": "L",
-        "rate": 64,
+        "rate": 66,
         "hgt": 191,
-        "spe": 69,
+        "spe": 73,
         "acc": 62,
-        "sta": 60,
-        "str": 70,
-        "con": 54,
-        "pas": 57,
-        "sho": 41,
-        "tac": 64,
-        "prc": 285,
+        "sta": 64,
+        "str": 76,
+        "con": 59,
+        "pas": 63,
+        "sho": 30,
+        "tac": 67,
+        "prc": 380,
         "id": 2351,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Alex",
@@ -78810,20 +78810,20 @@
         "club": "Brest",
         "pos": "GK",
         "foot": "L",
-        "rate": 64,
+        "rate": 69,
         "hgt": 188,
         "spe": 46,
         "acc": 42,
-        "sta": 62,
-        "str": 53,
-        "con": 47,
-        "pas": 47,
-        "sho": 59,
+        "sta": 65,
+        "str": 54,
+        "con": 48,
+        "pas": 49,
+        "sho": 67,
         "tac": 35,
-        "prc": 245,
+        "prc": 495,
         "id": 2345,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mathias",
@@ -83452,20 +83452,20 @@
         "club": "Brest",
         "pos": "LB",
         "foot": "L",
-        "rate": 63,
+        "rate": 66,
         "hgt": 183,
-        "spe": 68,
-        "acc": 68,
-        "sta": 63,
-        "str": 58,
-        "con": 60,
-        "pas": 59,
-        "sho": 35,
-        "tac": 60,
-        "prc": 245,
+        "spe": 71,
+        "acc": 71,
+        "sta": 69,
+        "str": 59,
+        "con": 62,
+        "pas": 63,
+        "sho": 42,
+        "tac": 64,
+        "prc": 380,
         "id": 3455,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Samukelo",
@@ -97023,7 +97023,7 @@
         "fname": "Luck",
         "lname": "Zogbe",
         "nat": "Ivory Coast",
-        "club": "Unlicensed",
+        "club": "Brest",
         "pos": "RB",
         "foot": "R",
         "rate": 60,
@@ -97039,7 +97039,7 @@
         "prc": 145,
         "id": 7449,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Brandon",
