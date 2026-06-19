@@ -136,6 +136,11 @@
       "nation": "ESP"
     },
     {
+      "club": "Cornella",
+      "update": 1,
+      "nation": "ESP"
+    },
+    {
       "club": "Real Betis",
       "update": 1,
       "nation": "ESP"
@@ -397,11 +402,6 @@
     },
     {
       "club": "Cadiz",
-      "update": 0,
-      "nation": "ESP"
-    },
-    {
-      "club": "Cornella",
       "update": 0,
       "nation": "ESP"
     },

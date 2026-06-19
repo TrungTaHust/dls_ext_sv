@@ -9337,17 +9337,17 @@
         "rate": 76,
         "hgt": 174,
         "spe": 76,
-        "acc": 76,
-        "sta": 80,
-        "str": 64,
+        "acc": 75,
+        "sta": 81,
+        "str": 63,
         "con": 73,
         "pas": 73,
-        "sho": 57,
-        "tac": 78,
+        "sho": 60,
+        "tac": 77,
         "prc": 1115,
         "id": 6074,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Luke",
@@ -10139,7 +10139,7 @@
         "prc": 1130,
         "id": 2933,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Pablo",
@@ -11468,20 +11468,20 @@
         "club": "Cornella",
         "pos": "GK",
         "foot": "L",
-        "rate": 75,
+        "rate": 76,
         "hgt": 194,
-        "spe": 60,
-        "acc": 56,
+        "spe": 56,
+        "acc": 55,
         "sta": 72,
-        "str": 59,
+        "str": 64,
         "con": 52,
-        "pas": 52,
-        "sho": 72,
-        "tac": 41,
-        "prc": 925,
+        "pas": 54,
+        "sho": 73,
+        "tac": 43,
+        "prc": 1010,
         "id": 2666,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mark",
@@ -17232,20 +17232,20 @@
         "club": "Cornella",
         "pos": "LM",
         "foot": "R",
-        "rate": 73,
+        "rate": 72,
         "hgt": 177,
-        "spe": 79,
-        "acc": 80,
-        "sta": 69,
-        "str": 59,
-        "con": 71,
-        "pas": 68,
-        "sho": 72,
-        "tac": 51,
-        "prc": 935,
+        "spe": 78,
+        "acc": 79,
+        "sta": 68,
+        "str": 58,
+        "con": 70,
+        "pas": 67,
+        "sho": 71,
+        "tac": 49,
+        "prc": 845,
         "id": 5822,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Rodrigo",
@@ -17562,20 +17562,20 @@
         "club": "Cornella",
         "pos": "CB",
         "foot": "L",
-        "rate": 73,
+        "rate": 72,
         "hgt": 190,
         "spe": 69,
-        "acc": 62,
+        "acc": 60,
         "sta": 79,
         "str": 79,
         "con": 66,
-        "pas": 69,
+        "pas": 68,
         "sho": 51,
-        "tac": 75,
-        "prc": 850,
+        "tac": 74,
+        "prc": 770,
         "id": 1946,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Cameron",
@@ -18420,20 +18420,20 @@
         "club": "Cornella",
         "pos": "RB",
         "foot": "R",
-        "rate": 73,
+        "rate": 72,
         "hgt": 183,
         "spe": 77,
-        "acc": 74,
+        "acc": 72,
         "sta": 79,
         "str": 69,
-        "con": 70,
-        "pas": 69,
-        "sho": 32,
-        "tac": 74,
-        "prc": 850,
+        "con": 69,
+        "pas": 68,
+        "sho": 31,
+        "tac": 73,
+        "prc": 770,
         "id": 2839,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ainsley",
@@ -23857,17 +23857,17 @@
         "rate": 71,
         "hgt": 186,
         "spe": 68,
-        "acc": 64,
+        "acc": 62,
         "sta": 72,
-        "str": 75,
-        "con": 71,
+        "str": 76,
+        "con": 70,
         "pas": 67,
-        "sho": 79,
+        "sho": 77,
         "tac": 37,
         "prc": 830,
         "id": 3202,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Gonzalo",
@@ -29081,7 +29081,7 @@
         "prc": 745,
         "id": 3012,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Maxi",
@@ -30458,16 +30458,16 @@
         "hgt": 177,
         "spe": 66,
         "acc": 68,
-        "sta": 72,
+        "sta": 73,
         "str": 59,
-        "con": 70,
-        "pas": 73,
-        "sho": 44,
-        "tac": 70,
+        "con": 69,
+        "pas": 72,
+        "sho": 48,
+        "tac": 69,
         "prc": 680,
         "id": 4486,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Giulio",
@@ -30841,7 +30841,7 @@
         "prc": 680,
         "id": 3351,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Florian",
@@ -31721,7 +31721,7 @@
         "prc": 625,
         "id": 1973,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Fabio",
@@ -35140,20 +35140,20 @@
         "club": "Cornella",
         "pos": "RW",
         "foot": "L",
-        "rate": 69,
+        "rate": 68,
         "hgt": 179,
         "spe": 82,
         "acc": 80,
-        "sta": 63,
-        "str": 52,
-        "con": 70,
+        "sta": 61,
+        "str": 54,
+        "con": 69,
         "pas": 61,
-        "sho": 68,
-        "tac": 36,
-        "prc": 665,
+        "sho": 66,
+        "tac": 30,
+        "prc": 590,
         "id": 5262,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ernest",
@@ -36737,7 +36737,7 @@
         "prc": 605,
         "id": 6808,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Branco",
@@ -37859,7 +37859,7 @@
         "prc": 605,
         "id": 2679,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Tomi",
@@ -53633,7 +53633,7 @@
         "prc": 470,
         "id": 5727,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Diadie",
@@ -56383,7 +56383,7 @@
         "prc": 435,
         "id": 5976,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jack",
@@ -57395,7 +57395,7 @@
         "prc": 435,
         "id": 6196,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jeffrey",
@@ -78603,7 +78603,7 @@
         "prc": 285,
         "id": 6238,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Marvin",
@@ -107907,7 +107907,7 @@
         "prc": 55,
         "id": 3094,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Shamal",
