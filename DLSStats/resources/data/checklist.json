@@ -101,6 +101,11 @@
       "nation": "ENG"
     },
     {
+      "club": "Derby",
+      "update": 1,
+      "nation": "ENG1"
+    },
+    {
       "club": "Leicester",
       "update": 1,
       "nation": "ENG1"
@@ -206,6 +211,11 @@
       "nation": "ITA"
     },
     {
+      "club": "Cremonese",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
       "club": "Inter Milan",
       "update": 1,
       "nation": "ITA"
@@ -282,11 +292,6 @@
     },
     {
       "club": "Coventry",
-      "update": 0,
-      "nation": "ENG1"
-    },
-    {
-      "club": "Derby",
       "update": 0,
       "nation": "ENG1"
     },
@@ -569,11 +574,6 @@
       "club": "Toulouse",
       "update": 0,
       "nation": "FRA"
-    },
-    {
-      "club": "Cremonese",
-      "update": 0,
-      "nation": "ITA"
     },
     {
       "club": "Empoli",
