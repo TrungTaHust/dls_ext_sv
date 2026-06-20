@@ -146,6 +146,11 @@
       "nation": "ESP"
     },
     {
+      "club": "Elche",
+      "update": 1,
+      "nation": "ESP"
+    },
+    {
       "club": "Real Betis",
       "update": 1,
       "nation": "ESP"
@@ -212,6 +217,11 @@
     },
     {
       "club": "Cremonese",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
+      "club": "Fiorentina",
       "update": 1,
       "nation": "ITA"
     },
@@ -416,11 +426,6 @@
       "nation": "ESP"
     },
     {
-      "club": "Elche",
-      "update": 0,
-      "nation": "ESP"
-    },
-    {
       "club": "Getafe",
       "update": 0,
       "nation": "ESP"
@@ -577,11 +582,6 @@
     },
     {
       "club": "Empoli",
-      "update": 0,
-      "nation": "ITA"
-    },
-    {
-      "club": "Fiorentina",
       "update": 0,
       "nation": "ITA"
     },
