@@ -1006,6 +1006,10 @@
       "updated": 1
     },
     {
+      "nation": "Uruguay",
+      "updated": 1
+    },
+    {
       "nation": "Venezuela",
       "updated": 1
     },
@@ -1051,10 +1055,6 @@
     },
     {
       "nation": "Ukraine",
-      "updated": 0
-    },
-    {
-      "nation": "Uruguay",
       "updated": 0
     }
   ]

@@ -239,7 +239,7 @@
         "prc": 2440,
         "id": 7012,
         "version": 20263,
-        "status": 1
+        "status": 2
     },
     {
         "fname": "VMF",
@@ -2637,7 +2637,7 @@
         "prc": 1715,
         "id": 2474,
         "version": 20263,
-        "status": 1
+        "status": 2
     },
     {
         "fname": "Eberechi",
@@ -3957,7 +3957,7 @@
         "prc": 1315,
         "id": 1279,
         "version": 20263,
-        "status": 1
+        "status": 2
     },
     {
         "fname": "Matthijs",
@@ -5321,7 +5321,7 @@
         "prc": 1315,
         "id": 3282,
         "version": 20263,
-        "status": 1
+        "status": 2
     },
     {
         "fname": "Goncalo",
@@ -5902,20 +5902,20 @@
         "club": "Unlicensed",
         "pos": "CF",
         "foot": "R",
-        "rate": 77,
+        "rate": 76,
         "hgt": 187,
         "spe": 86,
         "acc": 74,
-        "sta": 82,
+        "sta": 77,
         "str": 78,
-        "con": 74,
-        "pas": 71,
-        "sho": 75,
+        "con": 73,
+        "pas": 70,
+        "sho": 74,
         "tac": 37,
-        "prc": 1460,
+        "prc": 1340,
         "id": 5330,
         "version": 20263,
-        "status": 0
+        "status": 2
     },
     {
         "fname": "Ayoze",
@@ -6456,16 +6456,16 @@
         "hgt": 178,
         "spe": 73,
         "acc": 78,
-        "sta": 75,
-        "str": 61,
+        "sta": 76,
+        "str": 63,
         "con": 78,
-        "pas": 77,
-        "sho": 78,
+        "pas": 76,
+        "sho": 79,
         "tac": 61,
         "prc": 1345,
         "id": 7388,
         "version": 20263,
-        "status": 0
+        "status": 2
     },
     {
         "fname": "Davide",
@@ -8423,7 +8423,7 @@
         "prc": 1235,
         "id": 1610,
         "version": 20263,
-        "status": 1
+        "status": 2
     },
     {
         "fname": "James",
@@ -11252,7 +11252,7 @@
         "hgt": 185,
         "spe": 77,
         "acc": 75,
-        "sta": 79,
+        "sta": 77,
         "str": 70,
         "con": 71,
         "pas": 74,
@@ -11261,7 +11261,7 @@
         "prc": 1020,
         "id": 5744,
         "version": 20263,
-        "status": 0
+        "status": 2
     },
     {
         "fname": "Djed",
@@ -13248,22 +13248,22 @@
         "lname": "De La Cruz",
         "nat": "Uruguay",
         "club": "Unlicensed",
-        "pos": "DM",
+        "pos": "CM",
         "foot": "R",
-        "rate": 74,
+        "rate": 73,
         "hgt": 167,
-        "spe": 74,
-        "acc": 81,
-        "sta": 72,
-        "str": 58,
+        "spe": 71,
+        "acc": 80,
+        "sta": 69,
+        "str": 53,
         "con": 75,
-        "pas": 77,
-        "sho": 61,
-        "tac": 61,
-        "prc": 1030,
+        "pas": 74,
+        "sho": 60,
+        "tac": 65,
+        "prc": 935,
         "id": 2484,
         "version": 20263,
-        "status": 0
+        "status": 2
     },
     {
         "fname": "Wataru",
@@ -13461,7 +13461,7 @@
         "prc": 935,
         "id": 6974,
         "version": 20263,
-        "status": 1
+        "status": 2
     },
     {
         "fname": "Mats",
@@ -14275,7 +14275,7 @@
         "prc": 1020,
         "id": 1277,
         "version": 20263,
-        "status": 1
+        "status": 2
     },
     {
         "fname": "Javi",
@@ -14407,7 +14407,7 @@
         "prc": 935,
         "id": 5423,
         "version": 20263,
-        "status": 1
+        "status": 2
     },
     {
         "fname": "Nicolas",
@@ -14583,7 +14583,7 @@
         "prc": 1020,
         "id": 5091,
         "version": 20263,
-        "status": 1
+        "status": 2
     },
     {
         "fname": "Stefan",
@@ -23524,20 +23524,20 @@
         "club": "Unlicensed",
         "pos": "GK",
         "foot": "R",
-        "rate": 72,
+        "rate": 71,
         "hgt": 190,
-        "spe": 60,
-        "acc": 58,
+        "spe": 59,
+        "acc": 56,
         "sta": 68,
         "str": 55,
-        "con": 51,
+        "con": 54,
         "pas": 53,
-        "sho": 69,
-        "tac": 43,
-        "prc": 690,
+        "sho": 68,
+        "tac": 39,
+        "prc": 620,
         "id": 6026,
         "version": 20263,
-        "status": 0
+        "status": 2
     },
     {
         "fname": "Antonio",
@@ -25526,20 +25526,20 @@
         "club": "Unlicensed",
         "pos": "CM",
         "foot": "R",
-        "rate": 71,
+        "rate": 73,
         "hgt": 171,
         "spe": 70,
         "acc": 76,
-        "sta": 72,
+        "sta": 81,
         "str": 65,
-        "con": 68,
-        "pas": 67,
-        "sho": 49,
-        "tac": 65,
-        "prc": 760,
+        "con": 70,
+        "pas": 70,
+        "sho": 58,
+        "tac": 66,
+        "prc": 935,
         "id": 5190,
         "version": 20263,
-        "status": 0
+        "status": 2
     },
     {
         "fname": "Pedro",
@@ -34691,7 +34691,7 @@
         "prc": 665,
         "id": 7147,
         "version": 20263,
-        "status": 0
+        "status": 2
     },
     {
         "fname": "Michel-Ange",
@@ -48428,20 +48428,20 @@
         "club": "Unlicensed",
         "pos": "RB",
         "foot": "R",
-        "rate": 68,
+        "rate": 71,
         "hgt": 171,
-        "spe": 68,
-        "acc": 71,
-        "sta": 65,
-        "str": 58,
-        "con": 66,
-        "pas": 64,
-        "sho": 39,
-        "tac": 68,
-        "prc": 495,
+        "spe": 71,
+        "acc": 73,
+        "sta": 71,
+        "str": 61,
+        "con": 70,
+        "pas": 70,
+        "sho": 45,
+        "tac": 72,
+        "prc": 695,
         "id": 7062,
         "version": 20263,
-        "status": 0
+        "status": 2
     },
     {
         "fname": "Joel",
@@ -120272,5 +120272,49 @@
         "id": 7522,
         "version": 20263,
         "status": 1
+    },
+    {
+        "fname": "Fernando",
+        "lname": "Muslera",
+        "nat": "Uruguay",
+        "club": "Unlicensed",
+        "pos": "GK",
+        "foot": "R",
+        "rate": 73,
+        "hgt": 190,
+        "spe": 51,
+        "acc": 48,
+        "sta": 71,
+        "str": 59,
+        "con": 55,
+        "pas": 56,
+        "sho": 70,
+        "tac": 43,
+        "prc": 765,
+        "id": 5150,
+        "version": 20263,
+        "status": 2
+    },
+    {
+        "fname": "Agustin",
+        "lname": "Canobbio",
+        "nat": "Uruguay",
+        "club": "Unlicensed",
+        "pos": "LM",
+        "foot": "R",
+        "rate": 71,
+        "hgt": 175,
+        "spe": 71,
+        "acc": 75,
+        "sta": 75,
+        "str": 53,
+        "con": 72,
+        "pas": 72,
+        "sho": 65,
+        "tac": 52,
+        "prc": 760,
+        "id": 2025,
+        "version": 20263,
+        "status": 2
     }
 ]
