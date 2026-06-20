@@ -7816,20 +7816,20 @@
         "club": "Monaco",
         "pos": "RW",
         "foot": "L",
-        "rate": 76,
+        "rate": 77,
         "hgt": 183,
         "spe": 79,
         "acc": 80,
-        "sta": 75,
+        "sta": 77,
         "str": 61,
         "con": 80,
-        "pas": 77,
-        "sho": 73,
-        "tac": 44,
-        "prc": 1340,
+        "pas": 79,
+        "sho": 74,
+        "tac": 46,
+        "prc": 1460,
         "id": 1128,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Federico",
@@ -8610,18 +8610,18 @@
         "foot": "R",
         "rate": 76,
         "hgt": 178,
-        "spe": 73,
-        "acc": 79,
-        "sta": 71,
+        "spe": 72,
+        "acc": 80,
+        "sta": 72,
         "str": 58,
         "con": 79,
         "pas": 76,
         "sho": 72,
-        "tac": 61,
+        "tac": 62,
         "prc": 1235,
         "id": 3307,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Filip",
@@ -10997,7 +10997,7 @@
         "prc": 1020,
         "id": 4010,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Abdukodir",
@@ -11534,20 +11534,20 @@
         "club": "Monaco",
         "pos": "GK",
         "foot": "R",
-        "rate": 75,
+        "rate": 74,
         "hgt": 192,
-        "spe": 53,
-        "acc": 51,
-        "sta": 73,
-        "str": 60,
+        "spe": 52,
+        "acc": 50,
+        "sta": 72,
+        "str": 58,
         "con": 54,
-        "pas": 57,
-        "sho": 72,
-        "tac": 41,
-        "prc": 925,
+        "pas": 55,
+        "sho": 71,
+        "tac": 42,
+        "prc": 840,
         "id": 3683,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Luiz",
@@ -12867,7 +12867,7 @@
         "prc": 1030,
         "id": 1988,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mahdi",
@@ -13954,20 +13954,20 @@
         "club": "Monaco",
         "pos": "CB",
         "foot": "R",
-        "rate": 74,
+        "rate": 73,
         "hgt": 191,
-        "spe": 69,
-        "acc": 60,
-        "sta": 68,
-        "str": 82,
+        "spe": 68,
+        "acc": 59,
+        "sta": 64,
+        "str": 80,
         "con": 68,
         "pas": 74,
-        "sho": 58,
-        "tac": 78,
-        "prc": 935,
+        "sho": 57,
+        "tac": 76,
+        "prc": 850,
         "id": 2620,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jose",
@@ -15120,20 +15120,20 @@
         "club": "Monaco",
         "pos": "CF",
         "foot": "R",
-        "rate": 73,
+        "rate": 72,
         "hgt": 187,
-        "spe": 80,
-        "acc": 72,
-        "sta": 69,
+        "spe": 79,
+        "acc": 71,
+        "sta": 68,
         "str": 73,
-        "con": 72,
+        "con": 71,
         "pas": 69,
-        "sho": 76,
+        "sho": 75,
         "tac": 24,
-        "prc": 1015,
+        "prc": 920,
         "id": 1669,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Rafael Santos",
@@ -15617,7 +15617,7 @@
         "prc": 1015,
         "id": 4946,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mykhailo",
@@ -18178,20 +18178,20 @@
         "club": "Monaco",
         "pos": "LB",
         "foot": "L",
-        "rate": 73,
+        "rate": 72,
         "hgt": 178,
         "spe": 73,
         "acc": 75,
-        "sta": 75,
-        "str": 59,
-        "con": 73,
+        "sta": 74,
+        "str": 58,
+        "con": 74,
         "pas": 75,
-        "sho": 46,
-        "tac": 70,
-        "prc": 850,
+        "sho": 45,
+        "tac": 68,
+        "prc": 770,
         "id": 3599,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "",
@@ -18653,7 +18653,7 @@
         "prc": 850,
         "id": 7053,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Julen",
@@ -19058,20 +19058,20 @@
         "club": "Monaco",
         "pos": "CF",
         "foot": "R",
-        "rate": 72,
+        "rate": 73,
         "hgt": 178,
-        "spe": 85,
-        "acc": 81,
-        "sta": 67,
-        "str": 63,
-        "con": 70,
-        "pas": 67,
-        "sho": 78,
-        "tac": 20,
-        "prc": 920,
+        "spe": 83,
+        "acc": 80,
+        "sta": 71,
+        "str": 65,
+        "con": 72,
+        "pas": 69,
+        "sho": 79,
+        "tac": 21,
+        "prc": 1015,
         "id": 1465,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Michy",
@@ -20831,7 +20831,7 @@
         "prc": 845,
         "id": 5765,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Djibril",
@@ -23295,7 +23295,7 @@
         "prc": 770,
         "id": 6816,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Joel",
@@ -26243,7 +26243,7 @@
         "prc": 760,
         "id": 1057,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Hugo",
@@ -28606,20 +28606,20 @@
         "club": "Monaco",
         "pos": "GK",
         "foot": "R",
-        "rate": 71,
+        "rate": 70,
         "hgt": 190,
         "spe": 54,
         "acc": 49,
         "sta": 66,
         "str": 58,
-        "con": 47,
+        "con": 48,
         "pas": 51,
-        "sho": 69,
-        "tac": 42,
-        "prc": 620,
+        "sho": 68,
+        "tac": 41,
+        "prc": 555,
         "id": 4109,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Dominik",
@@ -38415,7 +38415,7 @@
         "fname": "Wout",
         "lname": "Faes",
         "nat": "Belgium",
-        "club": "Leicester",
+        "club": "Monaco",
         "pos": "CB",
         "foot": "R",
         "rate": 69,
@@ -38431,7 +38431,7 @@
         "prc": 555,
         "id": 2942,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "",
@@ -120336,6 +120336,28 @@
         "tac": 64,
         "prc": 245,
         "id": 7523,
+        "version": 20263,
+        "status": 1
+    },
+    {
+        "fname": "Aladji",
+        "lname": "Bamba",
+        "nat": "France",
+        "club": "Monaco",
+        "pos": "DM",
+        "foot": "R",
+        "rate": 64,
+        "hgt": 181,
+        "spe": 61,
+        "acc": 63,
+        "sta": 61,
+        "str": 62,
+        "con": 60,
+        "pas": 63,
+        "sho": 44,
+        "tac": 63,
+        "prc": 310,
+        "id": 7524,
         "version": 20263,
         "status": 1
     }
