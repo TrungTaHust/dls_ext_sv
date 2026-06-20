@@ -226,12 +226,22 @@
       "nation": "ITA"
     },
     {
+      "club": "Genoa",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
       "club": "Inter Milan",
       "update": 1,
       "nation": "ITA"
     },
     {
       "club": "Juventus",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
+      "club": "Lazio",
       "update": 1,
       "nation": "ITA"
     },
@@ -587,16 +597,6 @@
     },
     {
       "club": "Frosinone",
-      "update": 0,
-      "nation": "ITA"
-    },
-    {
-      "club": "Genoa",
-      "update": 0,
-      "nation": "ITA"
-    },
-    {
-      "club": "Lazio",
       "update": 0,
       "nation": "ITA"
     },
