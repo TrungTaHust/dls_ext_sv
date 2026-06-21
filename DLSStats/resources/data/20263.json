@@ -6432,18 +6432,18 @@
         "foot": "R",
         "rate": 77,
         "hgt": 181,
-        "spe": 68,
-        "acc": 62,
+        "spe": 69,
+        "acc": 61,
         "sta": 79,
         "str": 76,
         "con": 75,
         "pas": 79,
-        "sho": 72,
-        "tac": 75,
+        "sho": 76,
+        "tac": 74,
         "prc": 1345,
         "id": 6861,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Rodrigo",
@@ -7797,17 +7797,17 @@
         "rate": 76,
         "hgt": 173,
         "spe": 85,
-        "acc": 88,
-        "sta": 67,
-        "str": 66,
-        "con": 88,
+        "acc": 87,
+        "sta": 68,
+        "str": 64,
+        "con": 87,
         "pas": 71,
-        "sho": 70,
+        "sho": 69,
         "tac": 16,
         "prc": 1340,
         "id": 6174,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Maghnes",
@@ -8080,20 +8080,20 @@
         "club": "Lens",
         "pos": "AM",
         "foot": "L",
-        "rate": 76,
+        "rate": 77,
         "hgt": 181,
         "spe": 74,
         "acc": 75,
-        "sta": 80,
+        "sta": 81,
         "str": 64,
         "con": 81,
-        "pas": 78,
-        "sho": 73,
+        "pas": 81,
+        "sho": 77,
         "tac": 45,
-        "prc": 1235,
+        "prc": 1345,
         "id": 6818,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Malik",
@@ -10258,20 +10258,20 @@
         "club": "Lens",
         "pos": "CM",
         "foot": "R",
-        "rate": 75,
+        "rate": 76,
         "hgt": 177,
-        "spe": 66,
+        "spe": 67,
         "acc": 74,
-        "sta": 85,
-        "str": 62,
-        "con": 74,
-        "pas": 79,
-        "sho": 64,
+        "sta": 88,
+        "str": 63,
+        "con": 77,
+        "pas": 81,
+        "sho": 68,
         "tac": 70,
-        "prc": 1130,
+        "prc": 1235,
         "id": 6828,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Carlos",
@@ -11952,20 +11952,20 @@
         "club": "Lyon",
         "pos": "CF",
         "foot": "L",
-        "rate": 74,
+        "rate": 76,
         "hgt": 173,
-        "spe": 81,
-        "acc": 85,
-        "sta": 64,
-        "str": 66,
-        "con": 74,
-        "pas": 68,
-        "sho": 74,
-        "tac": 24,
-        "prc": 1115,
+        "spe": 82,
+        "acc": 86,
+        "sta": 71,
+        "str": 65,
+        "con": 78,
+        "pas": 73,
+        "sho": 78,
+        "tac": 29,
+        "prc": 1340,
         "id": 2881,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Niclas",
@@ -13096,20 +13096,20 @@
         "club": "Lens",
         "pos": "CM",
         "foot": "L",
-        "rate": 74,
+        "rate": 76,
         "hgt": 181,
         "spe": 73,
         "acc": 73,
-        "sta": 77,
+        "sta": 80,
         "str": 70,
-        "con": 74,
-        "pas": 73,
-        "sho": 48,
-        "tac": 74,
-        "prc": 1030,
+        "con": 76,
+        "pas": 76,
+        "sho": 49,
+        "tac": 76,
+        "prc": 1235,
         "id": 6252,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Pape Matar",
@@ -14130,20 +14130,20 @@
         "club": "Lyon",
         "pos": "CB",
         "foot": "L",
-        "rate": 74,
+        "rate": 75,
         "hgt": 190,
-        "spe": 75,
-        "acc": 66,
-        "sta": 72,
-        "str": 80,
+        "spe": 76,
+        "acc": 65,
+        "sta": 75,
+        "str": 83,
         "con": 69,
-        "pas": 71,
+        "pas": 72,
         "sho": 46,
-        "tac": 79,
-        "prc": 935,
+        "tac": 82,
+        "prc": 1020,
         "id": 5269,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Aitor",
@@ -14759,7 +14759,7 @@
         "prc": 840,
         "id": 3406,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Bernd",
@@ -16079,7 +16079,7 @@
         "prc": 1015,
         "id": 6172,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Emiliano",
@@ -16946,20 +16946,20 @@
         "club": "Lyon",
         "pos": "DM",
         "foot": "R",
-        "rate": 73,
+        "rate": 74,
         "hgt": 178,
-        "spe": 68,
+        "spe": 69,
         "acc": 67,
-        "sta": 73,
+        "sta": 77,
         "str": 61,
         "con": 74,
         "pas": 77,
-        "sho": 59,
+        "sho": 60,
         "tac": 73,
-        "prc": 935,
+        "prc": 1030,
         "id": 5065,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Wilfred",
@@ -17223,7 +17223,7 @@
         "prc": 935,
         "id": 3064,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Javi",
@@ -17320,20 +17320,20 @@
         "club": "Lens",
         "pos": "LWB",
         "foot": "L",
-        "rate": 73,
+        "rate": 74,
         "hgt": 178,
         "spe": 69,
-        "acc": 67,
-        "sta": 78,
-        "str": 69,
-        "con": 70,
-        "pas": 77,
-        "sho": 50,
-        "tac": 72,
-        "prc": 935,
+        "acc": 68,
+        "sta": 80,
+        "str": 72,
+        "con": 73,
+        "pas": 79,
+        "sho": 51,
+        "tac": 73,
+        "prc": 1030,
         "id": 6971,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Vaclav",
@@ -17443,7 +17443,7 @@
         "prc": 935,
         "id": 1091,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Przemyslaw",
@@ -18002,20 +18002,20 @@
         "club": "Lens",
         "pos": "CB",
         "foot": "L",
-        "rate": 73,
+        "rate": 75,
         "hgt": 183,
-        "spe": 72,
-        "acc": 67,
-        "sta": 72,
-        "str": 79,
-        "con": 67,
-        "pas": 70,
-        "sho": 42,
-        "tac": 79,
-        "prc": 850,
+        "spe": 73,
+        "acc": 68,
+        "sta": 76,
+        "str": 81,
+        "con": 69,
+        "pas": 72,
+        "sho": 40,
+        "tac": 81,
+        "prc": 1020,
         "id": 6280,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Giorgio",
@@ -18455,7 +18455,7 @@
         "prc": 850,
         "id": 4566,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Arnau",
@@ -18948,20 +18948,20 @@
         "club": "Lens",
         "pos": "GK",
         "foot": "R",
-        "rate": 73,
+        "rate": 76,
         "hgt": 193,
-        "spe": 52,
-        "acc": 46,
-        "sta": 72,
-        "str": 61,
-        "con": 51,
-        "pas": 55,
-        "sho": 69,
-        "tac": 37,
-        "prc": 765,
+        "spe": 53,
+        "acc": 49,
+        "sta": 75,
+        "str": 62,
+        "con": 53,
+        "pas": 58,
+        "sho": 72,
+        "tac": 38,
+        "prc": 1010,
         "id": 5990,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Pietro",
@@ -19366,20 +19366,20 @@
         "club": "Lens",
         "pos": "CF",
         "foot": "R",
-        "rate": 72,
+        "rate": 69,
         "hgt": 186,
-        "spe": 71,
-        "acc": 68,
-        "sta": 75,
+        "spe": 68,
+        "acc": 64,
+        "sta": 70,
         "str": 77,
-        "con": 69,
-        "pas": 71,
-        "sho": 71,
+        "con": 68,
+        "pas": 68,
+        "sho": 68,
         "tac": 35,
-        "prc": 920,
+        "prc": 665,
         "id": 6568,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Callum",
@@ -21923,15 +21923,15 @@
         "spe": 72,
         "acc": 62,
         "sta": 69,
-        "str": 78,
-        "con": 67,
-        "pas": 70,
+        "str": 77,
+        "con": 68,
+        "pas": 71,
         "sho": 43,
         "tac": 76,
         "prc": 770,
         "id": 1416,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Daniel",
@@ -22195,7 +22195,7 @@
         "prc": 770,
         "id": 3376,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "",
@@ -23163,7 +23163,7 @@
         "prc": 770,
         "id": 4718,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Gonzalo",
@@ -23810,20 +23810,20 @@
         "club": "Lens",
         "pos": "CF",
         "foot": "R",
-        "rate": 71,
+        "rate": 72,
         "hgt": 187,
         "spe": 71,
-        "acc": 66,
-        "sta": 69,
-        "str": 78,
+        "acc": 67,
+        "sta": 71,
+        "str": 79,
         "con": 72,
         "pas": 69,
         "sho": 75,
-        "tac": 24,
-        "prc": 830,
+        "tac": 30,
+        "prc": 920,
         "id": 2799,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Pio",
@@ -25372,20 +25372,20 @@
         "club": "Lens",
         "pos": "CM",
         "foot": "R",
-        "rate": 71,
+        "rate": 69,
         "hgt": 178,
-        "spe": 68,
+        "spe": 64,
         "acc": 72,
-        "sta": 69,
-        "str": 65,
+        "sta": 66,
+        "str": 63,
         "con": 69,
-        "pas": 71,
-        "sho": 55,
-        "tac": 69,
-        "prc": 760,
+        "pas": 70,
+        "sho": 51,
+        "tac": 68,
+        "prc": 605,
         "id": 3489,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Reo",
@@ -25990,18 +25990,18 @@
         "foot": "R",
         "rate": 71,
         "hgt": 178,
-        "spe": 67,
-        "acc": 68,
-        "sta": 67,
+        "spe": 68,
+        "acc": 69,
+        "sta": 65,
         "str": 67,
-        "con": 74,
+        "con": 73,
         "pas": 68,
         "sho": 47,
-        "tac": 68,
+        "tac": 67,
         "prc": 760,
         "id": 4604,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Al",
@@ -26167,17 +26167,17 @@
         "rate": 71,
         "hgt": 188,
         "spe": 70,
-        "acc": 66,
-        "sta": 71,
-        "str": 69,
+        "acc": 62,
+        "sta": 73,
+        "str": 72,
         "con": 68,
-        "pas": 70,
-        "sho": 50,
-        "tac": 66,
+        "pas": 72,
+        "sho": 51,
+        "tac": 70,
         "prc": 760,
         "id": 6810,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mikel",
@@ -32601,7 +32601,7 @@
         "prc": 625,
         "id": 1024,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ludwig",
@@ -37507,7 +37507,7 @@
         "prc": 605,
         "id": 5033,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jaden",
@@ -37934,20 +37934,20 @@
         "club": "Lens",
         "pos": "RWB",
         "foot": "R",
-        "rate": 69,
+        "rate": 71,
         "hgt": 175,
         "spe": 78,
         "acc": 79,
-        "sta": 69,
+        "sta": 71,
         "str": 59,
-        "con": 65,
-        "pas": 66,
-        "sho": 42,
-        "tac": 64,
-        "prc": 605,
+        "con": 69,
+        "pas": 69,
+        "sho": 43,
+        "tac": 66,
+        "prc": 760,
         "id": 1019,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Issa",
@@ -38585,7 +38585,7 @@
         "prc": 555,
         "id": 3552,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Luis",
@@ -39465,7 +39465,7 @@
         "prc": 555,
         "id": 4715,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Gideon",
@@ -41753,7 +41753,7 @@
         "prc": 590,
         "id": 7343,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Lameck",
@@ -45383,7 +45383,7 @@
         "prc": 535,
         "id": 3973,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Diego",
@@ -46624,20 +46624,20 @@
         "club": "Lens",
         "pos": "CB",
         "foot": "R",
-        "rate": 68,
+        "rate": 70,
         "hgt": 185,
-        "spe": 70,
+        "spe": 71,
         "acc": 63,
-        "sta": 66,
+        "sta": 72,
         "str": 75,
-        "con": 63,
-        "pas": 66,
-        "sho": 36,
-        "tac": 73,
-        "prc": 495,
+        "con": 65,
+        "pas": 67,
+        "sho": 41,
+        "tac": 75,
+        "prc": 625,
         "id": 3185,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Unai",
@@ -58385,7 +58385,7 @@
         "prc": 385,
         "id": 2547,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Raul",
@@ -66613,7 +66613,7 @@
         "prc": 335,
         "id": 3364,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Jay",
@@ -95926,20 +95926,20 @@
         "club": "Lens",
         "pos": "CB",
         "foot": "R",
-        "rate": 60,
+        "rate": 62,
         "hgt": 192,
-        "spe": 60,
-        "acc": 57,
-        "sta": 58,
+        "spe": 63,
+        "acc": 59,
+        "sta": 61,
         "str": 66,
-        "con": 53,
+        "con": 54,
         "pas": 58,
-        "sho": 33,
-        "tac": 60,
-        "prc": 145,
+        "sho": 40,
+        "tac": 61,
+        "prc": 210,
         "id": 2127,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Ronaldo",
@@ -120468,6 +120468,28 @@
         "tac": 15,
         "prc": 130,
         "id": 7529,
+        "version": 20263,
+        "status": 1
+    },
+    {
+        "fname": "Ruben",
+        "lname": "Kluivert",
+        "nat": "Netherlands",
+        "club": "Lyon",
+        "pos": "CB",
+        "foot": "R",
+        "rate": 68,
+        "hgt": 187,
+        "spe": 85,
+        "acc": 70,
+        "sta": 62,
+        "str": 71,
+        "con": 59,
+        "pas": 63,
+        "sho": 31,
+        "tac": 66,
+        "prc": 495,
+        "id": 7530,
         "version": 20263,
         "status": 1
     }
