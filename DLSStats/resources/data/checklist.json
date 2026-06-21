@@ -171,6 +171,21 @@
       "nation": "ESP"
     },
     {
+      "club": "Osasuna",
+      "update": 1,
+      "nation": "ESP"
+    },
+    {
+      "club": "Oviedo",
+      "update": 1,
+      "nation": "ESP"
+    },
+    {
+      "club": "Rayo Vallecano",
+      "update": 1,
+      "nation": "ESP"
+    },
+    {
       "club": "Real Betis",
       "update": 1,
       "nation": "ESP"
@@ -241,7 +256,22 @@
       "nation": "FRA"
     },
     {
+      "club": "Nantes",
+      "update": 1,
+      "nation": "FRA"
+    },
+    {
+      "club": "Nice",
+      "update": 1,
+      "nation": "FRA"
+    },
+    {
       "club": "Paris SG",
+      "update": 1,
+      "nation": "FRA"
+    },
+    {
+      "club": "Rennes",
       "update": 1,
       "nation": "FRA"
     },
@@ -306,12 +336,27 @@
       "nation": "ITA"
     },
     {
+      "club": "Parma",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
       "club": "Roma",
       "update": 1,
       "nation": "ITA"
     },
     {
       "club": "Torino",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
+      "club": "Udinese",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
+      "club": "Verona",
       "update": 1,
       "nation": "ITA"
     },
@@ -521,21 +566,6 @@
       "nation": "ESP"
     },
     {
-      "club": "Osasuna",
-      "update": 0,
-      "nation": "ESP"
-    },
-    {
-      "club": "Oviedo",
-      "update": 0,
-      "nation": "ESP"
-    },
-    {
-      "club": "Rayo Vallecano",
-      "update": 0,
-      "nation": "ESP"
-    },
-    {
       "club": "Valencia",
       "update": 0,
       "nation": "ESP"
@@ -566,27 +596,12 @@
       "nation": "FRA"
     },
     {
-      "club": "Nantes",
-      "update": 1,
-      "nation": "FRA"
-    },
-    {
-      "club": "Nice",
-      "update": 1,
-      "nation": "FRA"
-    },
-    {
       "club": "Paris",
       "update": 0,
       "nation": "FRA"
     },
     {
       "club": "Reims",
-      "update": 0,
-      "nation": "FRA"
-    },
-    {
-      "club": "Rennes",
       "update": 0,
       "nation": "FRA"
     },
@@ -626,11 +641,6 @@
       "nation": "ITA"
     },
     {
-      "club": "Parma",
-      "update": 0,
-      "nation": "ITA"
-    },
-    {
       "club": "Pisa",
       "update": 0,
       "nation": "ITA"
@@ -646,17 +656,7 @@
       "nation": "ITA"
     },
     {
-      "club": "Udinese",
-      "update": 0,
-      "nation": "ITA"
-    },
-    {
       "club": "Venezia",
-      "update": 0,
-      "nation": "ITA"
-    },
-    {
-      "club": "Verona",
       "update": 0,
       "nation": "ITA"
     },
