@@ -181,6 +181,11 @@
       "nation": "FRA"
     },
     {
+      "club": "Le Havre",
+      "update": 1,
+      "nation": "FRA"
+    },
+    {
       "club": "Lille",
       "update": 1,
       "nation": "FRA"
@@ -262,6 +267,11 @@
     },
     {
       "club": "Roma",
+      "update": 1,
+      "nation": "ITA"
+    },
+    {
+      "club": "Torino",
       "update": 1,
       "nation": "ITA"
     },
@@ -521,11 +531,6 @@
       "nation": "FRA"
     },
     {
-      "club": "Le Havre",
-      "update": 0,
-      "nation": "FRA"
-    },
-    {
       "club": "Lens",
       "update": 0,
       "nation": "FRA"
@@ -627,11 +632,6 @@
     },
     {
       "club": "Sassuolo",
-      "update": 0,
-      "nation": "ITA"
-    },
-    {
-      "club": "Torino",
       "update": 0,
       "nation": "ITA"
     },
