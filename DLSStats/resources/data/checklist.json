@@ -151,6 +151,11 @@
       "nation": "ESP"
     },
     {
+      "club": "Getafe",
+      "update": 1,
+      "nation": "ESP"
+    },
+    {
       "club": "Girona",
       "update": 1,
       "nation": "ESP"
@@ -316,6 +321,11 @@
       "nation": "SCO"
     },
     {
+      "club": "Hibernian",
+      "update": 1,
+      "nation": "SCO"
+    },
+    {
       "club": "Birmingham",
       "update": 0,
       "nation": "ENG1"
@@ -462,11 +472,6 @@
     },
     {
       "club": "Eibar",
-      "update": 0,
-      "nation": "ESP"
-    },
-    {
-      "club": "Getafe",
       "update": 0,
       "nation": "ESP"
     },
@@ -857,11 +862,6 @@
     },
     {
       "club": "Glasgow R",
-      "update": 0,
-      "nation": "SCO"
-    },
-    {
-      "club": "Hibernian",
       "update": 0,
       "nation": "SCO"
     },
