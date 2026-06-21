@@ -166,6 +166,11 @@
       "nation": "ESP"
     },
     {
+      "club": "Mallorca",
+      "update": 1,
+      "nation": "ESP"
+    },
+    {
       "club": "Real Betis",
       "update": 1,
       "nation": "ESP"
@@ -222,6 +227,11 @@
     },
     {
       "club": "Marseille",
+      "update": 1,
+      "nation": "FRA"
+    },
+    {
+      "club": "Metz",
       "update": 1,
       "nation": "FRA"
     },
@@ -337,6 +347,11 @@
     },
     {
       "club": "Hibernian",
+      "update": 1,
+      "nation": "SCO"
+    },
+    {
+      "club": "S Mirren",
       "update": 1,
       "nation": "SCO"
     },
@@ -506,11 +521,6 @@
       "nation": "ESP"
     },
     {
-      "club": "Mallorca",
-      "update": 0,
-      "nation": "ESP"
-    },
-    {
       "club": "Osasuna",
       "update": 0,
       "nation": "ESP"
@@ -551,23 +561,18 @@
       "nation": "FRA"
     },
     {
-      "club": "Metz",
-      "update": 0,
-      "nation": "FRA"
-    },
-    {
       "club": "Montpellier",
       "update": 0,
       "nation": "FRA"
     },
     {
       "club": "Nantes",
-      "update": 0,
+      "update": 1,
       "nation": "FRA"
     },
     {
       "club": "Nice",
-      "update": 0,
+      "update": 1,
       "nation": "FRA"
     },
     {
@@ -887,11 +892,6 @@
     },
     {
       "club": "S Johnstone",
-      "update": 0,
-      "nation": "SCO"
-    },
-    {
-      "club": "S Mirren",
       "update": 0,
       "nation": "SCO"
     }
