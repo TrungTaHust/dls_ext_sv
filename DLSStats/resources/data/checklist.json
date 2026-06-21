@@ -151,6 +151,11 @@
       "nation": "ESP"
     },
     {
+      "club": "Girona",
+      "update": 1,
+      "nation": "ESP"
+    },
+    {
       "club": "Real Betis",
       "update": 1,
       "nation": "ESP"
@@ -162,6 +167,11 @@
     },
     {
       "club": "Real Sociedad",
+      "update": 1,
+      "nation": "ESP"
+    },
+    {
+      "club": "Sevilla",
       "update": 1,
       "nation": "ESP"
     },
@@ -461,11 +471,6 @@
       "nation": "ESP"
     },
     {
-      "club": "Girona",
-      "update": 0,
-      "nation": "ESP"
-    },
-    {
       "club": "Granada",
       "update": 0,
       "nation": "ESP"
@@ -502,11 +507,6 @@
     },
     {
       "club": "Rayo Vallecano",
-      "update": 0,
-      "nation": "ESP"
-    },
-    {
-      "club": "Sevilla",
       "update": 0,
       "nation": "ESP"
     },
