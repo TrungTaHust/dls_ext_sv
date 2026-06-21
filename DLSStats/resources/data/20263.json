@@ -34295,7 +34295,7 @@
         "prc": 665,
         "id": 4783,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mexx",
@@ -44239,7 +44239,7 @@
         "prc": 535,
         "id": 3487,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Peer",
@@ -47121,7 +47121,7 @@
         "prc": 495,
         "id": 4834,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Chris",
@@ -50839,7 +50839,7 @@
         "prc": 520,
         "id": 1586,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Valery",
@@ -51112,20 +51112,20 @@
         "club": "Hull",
         "pos": "SS",
         "foot": "L",
-        "rate": 67,
+        "rate": 68,
         "hgt": 179,
-        "spe": 69,
-        "acc": 73,
-        "sta": 67,
+        "spe": 71,
+        "acc": 74,
+        "sta": 70,
         "str": 63,
-        "con": 68,
+        "con": 69,
         "pas": 65,
-        "sho": 68,
-        "tac": 28,
-        "prc": 520,
+        "sho": 69,
+        "tac": 30,
+        "prc": 590,
         "id": 3242,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Felix",
@@ -53457,7 +53457,7 @@
         "prc": 470,
         "id": 4501,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "",
@@ -55745,7 +55745,7 @@
         "prc": 435,
         "id": 3689,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Shaun",
@@ -58812,20 +58812,20 @@
         "club": "Hull",
         "pos": "GK",
         "foot": "R",
-        "rate": 67,
+        "rate": 68,
         "hgt": 187,
         "spe": 53,
         "acc": 52,
-        "sta": 63,
+        "sta": 64,
         "str": 50,
         "con": 52,
         "pas": 45,
         "sho": 65,
-        "tac": 42,
-        "prc": 385,
+        "tac": 43,
+        "prc": 435,
         "id": 5567,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Boris",
@@ -65434,20 +65434,20 @@
         "club": "Hull",
         "pos": "LB",
         "foot": "L",
-        "rate": 66,
+        "rate": 67,
         "hgt": 179,
         "spe": 73,
-        "acc": 75,
-        "sta": 67,
-        "str": 54,
+        "acc": 74,
+        "sta": 68,
+        "str": 58,
         "con": 63,
-        "pas": 68,
+        "pas": 69,
         "sho": 45,
-        "tac": 54,
-        "prc": 380,
+        "tac": 58,
+        "prc": 435,
         "id": 3275,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mohamed",
@@ -68857,7 +68857,7 @@
         "prc": 355,
         "id": 2376,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Amankwah",
@@ -70661,7 +70661,7 @@
         "prc": 355,
         "id": 4934,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mikey",
@@ -71088,20 +71088,20 @@
         "club": "Hull",
         "pos": "CB",
         "foot": "R",
-        "rate": 65,
+        "rate": 66,
         "hgt": 193,
         "spe": 68,
         "acc": 63,
         "sta": 65,
-        "str": 75,
-        "con": 55,
-        "pas": 55,
-        "sho": 46,
-        "tac": 65,
-        "prc": 335,
+        "str": 78,
+        "con": 56,
+        "pas": 58,
+        "sho": 44,
+        "tac": 66,
+        "prc": 380,
         "id": 1116,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mads Juel",
@@ -71629,7 +71629,7 @@
         "prc": 335,
         "id": 2811,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Unai",
@@ -75523,7 +75523,7 @@
         "prc": 310,
         "id": 2729,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Mads",
@@ -76755,7 +76755,7 @@
         "prc": 310,
         "id": 1127,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Przemyslaw",
@@ -83751,7 +83751,7 @@
         "prc": 245,
         "id": 2362,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Dylan",
@@ -88047,7 +88047,7 @@
         "fname": "Cody",
         "lname": "Drameh",
         "nat": "England",
-        "club": "Unlicensed",
+        "club": "Hull",
         "pos": "RB",
         "foot": "R",
         "rate": 62,
@@ -88063,7 +88063,7 @@
         "prc": 210,
         "id": 2738,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Joe",
@@ -89383,7 +89383,7 @@
         "prc": 215,
         "id": 3898,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Lukas",
@@ -97347,7 +97347,7 @@
         "prc": 115,
         "id": 5710,
         "version": 20263,
-        "status": 0
+        "status": 1
     },
     {
         "fname": "Charlie",
